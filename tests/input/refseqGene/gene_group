@@ -1,0 +1,121 @@
+#tax_id	GeneID	relationship	Other_tax_id	Other_GeneID
+9606	1	Potential readthrough sibling	9606	162968
+9606	2	Related pseudogene	9606	3
+9606	3	Related functional gene	9606	2
+9606	10	Related pseudogene	9606	11
+9606	11	Related functional gene	9606	10
+9606	13	Related pseudogene	9606	201651
+9606	2738	Potential readthrough sibling	9606	286128
+9606	2738	Potential readthrough sibling	9606	79943
+9606	5326	Related pseudogene	9606	152845
+9606	6018	Related pseudogene	9606	57008
+9606	6299	Related pseudogene	9606	139163
+9606	6399	Related pseudogene	9606	27192
+9606	6399	Related pseudogene	9606	27193
+9606	6399	Related pseudogene	9606	27194
+9606	6399	Related pseudogene	9606	27195
+9606	6399	Related pseudogene	9606	27196
+9606	6399	Related pseudogene	9606	392597
+9606	6399	Related pseudogene	9606	414751
+9606	6399	Related pseudogene	9606	414752
+9606	6399	Related pseudogene	9606	414753
+9606	7539	Related pseudogene	9606	100533707
+9606	7541	Related pseudogene	9606	100421259
+9606	7551	Related pseudogene	9606	100419451
+9606	7554	Potential readthrough sibling	9606	105372481
+9606	7554	Readthrough sibling	9606	105372481
+9606	7554	Readthrough parent	9606	108903150
+9606	7556	Potential readthrough sibling	9606	10795
+9606	7567	Potential readthrough sibling	9606	7571
+9606	7567	Related pseudogene	9606	100419512
+9606	7568	Readthrough parent	9606	100529855
+9606	7568	Readthrough sibling	9606	90589
+9606	7568	Related pseudogene	9606	100419709
+9606	7571	Potential readthrough sibling	9606	7567
+9606	7576	Related pseudogene	9606	100131411
+9606	7576	Related pseudogene	9606	79986
+9606	7584	Related pseudogene	9606	100419545
+9606	7584	Related pseudogene	9606	100419553
+9606	7592	Related pseudogene	9606	100419515
+9606	7592	Related pseudogene	9606	100419707
+9606	7621	Related pseudogene	9606	100419609
+9606	7633	Related pseudogene	9606	100419511
+9606	7637	Related pseudogene	9606	100419706
+9606	7639	Related pseudogene	9606	100419642
+9606	7639	Related pseudogene	9606	100533638
+9606	7639	Related pseudogene	9606	441843
+9606	7643	Related pseudogene	9606	100873799
+9606	7644	Related pseudogene	9606	100533643
+9606	7644	Related pseudogene	9606	441666
+9606	7690	Potential readthrough sibling	9606	167359
+9606	7690	Related pseudogene	9606	100133252
+9606	7690	Related pseudogene	9606	645749
+9606	7693	Related pseudogene	9606	100419834
+9606	7697	Related pseudogene	9606	100652813
+9606	7700	Related pseudogene	9606	642280
+9606	7705	Related pseudogene	9606	100419796
+9606	7707	Potential readthrough sibling	9606	84561
+9606	7726	Related pseudogene	9606	404024
+9606	7727	Potential readthrough sibling	9606	79903
+9606	7730	Readthrough parent	9606	100529215
+9606	7730	Readthrough sibling	9606	84527
+9606	10795	Potential readthrough sibling	9606	7556
+9606	27192	Related functional gene	9606	6399
+9606	27193	Related functional gene	9606	6399
+9606	27194	Related functional gene	9606	6399
+9606	27195	Related functional gene	9606	6399
+9606	27196	Related functional gene	9606	6399
+9606	57008	Related functional gene	9606	6018
+9606	79903	Potential readthrough sibling	9606	7727
+9606	79943	Potential readthrough sibling	9606	2738
+9606	79986	Related functional gene	9606	7576
+9606	84527	Readthrough parent	9606	100529215
+9606	84527	Readthrough sibling	9606	7730
+9606	84561	Potential readthrough sibling	9606	7707
+9606	90589	Readthrough parent	9606	100529855
+9606	90589	Readthrough sibling	9606	7568
+9606	139163	Related functional gene	9606	6299
+9606	152845	Related functional gene	9606	5326
+9606	162968	Potential readthrough sibling	9606	1
+9606	167359	Potential readthrough sibling	9606	7690
+9606	201651	Related functional gene	9606	13
+9606	286128	Potential readthrough sibling	9606	2738
+9606	392597	Related functional gene	9606	6399
+9606	404024	Related functional gene	9606	7726
+9606	414751	Related functional gene	9606	6399
+9606	414752	Related functional gene	9606	6399
+9606	414753	Related functional gene	9606	6399
+9606	441666	Related functional gene	9606	7644
+9606	441843	Related functional gene	9606	7639
+9606	642280	Related functional gene	9606	7700
+9606	645749	Related functional gene	9606	7690
+9606	100131411	Related functional gene	9606	7576
+9606	100133252	Related functional gene	9606	7690
+9606	100419451	Related functional gene	9606	7551
+9606	100419511	Related functional gene	9606	7633
+9606	100419512	Related functional gene	9606	7567
+9606	100419515	Related functional gene	9606	7592
+9606	100419545	Related functional gene	9606	7584
+9606	100419553	Related functional gene	9606	7584
+9606	100419609	Related functional gene	9606	7621
+9606	100419642	Related functional gene	9606	7639
+9606	100419706	Related functional gene	9606	7637
+9606	100419707	Related functional gene	9606	7592
+9606	100419709	Related functional gene	9606	7568
+9606	100419796	Related functional gene	9606	7705
+9606	100419834	Related functional gene	9606	7693
+9606	100421259	Related functional gene	9606	7541
+9606	100529215	Readthrough child	9606	7730
+9606	100529215	Readthrough child	9606	84527
+9606	100529855	Readthrough child	9606	7568
+9606	100529855	Readthrough child	9606	90589
+9606	100533638	Related functional gene	9606	7639
+9606	100533643	Related functional gene	9606	7644
+9606	100533707	Related functional gene	9606	7539
+9606	100652813	Related functional gene	9606	7697
+9606	100873799	Related functional gene	9606	7643
+9606	105372481	Potential readthrough sibling	9606	7554
+9606	105372481	Readthrough parent	9606	108903150
+9606	105372481	Readthrough sibling	9606	7554
+9606	108903150	Readthrough child	9606	105372481
+9606	108903150	Readthrough child	9606	7554
