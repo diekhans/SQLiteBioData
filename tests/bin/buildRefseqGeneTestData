@@ -1,0 +1,114 @@
+#!/usr/bin/env python3
+
+import sys
+from os import path as osp
+import argparse
+from datetime import datetime
+from pycbio.sys import fileOps
+from pycbio.db import sqliteOps
+from pycbio.tsv import TsvReader
+
+sqllenReLib = "/cluster/home/markd/opt/current/x86_64/lib/sqlean-0.9.1/re.so"
+
+# human has most cases, gibbon is a hub
+test_tax_ids = (9606, 61853)
+
+def parseArgs():
+    desc = """generate test cases from a full refseqGeneDb
+    """
+    parser = argparse.ArgumentParser(description=desc)
+    parser.add_argument("refseqGeneDb",
+                        help="full database")
+    parser.add_argument("refseqCasesTsv",
+                        help="gene ids to select")
+    parser.add_argument("outdir",
+                        help="directory for output")
+    return parser.parse_args()
+
+createTmpTblSql = """
+CREATE TEMP TABLE testGeneIds (
+    GeneID INT
+);
+CREATE INDEX testGeneIds_GeneID ON testGeneIds (GeneID);
+"""
+
+loadGeneIdsSql = """
+INSERT INTO testGeneIds (GeneID) VALUES (?);
+"""
+
+# This was used to generate original set of test case, however
+# they were move to a file to allow added specific ones.  This remains
+# here for documentation.
+getTaxonCaseSql = """
+-- symbol without synonym match
+INSERT INTO testGeneIds
+   SELECT GeneID FROM gene_info WHERE (tax_id = :tax_id) AND
+       ((Symbol LIKE "znf%") AND
+        (Synonyms NOT REGEXP "(\||^)[zZ][nN][fF]")) LIMIT 50;
+
+-- synonym without symbol match
+INSERT INTO testGeneIds
+   SELECT GeneID FROM gene_info WHERE (tax_id = :tax_id) AND
+       ((Symbol NOT LIKE "znf%") AND
+        (Synonyms REGEXP "(\||^)[zZ][nN][fF]")) LIMIT 25;
+
+-- some other stuff, don't get NEWENTRY stuff
+INSERT INTO testGeneIds
+   SELECT GeneID FROM gene_info WHERE (tax_id = :tax_id) AND
+       (Symbol != "NEWENTRY") AND
+       ((Symbol NOT LIKE "znf%")) AND
+        (Synonyms NOT REGEXP "(\||^)[zZ][nN][fF]") LIMIT 10;
+"""
+
+getHomologSql = """
+-- make sure we have all paralogs and orthologs in table
+INSERT INTO testGeneIds
+    SELECT Other_GeneId FROM gene_group WHERE GeneId IN (select GeneID FROM testGeneIds);
+INSERT INTO testGeneIds
+    SELECT GeneId FROM gene_group WHERE Other_GeneId IN (select GeneID FROM testGeneIds);
+"""
+
+
+def loadGeneIdRows(refseqCasesTsv):
+    # tuple per row
+    typeMap = {
+        'tax_id': int,
+        'GeneID': int
+    }
+    return [(r.GeneID,) for r in TsvReader(refseqCasesTsv, typeMap=typeMap)]
+
+def createGeneIdTable(cur, refseqCasesTsv):
+    cur.execute(createTmpTblSql).fetchall()
+    cur.executemany(loadGeneIdsSql, loadGeneIdRows(refseqCasesTsv)).fetchall()
+    cur.execute(getHomologSql).fetchall()
+
+def createGeneDataFile(cur, sql, fname):
+    cur.execute(sql)
+    cnt = 0
+    with open(fname, 'w') as fh:
+        for row in cur:
+            if cnt == 0:
+                fh.write('#')
+                fileOps.prRow(fh, [c[0] for c in cur.description])
+            fileOps.prRow(fh, row)
+            cnt += 1
+
+def createGeneDataFiles(cur, outdir):
+    createGeneDataFile(cur, "SELECT * FROM gene2refseq WHERE GeneID in testGeneIds;",
+                       osp.join(outdir, "gene2refseq"))
+    createGeneDataFile(cur, "SELECT * FROM gene_info WHERE GeneID in testGeneIds;",
+                       osp.join(outdir, "gene_info"))
+    createGeneDataFile(cur, "SELECT * FROM gene_group WHERE (GeneID IN testGeneIds) or (Other_GeneId IN testGeneIds);",
+                       osp.join(outdir, "gene_group"))
+    createGeneDataFile(cur, "SELECT * FROM gene_orthologs WHERE (GeneID IN testGeneIds) or (Other_GeneId IN testGeneIds);",
+                       osp.join(outdir, "gene_orthologs"))
+
+def buildRefseqGeneTestData(opts):
+    conn = sqliteOps.connect(opts.refseqGeneDb)
+    sqliteOps.loadExtension(conn, sqllenReLib)
+    cur = conn.cursor()
+    createGeneIdTable(cur, opts.refseqCasesTsv)
+    fileOps.ensureDir(opts.outdir)
+    createGeneDataFiles(cur, opts.outdir)
+
+buildRefseqGeneTestData(parseArgs())
