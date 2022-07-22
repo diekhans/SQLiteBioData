@@ -10,9 +10,6 @@ from pycbio.tsv import TsvReader
 
 sqllenReLib = "/cluster/home/markd/opt/current/x86_64/lib/sqlean-0.9.1/re.so"
 
-# human has most cases, gibbon is a hub
-test_tax_ids = (9606, 61853)
-
 def parseArgs():
     desc = """generate test cases from a full refseqGeneDb
     """
