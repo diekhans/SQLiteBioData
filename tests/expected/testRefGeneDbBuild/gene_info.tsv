@@ -1,0 +1,226 @@
+tax_id	GeneID	Symbol	LocusTag	Synonyms	dbXrefs	chromosome	map_location	description	type_of_gene	Symbol_from_nomenclature_authority	Full_name_from_nomenclature_authority	Nomenclature_status	Other_designations	Modification_date	Feature_type
+9606	1	A1BG		A1B|ABG|GAB|HYST2477	MIM:138670|HGNC:HGNC:5|Ensembl:ENSG00000121410	19	19q13.43	alpha-1-B glycoprotein	protein-coding	A1BG	alpha-1-B glycoprotein	O	alpha-1B-glycoprotein|HEL-S-163pA|epididymis secretory sperm binding protein Li 163pA	20210708	
+9606	2	A2M		A2MD|CPAMD5|FWP007|S863-7	MIM:103950|HGNC:HGNC:7|Ensembl:ENSG00000175899	12	12p13.31	alpha-2-macroglobulin	protein-coding	A2M	alpha-2-macroglobulin	O	alpha-2-macroglobulin|C3 and PZP-like alpha-2-macroglobulin domain-containing protein 5|alpha-2-M	20210711	
+9606	3	A2MP1		A2MP	HGNC:HGNC:8|Ensembl:ENSG00000256069	12	12p13.31	alpha-2-macroglobulin pseudogene 1	pseudo	A2MP1	alpha-2-macroglobulin pseudogene 1	O	pregnancy-zone protein pseudogene	20210611	
+9606	9	NAT1		AAC1|MNAT|NAT-1|NATI	MIM:108345|HGNC:HGNC:7645|Ensembl:ENSG00000171428	8	8p22	N-acetyltransferase 1	protein-coding	NAT1	N-acetyltransferase 1	O	arylamine N-acetyltransferase 1|N-acetyltransferase 1 (arylamine N-acetyltransferase)|N-acetyltransferase type 1|arylamide acetylase 1|monomorphic arylamine N-acetyltransferase	20210926	
+9606	10	NAT2		AAC2|NAT-2|PNAT	MIM:612182|HGNC:HGNC:7646|Ensembl:ENSG00000156006	8	8p22	N-acetyltransferase 2	protein-coding	NAT2	N-acetyltransferase 2	O	arylamine N-acetyltransferase 2|N-acetyltransferase 2 (arylamine N-acetyltransferase)|N-acetyltransferase type 2|arylamide acetylase 2	20210926	
+9606	11	NATP		AACP|NATP1	HGNC:HGNC:15	8	8p22	N-acetyltransferase pseudogene	pseudo	NATP	N-acetyltransferase pseudogene	O	arylamide acetylase pseudogene	20210611	
+9606	12	SERPINA3		AACT|ACT|GIG24|GIG25	MIM:107280|HGNC:HGNC:16|Ensembl:ENSG00000196136	14	14q32.13	serpin family A member 3	protein-coding	SERPINA3	serpin family A member 3	O	alpha-1-antichymotrypsin|cell growth-inhibiting gene 24/25 protein|growth-inhibiting protein 24|growth-inhibiting protein 25|serine (or cysteine) proteinase inhibitor, clade A, member 3|serpin A3|serpin peptidase inhibitor, clade A (alpha-1 antiproteinase, antitrypsin), member 3	20210708	
+9606	13	AADAC		CES5A1|DAC	MIM:600338|HGNC:HGNC:17|Ensembl:ENSG00000114771	3	3q25.1	arylacetamide deacetylase	protein-coding	AADAC	arylacetamide deacetylase	O	arylacetamide deacetylase|arylacetamide deacetylase (esterase)	20210708	
+9606	14	AAMP			MIM:603488|HGNC:HGNC:18|Ensembl:ENSG00000127837	2	2q35	angio associated migratory cell protein	protein-coding	AAMP	angio associated migratory cell protein	O	angio-associated migratory cell protein	20210905	
+9606	15	AANAT		DSPS|SNAT	MIM:600950|HGNC:HGNC:19|Ensembl:ENSG00000129673	17	17q25.1	aralkylamine N-acetyltransferase	protein-coding	AANAT	aralkylamine N-acetyltransferase	O	serotonin N-acetyltransferase|arylalkylamine N-acetyltransferase|serotonin acetylase	20210726	
+9606	150	ADRA2A		ADRA2|ADRA2R|ADRAR|ALPHA2AAR|ZNF32	MIM:104210|HGNC:HGNC:281|Ensembl:ENSG00000150594	10	10q25.2	adrenoceptor alpha 2A	protein-coding	ADRA2A	adrenoceptor alpha 2A	O	alpha-2A adrenergic receptor|adrenergic, alpha-2A-, receptor|alpha-2 adrenergic receptor subtype C10|alpha-2-adrenergic receptor, platelet type|alpha-2A adrenoceptor|alpha-2A adrenoreceptor|alpha-2AAR subtype C10	20210708	
+9606	463	ZFHX3		ATBF1|ATBT|C16orf47|ZFH-3|ZNF927	MIM:104155|HGNC:HGNC:777|Ensembl:ENSG00000140836	16	16q22.2-q22.3	zinc finger homeobox 3	protein-coding	ZFHX3	zinc finger homeobox 3	O	zinc finger homeobox protein 3|AT motif-binding factor 1|AT-binding transcription factor 1|alpha-fetoprotein enhancer binding protein|zinc finger homeodomain protein 3	20210906	
+9606	546	ATRX		JMS|MRX52|RAD54|RAD54L|XH2|XNP|ZNF-HX	MIM:300032|HGNC:HGNC:886|Ensembl:ENSG00000085224	X	Xq21.1	ATRX chromatin remodeler	protein-coding	ATRX	ATRX chromatin remodeler	O	transcriptional regulator ATRX|ATP-dependent helicase ATRX|X-linked helicase II|X-linked nuclear protein|alpha thalassemia/mental retardation syndrome X-linked (RAD54 homolog, S. cerevisiae)	20210926	
+9606	604	BCL6		BCL5|BCL6A|LAZ3|ZBTB27|ZNF51	MIM:109565|HGNC:HGNC:1001|Ensembl:ENSG00000113916	3	3q27.3	BCL6 transcription repressor	protein-coding	BCL6	BCL6 transcription repressor	O	B-cell lymphoma 6 protein|B cell CLL/lymphoma 6|B-cell lymphoma 5 protein|B-cell lymphoma 6 protein transcript|BCL-5|BCL-6|cys-his2 zinc finger transcription factor|lymphoma-associated zinc finger gene on chromosome 3|protein LAZ-3|zinc finger and BTB domain-containing protein 27|zinc finger protein 51|zinc finger transcription factor BCL6S	20210919	
+9606	1958	EGR1		AT225|G0S30|KROX-24|NGFI-A|TIS8|ZIF-268|ZNF225	MIM:128990|HGNC:HGNC:3238|Ensembl:ENSG00000120738	5	5q31.2	early growth response 1	protein-coding	EGR1	early growth response 1	O	early growth response protein 1|EGR-1|nerve growth factor-induced protein A|transcription factor ETR103|transcription factor Zif268|zinc finger gene 225|zinc finger protein 225|zinc finger protein Krox-24	20210926	
+9606	2310	FOXO3B		FKHRL1P1|ZNF286C	HGNC:HGNC:3822|Ensembl:ENSG00000240445	17	17p11.2	forkhead box O3B	protein-coding	FOXO3B	forkhead box O3B	O	forkhead box protein O3B|forkhead box O3B (pseudogene)|forkhead(Drosophila) homolog (rhabdomyosarcoma) 1 like pseudogene 1	20210611	
+9606	2672	GFI1		GFI-1|GFI1A|SCN2|ZNF163	MIM:600871|HGNC:HGNC:4237|Ensembl:ENSG00000162676	1	1p22.1	growth factor independent 1 transcriptional repressor	protein-coding	GFI1	growth factor independent 1 transcriptional repressor	O	zinc finger protein Gfi-1|growth factor independence-1|growth factor independent 1 transcription repressor|growth factor independent protein 1|zinc finger protein 163	20210611	
+9606	2738	GLI4		HKR4|ZNF928	MIM:165280|HGNC:HGNC:4320|Ensembl:ENSG00000250571	8	8q24.3	GLI family zinc finger 4	protein-coding	GLI4	GLI family zinc finger 4	O	zinc finger protein GLI4|GLI-Kruppel family member GLI4 (oncogene HKR4)|glioma-associated oncogene family zinc finger 4|krueppel-related zinc finger protein 4	20210611	
+9606	3090	HIC1		ZBTB29|ZNF901|hic-1	MIM:603825|HGNC:HGNC:4909|Ensembl:ENSG00000177374	17	17p13.3	HIC ZBTB transcriptional repressor 1	protein-coding	HIC1	HIC ZBTB transcriptional repressor 1	O	hypermethylated in cancer 1 protein|hypermethylated in cancer 1|zinc finger and BTB domain-containing protein 29	20210816	
+9606	3096	HIVEP1		CIRIP|CRYBP1|GAAP|MBP-1|PRDII-BF1|Schnurri-1|ZAS1|ZNF40|ZNF40A	MIM:194540|HGNC:HGNC:4920|Ensembl:ENSG00000095951	6	6p24.1	HIVEP zinc finger 1	protein-coding	HIVEP1	HIVEP zinc finger 1	O	zinc finger protein 40|cirhin interaction protein|gate keeper of apoptosis-activating protein|human immunodeficiency virus type I enhancer binding protein 1|major histocompatibility complex binding protein 1|positive regulatory domain II binding factor 1	20210905	
+9606	3097	HIVEP2		HIV-EP2|MBP-2|MIBP1|MRD43|SHN2|ZAS2|ZNF40B	MIM:143054|HGNC:HGNC:4921|Ensembl:ENSG00000010818	6	6q24.2	HIVEP zinc finger 2	protein-coding	HIVEP2	HIVEP zinc finger 2	O	transcription factor HIVEP2|MHC binding protein-2|Schnurri-2|c-myc intron binding protein 1|human immunodeficiency virus type I enhancer binding protein 2	20210611	
+9606	3104	ZBTB48		HKR3|TZAP|ZNF855|pp9964	MIM:165270|HGNC:HGNC:4930|Ensembl:ENSG00000204859	1	1p36.31	zinc finger and BTB domain containing 48	protein-coding	ZBTB48	zinc finger and BTB domain containing 48	O	telomere zinc finger-associated protein|GLI-Kruppel family member HKR3|krueppel-related zinc finger protein 3|telomeric zinc finger-associated protein|zinc finger and BTB domain-containing protein 48|zinc finger protein 855	20210611	
+9606	4150	MAZ		PUR1|Pur-1|SAF-1|SAF-2|SAF-3|ZF87|ZNF801|Zif87	MIM:600999|HGNC:HGNC:6914|Ensembl:ENSG00000103495	16	16p11.2	MYC associated zinc finger protein	protein-coding	MAZ	MYC associated zinc finger protein	O	myc-associated zinc finger protein|MAZI|purine-binding transcription factor|serum amyloid A activating factor 1|serum amyloid A activating factor 2|transcription factor Zif87|zinc finger protein 801|zinc-finger protein, 87 kilodaltons	20210906	
+9606	4281	MID1		BBBG1|FXY|GBBB1|MIDIN|OGS1|OS|OSX|RNF59|TRIM18|XPRF|ZNFXY	MIM:300552|HGNC:HGNC:7095|Ensembl:ENSG00000101871	X	Xp22.2	midline 1	protein-coding	MID1	midline 1	O	E3 ubiquitin-protein ligase Midline-1|Opitz/BBB syndrome|RING finger protein 59|RING finger protein Midline-1|RING-type E3 ubiquitin transferase Midline-1|midline 1 RING finger protein|putative transcription factor XPRF|tripartite motif protein TRIM18|tripartite motif-containing protein 18|zinc finger on X and Y, mouse, homolog of	20210828	
+9606	4694	NDUFA1		CI-MWFE|MC1DN12|MWFE|ZNF183	MIM:300078|HGNC:HGNC:7683|Ensembl:ENSG00000125356	X	Xq24	NADH:ubiquinone oxidoreductase subunit A1	protein-coding	NDUFA1	NADH:ubiquinone oxidoreductase subunit A1	O	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 1|NADH dehydrogenase (ubiquinone) 1 alpha subcomplex, 1, 7.5kDa|NADH-ubiquinone oxidoreductase MWFE subunit|NADH:ubiquinone oxidoreductase (complex 1)|complex I MWFE subunit|type I dehydrogenase	20210731	
+9606	5178	PEG3		PW1|ZKSCAN22|ZNF904|ZSCAN24	MIM:601483|HGNC:HGNC:8826|Ensembl:ENSG00000198300	19	19q13.43	paternally expressed 3	protein-coding	PEG3	paternally expressed 3	O	paternally-expressed gene 3 protein|Kruppel-type zinc finger protein|zinc finger and SCAN domain-containing protein 24	20210711	
+9606	5324	PLAG1		PSA|SGPA|SRS4|ZNF912	MIM:603026|HGNC:HGNC:9045|Ensembl:ENSG00000181690	8	8q12.1	PLAG1 zinc finger	protein-coding	PLAG1	PLAG1 zinc finger	O	zinc finger protein PLAG1|COL1A2/PLAG1 fusion|HAS2/PLAG1 fusion|pleiomorphic adenoma gene 1	20210809	
+9606	5326	PLAGL2		ZNF900	MIM:604866|HGNC:HGNC:9047|Ensembl:ENSG00000126003	20	20q11.21	PLAG1 like zinc finger 2	protein-coding	PLAGL2	PLAG1 like zinc finger 2	O	zinc finger protein PLAGL2|C2H2-type zinc finger protein|pleiomorphic adenoma gene-like 2|pleiomorphic adenoma-like protein 2	20210919	
+9606	6018	RLF		ZN-15L|ZNF292L	MIM:180610|HGNC:HGNC:10025|Ensembl:ENSG00000117000	1	1p34.2	RLF zinc finger	protein-coding	RLF	RLF zinc finger	O	zinc finger protein Rlf|Zn-15 related|rearranged L-myc fusion gene protein|rearranged L-myc fusion sequence|zn-15-related protein	20210905	
+9606	6297	SALL2		COLB|HSAL2|Sal-2|ZNF795|p150(Sal2)	MIM:602219|HGNC:HGNC:10526|Ensembl:ENSG00000165821	14	14q11.2	spalt like transcription factor 2	protein-coding	SALL2	spalt like transcription factor 2	O	sal-like protein 2|zinc finger protein 795|zinc finger protein SALL2|zinc finger protein Spalt-2	20210704	
+9606	6299	SALL1		HEL-S-89|HSAL1|Sal-1|TBS|ZNF794	MIM:602218|HGNC:HGNC:10524|Ensembl:ENSG00000103449	16	16q12.1	spalt like transcription factor 1	protein-coding	SALL1	spalt like transcription factor 1	O	sal-like protein 1|epididymis secretory protein Li 89|zinc finger protein 794|zinc finger protein SALL1|zinc finger protein Spalt-1	20210726	
+9606	6399	TRAPPC2		MIP2A|SEDL|SEDT|TRAPPC2P1|TRS20|ZNF547L|hYP38334	MIM:300202|HGNC:HGNC:23068|Ensembl:ENSG00000196459	X	Xp22.2	trafficking protein particle complex subunit 2	protein-coding	TRAPPC2	trafficking protein particle complex subunit 2	O	trafficking protein particle complex subunit 2|sedlin|trafficking protein particle complex 2	20210708	
+9606	6940	ZNF354A		EZNF|HEL104|HKL1|KID-1|KID1|TCF17	MIM:602444|HGNC:HGNC:11628|Ensembl:ENSG00000169131	5	5q35.3	zinc finger protein 354A	protein-coding	ZNF354A	zinc finger protein 354A	O	zinc finger protein 354A|epididymis luminal protein 104|transcription factor 17|zinc finger protein eZNF	20210704	
+9606	7536	SF1		BBP|D11S636|MBBP|ZCCHC25|ZFM1|ZNF162	MIM:601516|HGNC:HGNC:12950|Ensembl:ENSG00000168066	11	11q13.1	splicing factor 1	protein-coding	SF1	splicing factor 1	O	splicing factor 1|mammalian branch point-binding protein|transcription factor ZFM1|zinc finger gene in MEN1 locus|zinc finger protein 162	20210724	
+9606	7539	ZFP37		ZNF906|zfp-37	MIM:602951|HGNC:HGNC:12863|Ensembl:ENSG00000136866	9	9q32	ZFP37 zinc finger protein	protein-coding	ZFP37	ZFP37 zinc finger protein	O	zinc finger protein 37 homolog|zinc finger protein homologous to Zfp37 in mouse	20210611	
+9606	7541	ZBTB14		ZF5|ZFP-161|ZFP-5|ZFP161|ZNF478	MIM:602126|HGNC:HGNC:12860|Ensembl:ENSG00000198081	18	18p11.31	zinc finger and BTB domain containing 14	protein-coding	ZBTB14	zinc finger and BTB domain containing 14	O	zinc finger and BTB domain-containing protein 14|ZFP161 zinc finger protein|zinc finger protein 161 homolog|zinc finger protein 478|zinc finger protein 5 homolog|zinc finger protein homologous to Zfp161 in mouse	20210905	
+9606	7551	ZNF3		A8-51|HF.12|KOX25|PP838|Zfp113	MIM:194510|HGNC:HGNC:13089|Ensembl:ENSG00000166526	7	7q22.1	zinc finger protein 3	protein-coding	ZNF3	zinc finger protein 3	O	zinc finger protein 3|C2-H2 type zinc finger protein|zinc finger protein HF.12|zinc finger protein HZF3.1|zinc finger protein KOX25	20210708	
+9606	7553	ZNF7		HF.16|KOX4|zf30	MIM:194531|HGNC:HGNC:13139|Ensembl:ENSG00000147789	8	8q24.3	zinc finger protein 7	protein-coding	ZNF7	zinc finger protein 7	O	zinc finger protein 7|C2-H2 type zinc finger protein|Zinc finger protein-7 (KOX4)|zinc finger protein 7 (KOX 4, clone HF.16)|zinc finger protein HF.16|zinc finger protein KOX4|zinc finger protein zfp30	20210611	
+9606	7554	ZNF8		HF.18|Zfp128	MIM:194532|HGNC:HGNC:13154|Ensembl:ENSG00000278129	19	19q13.43	zinc finger protein 8	protein-coding	ZNF8	zinc finger protein 8	O	zinc finger protein 8|zinc finger protein 272|zinc finger protein 8 (clone HF.18)|zinc finger protein HF.18	20210704	
+9606	7556	ZNF10		KOX1	MIM:194538|HGNC:HGNC:12879|Ensembl:ENSG00000256223	12	12q24.33	zinc finger protein 10	protein-coding	ZNF10	zinc finger protein 10	O	zinc finger protein 10|zinc finger protein 10 (KOX 1)|zinc finger protein KOX1	20210611	
+9606	7561	ZNF14		GIOT-4|KOX6	MIM:194556|HGNC:HGNC:12924|Ensembl:ENSG00000105708	19	19p13.11	zinc finger protein 14	protein-coding	ZNF14	zinc finger protein 14	O	zinc finger protein 14|gonadotropin inducible transcription repressor-4|gonadotropin-inducible ovary transcription repressor 4|zinc finger protein 14 (KOX 6)|zinc finger protein KOX6	20210611	
+9606	7564	ZNF16		HZF1|KOX9	MIM:601262|HGNC:HGNC:12947|Ensembl:ENSG00000170631	8	8q24.3	zinc finger protein 16	protein-coding	ZNF16	zinc finger protein 16	O	zinc finger protein 16|zinc finger protein KOX9|zinc finger protein Kruppel type 9	20210905	
+9606	7565	ZNF17		HPF3|KOX10	MIM:619254|HGNC:HGNC:12958|Ensembl:ENSG00000186272	19	19q13.43	zinc finger protein 17	protein-coding	ZNF17	zinc finger protein 17	O	zinc finger protein 17|zinc finger protein 17 (HPF3, KOX 10)|zinc finger protein HPF3|zinc finger protein KOX10	20210611	
+9606	7567	ZNF19		KOX12	MIM:194525|HGNC:HGNC:12981|Ensembl:ENSG00000157429	16	16q22.2	zinc finger protein 19	protein-coding	ZNF19	zinc finger protein 19	O	zinc finger protein 19|zinc finger protein 19 (KOX 12)|zinc finger protein KOX12	20210716	
+9606	7568	ZNF20		KOX13	MIM:194557|HGNC:HGNC:12992|Ensembl:ENSG00000132010	19	19p13.2	zinc finger protein 20	protein-coding	ZNF20	zinc finger protein 20	O	zinc finger protein 20|zinc finger protein KOX13	20210611	
+9606	7571	ZNF23		KOX16|ZNF359|ZNF612|Zfp612	MIM:194527|HGNC:HGNC:13023|Ensembl:ENSG00000167377	16	16q22.2	zinc finger protein 23	protein-coding	ZNF23	zinc finger protein 23	O	zinc finger protein 23|kruppel-like zinc finger factor X31|zinc finger protein 23 (KOX 16)|zinc finger protein 32|zinc finger protein 359|zinc finger protein 612	20210905	
+9606	7574	ZNF26		HEL-179|KOX20	MIM:194537|HGNC:HGNC:13053|Ensembl:ENSG00000198393	12	12q24.33	zinc finger protein 26	protein-coding	ZNF26	zinc finger protein 26	O	zinc finger protein 26|epididymis luminal protein 179|zinc finger protein KOX20	20210611	
+9606	7576	ZNF28		KOX24	HGNC:HGNC:13073|Ensembl:ENSG00000198538	19	19q13.41	zinc finger protein 28	protein-coding	ZNF28	zinc finger protein 28	O	zinc finger protein 28|zinc finger protein KOX24	20210905	
+9606	7584	ZNF35		HF.10|HF10|Zfp105	MIM:194533|HGNC:HGNC:13099|Ensembl:ENSG00000169981	3	3p21.31	zinc finger protein 35	protein-coding	ZNF35	zinc finger protein 35	O	zinc finger protein 35|zinc finger protein 35 (clone HF.10)|zinc finger protein HF.10	20210611	
+9606	7592	ZNF41		MRX89	MIM:314995|HGNC:HGNC:13107|Ensembl:ENSG00000147124	X	Xp11.3	zinc finger protein 41	protein-coding	ZNF41	zinc finger protein 41	O	zinc finger protein 41	20210704	
+9606	7620	ZNF69		Cos5|hZNF3	MIM:194543|HGNC:HGNC:13138|Ensembl:ENSG00000198429	19	19p13.2	zinc finger protein 69	protein-coding	ZNF69	zinc finger protein 69	O	zinc finger protein 69|ZNF3	20210704	
+9606	7621	ZNF70		Cos17	MIM:194544|HGNC:HGNC:13140|Ensembl:ENSG00000187792	22	22q11.23	zinc finger protein 70	protein-coding	ZNF70	zinc finger protein 70	O	zinc finger protein 70|zinc finger protein N27C7-1	20210704	
+9606	7627	ZNF75A			MIM:601473|HGNC:HGNC:13146|Ensembl:ENSG00000162086	16	16p13.3	zinc finger protein 75a	protein-coding	ZNF75A	zinc finger protein 75a	O	zinc finger protein 75A	20210611	
+9606	7633	ZNF79		pT7	MIM:194552|HGNC:HGNC:13153|Ensembl:ENSG00000196152	9	9q33.3	zinc finger protein 79	protein-coding	ZNF79	zinc finger protein 79	O	zinc finger protein 79|ZNFpT7	20210611	
+9606	7634	ZNF80		pT17	MIM:194553|HGNC:HGNC:13155|Ensembl:ENSG00000174255	3	3q13.31	zinc finger protein 80	protein-coding	ZNF80	zinc finger protein 80	O	zinc finger protein 80|ZNFPT17	20210611	
+9606	7637	ZNF84		HPF2	MIM:618554|HGNC:HGNC:13159|Ensembl:ENSG00000198040	12	12q24.33|map from Rosati ref via FISH [AFS]	zinc finger protein 84	protein-coding	ZNF84	zinc finger protein 84	O	zinc finger protein 84|zinc finger protein HPF2	20210611	
+9606	7638	ZNF221			HGNC:HGNC:13014|Ensembl:ENSG00000159905	19	19q13.31	zinc finger protein 221	protein-coding	ZNF221	zinc finger protein 221	O	zinc finger protein 221	20210905	
+9606	7639	ZNF85		HPF4|HTF1	MIM:603899|HGNC:HGNC:13160|Ensembl:ENSG00000105750	19	19p12	zinc finger protein 85	protein-coding	ZNF85	zinc finger protein 85	O	zinc finger protein 85|zinc finger protein 85 (HPF4, HTF1)	20210611	
+9606	7643	ZNF90		HTF9	MIM:603973|HGNC:HGNC:13165|Ensembl:ENSG00000213988	19	19p12	zinc finger protein 90	protein-coding	ZNF90	zinc finger protein 90	O	zinc finger protein 90|zinc finger protein HTF9	20210611	
+9606	7644	ZNF91		HPF7|HTF10	MIM:603971|HGNC:HGNC:13166|Ensembl:ENSG00000167232	19	19p12	zinc finger protein 91	protein-coding	ZNF91	zinc finger protein 91	O	zinc finger protein 91|zinc finger protein 91 (HPF7, HTF10)|zinc finger protein HPF7|zinc finger protein HTF10	20210704	
+9606	7652	ZNF99		C19orf9|F8281	MIM:603981|HGNC:HGNC:13175|Ensembl:ENSG00000213973	19	19p12	zinc finger protein 99	protein-coding	ZNF99	zinc finger protein 99	O	zinc finger protein 99|zinc finger protein ENSP00000375192	20210611	
+9606	7673	ZNF222			MIM:617357|HGNC:HGNC:13015|Ensembl:ENSG00000159885	19	19q13.31	zinc finger protein 222	protein-coding	ZNF222	zinc finger protein 222	O	zinc finger protein 222	20210611	
+9606	7678	ZNF124		HZF-16|HZF16|ZK7	MIM:194631|HGNC:HGNC:12907|Ensembl:ENSG00000196418	1	1q44	zinc finger protein 124	protein-coding	ZNF124	zinc finger protein 124	O	zinc finger protein 124|zinc finger protein HZF-16	20210611	
+9606	7690	ZNF131		ZBTB35|pHZ-10	MIM:604073|HGNC:HGNC:12915|Ensembl:ENSG00000172262	5	5p12	zinc finger protein 131	protein-coding	ZNF131	zinc finger protein 131	O	zinc finger protein 131|zinc finger and BTB domain containing 35|zinc finger protein 131 (clone pHZ-10)	20210704	
+9606	7691	ZNF132		pHZ-12	MIM:604074|HGNC:HGNC:12916|Ensembl:ENSG00000131849	19	19q13.43	zinc finger protein 132	protein-coding	ZNF132	zinc finger protein 132	O	zinc finger protein 132	20210611	
+9606	7693	ZNF134		pHZ-15	MIM:604076|HGNC:HGNC:12918|Ensembl:ENSG00000213762	19	19q13.43	zinc finger protein 134	protein-coding	ZNF134	zinc finger protein 134	O	zinc finger protein 134|zinc finger protein 134 (clone pHZ-15)	20210611	
+9606	7695	ZNF136		pHZ-20	MIM:604078|HGNC:HGNC:12920|Ensembl:ENSG00000196646	19	19p13.2	zinc finger protein 136	protein-coding	ZNF136	zinc finger protein 136	O	zinc finger protein 136	20210704	
+9606	7697	ZNF138		pHZ-32	MIM:604080|HGNC:HGNC:12922|Ensembl:ENSG00000197008	7	7q11.21	zinc finger protein 138	protein-coding	ZNF138	zinc finger protein 138	O	zinc finger protein 138|zinc finger protein 138 (clone pHZ-32)	20210611	
+9606	7699	ZNF140		pHZ-39	MIM:604082|HGNC:HGNC:12925|Ensembl:ENSG00000196387	12	12q24.33	zinc finger protein 140	protein-coding	ZNF140	zinc finger protein 140	O	zinc finger protein 140	20210611	
+9606	7700	ZNF141		D4S90|pHZ-44	MIM:194648|HGNC:HGNC:12926|Ensembl:ENSG00000131127	4	4p16.3	zinc finger protein 141	protein-coding	ZNF141	zinc finger protein 141	O	zinc finger protein 141|zinc finger protein 141 (clone pHZ-44)	20210611	
+9606	7701	ZNF142		HA4654|NEDISHM|pHZ-49	MIM:604083|HGNC:HGNC:12927|Ensembl:ENSG00000115568	2	2q35	zinc finger protein 142	protein-coding	ZNF142	zinc finger protein 142	O	zinc finger protein 142|zinc finger protein 142 (clone pHZ-49)	20210611	
+9606	7702	ZNF143		SBF|STAF|pHZ-1	MIM:603433|HGNC:HGNC:12928|Ensembl:ENSG00000166478	11	11p15.4	zinc finger protein 143	protein-coding	ZNF143	zinc finger protein 143	O	zinc finger protein 143|SPH-binding factor|hStaf|selenocysteine tRNA gene transcription-activating factor|transcriptional activator Staf	20210708	
+9606	7705	ZNF146		OZF	MIM:601505|HGNC:HGNC:12931|Ensembl:ENSG00000167635	19	19q13.12	zinc finger protein 146	protein-coding	ZNF146	zinc finger protein 146	O	zinc finger protein OZF|only zinc finger protein	20210704	
+9606	7707	ZNF148		BERF-1|BFCOL1|GDACCF|HT-BETA|ZBP-89|ZFP148|pHZ-52	MIM:601897|HGNC:HGNC:12933|Ensembl:ENSG00000163848	3	3q21.2	zinc finger protein 148	protein-coding	ZNF148	zinc finger protein 148	O	zinc finger protein 148|CACCC box-binding protein|CLL-associated antigen KW-10|transcription factor ZBP-89|zinc finger DNA-binding protein 89	20210704	
+9606	7710	ZNF154		pHZ-92	MIM:604085|HGNC:HGNC:12939|Ensembl:ENSG00000179909	19	19q13.43	zinc finger protein 154	protein-coding	ZNF154	zinc finger protein 154	O	zinc finger protein 154	20210816	
+9606	7711	ZNF155		pHZ-96	MIM:604086|HGNC:HGNC:12940|Ensembl:ENSG00000204920	19	19q13.31	zinc finger protein 155	protein-coding	ZNF155	zinc finger protein 155	O	zinc finger protein 155|KRAB A domain	20210905	
+9606	7712	ZNF157		HZF22	MIM:300024|HGNC:HGNC:12942|Ensembl:ENSG00000147117	X	Xp11.3	zinc finger protein 157	protein-coding	ZNF157	zinc finger protein 157	O	zinc finger protein 157|zinc finger protein 22|zinc finger protein HZF22	20210611	
+9606	7718	ZNF165		CT53|LD65|ZSCAN7	MIM:600834|HGNC:HGNC:12953|Ensembl:ENSG00000197279	6	6p22.1	zinc finger protein 165	protein-coding	ZNF165	zinc finger protein 165	O	zinc finger protein 165|cancer/testis antigen 53|zinc finger and SCAN domain-containing protein 7	20210611	
+9606	7726	TRIM26		AFP|RNF95|ZNF173	MIM:600830|HGNC:HGNC:12962|Ensembl:ENSG00000234127	6	6p22.1	tripartite motif containing 26	protein-coding	TRIM26	tripartite motif containing 26	O	tripartite motif-containing protein 26|RING finger protein 95|acid finger protein|widely expressed acid zinc finger protein|zinc finger protein 173	20210808	
+9606	7727	ZNF174		ZSCAN8	MIM:603900|HGNC:HGNC:12963|Ensembl:ENSG00000103343	16	16p13.3	zinc finger protein 174	protein-coding	ZNF174	zinc finger protein 174	O	zinc finger protein 174|AW-1|zinc finger and SCAN domain-containing protein 8	20210704	
+9606	7728	ZNF175		OTK18	MIM:601139|HGNC:HGNC:12964|Ensembl:ENSG00000105497	19	19q13.41	zinc finger protein 175	protein-coding	ZNF175	zinc finger protein 175	O	zinc finger protein 175|zinc finger protein OTK18	20210611	
+9606	7730	ZNF177		PIGX	MIM:601276|HGNC:HGNC:12966|Ensembl:ENSG00000188629|Ensembl:ENSG00000270011	19	19p13.2	zinc finger protein 177	protein-coding	ZNF177	zinc finger protein 177	O	zinc finger protein 177	20210704	
+9606	7733	ZNF180		HHZ168	MIM:606740|HGNC:HGNC:12970|Ensembl:ENSG00000167384	19	19q13.31	zinc finger protein 180	protein-coding	ZNF180	zinc finger protein 180	O	zinc finger protein 180	20210611	
+9606	7738	ZNF184		kr-ZNF3	MIM:602277|HGNC:HGNC:12975|Ensembl:ENSG00000096654	6	6p22.1	zinc finger protein 184	protein-coding	ZNF184	zinc finger protein 184	O	zinc finger protein 184|zinc finger protein 184 (Kruppel-like)	20210726	
+9606	7739	ZNF185		SCELL	MIM:300381|HGNC:HGNC:12976|Ensembl:ENSG00000147394	X	Xq28	zinc finger protein 185 with LIM domain	protein-coding	ZNF185	zinc finger protein 185 with LIM domain	O	zinc finger protein 185|P1-A|sciellin like|zinc finger protein 185 (LIM domain)	20210619	
+9606	7743	ZNF189			MIM:603132|HGNC:HGNC:12980|Ensembl:ENSG00000136870	9	9q31.1	zinc finger protein 189	protein-coding	ZNF189	zinc finger protein 189	O	zinc finger protein 189	20210611	
+9606	7752	ZNF200			MIM:603231|HGNC:HGNC:12993|Ensembl:ENSG00000010539	16	16p13.3	zinc finger protein 200	protein-coding	ZNF200	zinc finger protein 200	O	zinc finger protein 200	20210611	
+9606	10795	ZNF268		HZF3	MIM:604753|HGNC:HGNC:13061|Ensembl:ENSG00000090612	12	12q24.33	zinc finger protein 268	protein-coding	ZNF268	zinc finger protein 268	O	zinc finger protein 268|zinc finger protein 3|zinc finger protein HZF3	20210611	
+9606	27192	TRAPPC2P6		SEDLP6	HGNC:HGNC:10715	Y	Yq11.23	trafficking protein particle complex 2 pseudogene 6	pseudo	TRAPPC2P6	trafficking protein particle complex 2 pseudogene 6	O	spondyloepiphyseal dysplasia, late, pseudogene 6	20190324	
+9606	27193	TRAPPC2P5		SEDLP5	HGNC:HGNC:10714	Y	Yq11.23	trafficking protein particle complex 2 pseudogene 5	pseudo	TRAPPC2P5	trafficking protein particle complex 2 pseudogene 5	O	spondyloepiphyseal dysplasia, late, pseudogene 5	20210611	
+9606	27194	TRAPPC2P4		SEDLP4	HGNC:HGNC:10713	Y	Yq11.23	trafficking protein particle complex 2 pseudogene 4	pseudo	TRAPPC2P4	trafficking protein particle complex 2 pseudogene 4	O	spondyloepiphyseal dysplasia, late, pseudogene 4	20210611	
+9606	27195	TRAPPC2P3		SEDLP3	HGNC:HGNC:10712	Y	Yq11.222	trafficking protein particle complex 2 pseudogene 3	pseudo	TRAPPC2P3	trafficking protein particle complex 2 pseudogene 3	O	spondyloepiphyseal dysplasia, late, pseudogene 3	20210611	
+9606	27196	TRAPPC2P2		SEDLP2	HGNC:HGNC:10711	8	8q13.3	trafficking protein particle complex 2 pseudogene 2	pseudo	TRAPPC2P2	trafficking protein particle complex 2 pseudogene 2	O	spondyloepiphyseal dysplasia, late, pseudogene 2	20210611	
+9606	57008	RLFP1		RLFP	HGNC:HGNC:16738	4	4q26	RLF pseudogene 1	pseudo	RLFP1	RLF pseudogene 1	O	Zn-15 related zinc finger protein RLF pseudogene|rearranged L-myc fusion pseudogene 1	20210611	
+9606	79903	NAA60		HAT4|NAT15|NatF|hNaa60	MIM:614246|HGNC:HGNC:25875|Ensembl:ENSG00000122390	16	16p13.3	N-alpha-acetyltransferase 60, NatF catalytic subunit	protein-coding	NAA60	N-alpha-acetyltransferase 60, NatF catalytic subunit	O	N-alpha-acetyltransferase 60|N-acetyltransferase 15 (GCN5-related, putative)|N-alpha-acetyltransferase F|epididymis secretory sperm binding protein|histone acetyltransferase type B protein 4	20210704	
+9606	79943	ZNF696			HGNC:HGNC:25872|Ensembl:ENSG00000185730	8	8q24.3	zinc finger protein 696	protein-coding	ZNF696	zinc finger protein 696	O	zinc finger protein 696	20210611	
+9606	79986	ZNF702P		ZNF702	HGNC:HGNC:25775|Ensembl:ENSG00000242779	19	19q13.41	zinc finger protein 702, pseudogene	pseudo	ZNF702P	zinc finger protein 702, pseudogene	O		20210611	
+9606	84527	ZNF559		NBLA00121	HGNC:HGNC:28197|Ensembl:ENSG00000188321	19	19p13.2	zinc finger protein 559	protein-coding	ZNF559	zinc finger protein 559	O	zinc finger protein 559|putative protein product of Nbla00121	20210611	
+9606	84561	SLC12A8		CCC9	MIM:611316|HGNC:HGNC:15595|Ensembl:ENSG00000221955	3	3q21.2	solute carrier family 12 member 8	protein-coding	SLC12A8	solute carrier family 12 member 8	O	solute carrier family 12 member 8|cation-chloride cotransporter 9|solute carrier family 12 (sodium/potassium/chloride transporters), member 8	20210611	
+9606	90589	ZNF625			HGNC:HGNC:30571|Ensembl:ENSG00000257591	19	19p13.2	zinc finger protein 625	protein-coding	ZNF625	zinc finger protein 625	O	zinc finger protein 625	20210611	
+9606	139163	SALL1P1		SALL1P	HGNC:HGNC:10525	X	Xp11.23	spalt like transcription factor 1 pseudogene 1	pseudo	SALL1P1	spalt like transcription factor 1 pseudogene 1	O	sal-like 1 pseudogene 1	20210611	
+9606	152845	LOC152845			Ensembl:ENSG00000214980	4	4q21.23	PLAG1 like zinc finger 2 pseudogene	pseudo				pleiomorphic adenoma gene-like 2 pseudogene	20210611	
+9606	162968	ZNF497			HGNC:HGNC:23714|Ensembl:ENSG00000174586	19	19q13.43	zinc finger protein 497	protein-coding	ZNF497	zinc finger protein 497	O	zinc finger protein 497|zinc finger-like protein	20210611	
+9606	167359	NIM1K		NIM1	HGNC:HGNC:28646|Ensembl:ENSG00000177453	5	5p12	NIM1 serine/threonine protein kinase	protein-coding	NIM1K	NIM1 serine/threonine protein kinase	O	serine/threonine-protein kinase NIM1	20210905	
+9606	201651	AADACP1			HGNC:HGNC:50305|Ensembl:ENSG00000240602	3	3q25.1	arylacetamide deacetylase pseudogene 1	pseudo	AADACP1	arylacetamide deacetylase pseudogene 1	O	arylacetamide deacetylase (esterase) pseudogene	20210611	
+9606	286128	ZFP41		ZNF753|zfp-41	HGNC:HGNC:26786|Ensembl:ENSG00000181638	8	8q24.3	ZFP41 zinc finger protein	protein-coding	ZFP41	ZFP41 zinc finger protein	O	zinc finger protein 41 homolog	20210708	
+9606	392597	TRAPPC2P7		SEDLP7	HGNC:HGNC:10716	Y	Yq11.222	trafficking protein particle complex 2 pseudogene 7	pseudo	TRAPPC2P7	trafficking protein particle complex 2 pseudogene 7	O	spondyloepiphyseal dysplasia, late, pseudogene 7	20210611	
+9606	404024	TRIM26BP		TRIM26P|TRIM26P1	HGNC:HGNC:31338|Ensembl:ENSG00000236475	6	6p22.1	tripartite motif containing 26B, pseudogene	pseudo	TRIM26BP	tripartite motif containing 26B, pseudogene	O	tripartite motif containing 26 pseudogene 1|tripartite motif-containing 26 pseudogene	20210611	
+9606	414751	TRAPPC2P8		TRAPPC2P3B	HGNC:HGNC:37731	Y	Yq11.222	trafficking protein particle complex 2 pseudogene 8	pseudo	TRAPPC2P8	trafficking protein particle complex 2 pseudogene 8	O	spondyloepiphyseal dysplasia, late, pseudogene	20210611	
+9606	414752	TRAPPC2P10		TRAPPC2P5B	HGNC:HGNC:37732	Y	Yq11.23	trafficking protein particle complex 2 pseudogene 10	pseudo	TRAPPC2P10	trafficking protein particle complex 2 pseudogene 10	O	spondyloepiphyseal dysplasia, late, pseudogene, centromeric	20210611	
+9606	414753	TRAPPC2P9		TRAPPC2P4B	HGNC:HGNC:37733	Y	Yq11.223	trafficking protein particle complex 2 pseudogene 9	pseudo	TRAPPC2P9	trafficking protein particle complex 2 pseudogene 9	O	spondyloepiphyseal dysplasia, late, pseudogene	20210611	
+9606	441666	LOC441666			Ensembl:ENSG00000215146	10	10q11.21	zinc finger protein 91 pseudogene	pseudo					20210611	
+9606	441843	ZNF209P		ZNF209	HGNC:HGNC:13000	19	19p12	zinc finger protein 209, pseudogene	pseudo	ZNF209P	zinc finger protein 209, pseudogene	O	zinc finger protein 675 pseudogene	20210611	
+9606	642280	ZNF876P			HGNC:HGNC:32472|Ensembl:ENSG00000198155	4	4p16.3	zinc finger protein 876, pseudogene	pseudo	ZNF876P	zinc finger protein 876, pseudogene	O		20210611	
+9606	645749	LOC645749				6	6q24.3	zinc finger protein 131 pseudogene	pseudo					20210611	
+61853	16545229	ND3				MT		NADH dehydrogenase subunit 3	protein-coding					20190926	
+61853	16545230	COX3				MT		cytochrome c oxidase subunit III	protein-coding					20190926	
+61853	16545231	CYTB				MT		cytochrome b	protein-coding					20190926	
+61853	16545232	ND6				MT		NADH dehydrogenase subunit 6	protein-coding					20190926	
+61853	16545233	ND5				MT		NADH dehydrogenase subunit 5	protein-coding					20190926	
+61853	16545234	ND4				MT		NADH dehydrogenase subunit 4	protein-coding					20190926	
+61853	16545235	ND4L				MT		NADH dehydrogenase subunit 4L	protein-coding					20190926	
+61853	16545236	ATP6				MT		ATP synthase F0 subunit 6	protein-coding					20190926	
+61853	16545237	ATP8				MT		ATP synthase F0 subunit 8	protein-coding					20190926	
+61853	16545238	COX2				MT		cytochrome c oxidase subunit II	protein-coding					20190926	
+9606	100131411	LOC100131411				5	5q13.3	zinc finger protein 28 pseudogene	pseudo					20210611	
+9606	100133252	LOC100133252			Ensembl:ENSG00000232716	7	7q32.3	zinc finger protein 131 pseudogene	pseudo					20210611	
+9606	100419451	LOC100419451				7	7q22.1	zinc finger protein 3 pseudogene	pseudo					20210611	
+9606	100419511	LOC100419511				2	2q36.1	zinc finger protein 79 pseudogene	pseudo					20210611	
+9606	100419512	LOC100419512			Ensembl:ENSG00000235653	2	2p22.1	zinc finger protein 19 pseudogene	pseudo					20210611	
+9606	100419515	LOC100419515			Ensembl:ENSG00000275318	9	9q22.31	zinc finger protein 41 pseudogene	pseudo					20210611	
+9606	100419545	LOC100419545				5	5p13.1	zinc finger protein 35 pseudogene	pseudo					20210611	
+9606	100419553	LOC100419553			Ensembl:ENSG00000277866	5	5q33.1	zinc finger protein 35 pseudogene	pseudo					20210611	
+9606	100419609	ZNF70P1		ZNF314P|bCX269C15.3|dJ1033B10.7	HGNC:HGNC:13846	6	6p21.32	zinc finger protein 70 pseudogene 1	pseudo	ZNF70P1	zinc finger protein 70 pseudogene 1	O	zinc finger protein 314, pseudogene	20210611	
+9606	100419642	LOC100419642			Ensembl:ENSG00000223740	7	7p11.2	zinc finger protein 85 pseudogene	pseudo					20210611	
+9606	100419706	LOC100419706				19	19q13.41	zinc finger protein 84 pseudogene	pseudo					20210724	
+9606	100419707	LOC100419707				19	19q13.41	zinc finger protein 41 pseudogene	pseudo					20210611	
+9606	100419709	ZNF887P		ZNF887	HGNC:HGNC:38700	19	19p13.2	zinc finger protein 887, pseudogene	pseudo	ZNF887P	zinc finger protein 887, pseudogene	O	zinc finger protein 20 pseudogene	20210611	
+9606	100419796	LOC100419796				1	1p34.1	zinc finger protein 146 pseudogene	pseudo					20210611	
+9606	100419834	LOC100419834				19	19q13.11	zinc finger protein 134 pseudogene	pseudo					20210611	
+9606	100421259	LOC100421259			Ensembl:ENSG00000260251	16	16q11.2	zinc finger and BTB domain containing 14 pseudogene	pseudo				ZFP161 zinc finger protein pseudogene	20210611	
+9606	100529215	ZNF559-ZNF177			HGNC:HGNC:42964|Ensembl:ENSG00000270011	19	19p13.2	ZNF559-ZNF177 readthrough	protein-coding	ZNF559-ZNF177	ZNF559-ZNF177 readthrough	O	zinc finger protein 177	20210611	
+9606	100529855	ZNF625-ZNF20			HGNC:HGNC:48368	19	19p13.2	ZNF625-ZNF20 readthrough (NMD candidate)	ncRNA	ZNF625-ZNF20	ZNF625-ZNF20 readthrough (NMD candidate)	O		20210724	
+9606	100533638	LOC100533638				19	19p12	zinc finger protein 85 pseudogene	pseudo					20210611	
+9606	100533643	LOC100533643			Ensembl:ENSG00000275598	11	11q12.3	zinc finger protein 91 pseudogene	pseudo				zinc finger protein 273 pseudogene	20210611	
+9606	100533707	LOC100533707				9	9q13	ZFP37 zinc finger protein pseudogene	pseudo					20210611	
+61853	100579226	LOC100579226		ZNF716	Ensembl:ENSNLEG00000000405	Un		zinc finger protein 679	protein-coding				zinc finger protein 679|zinc finger protein 716	20201127	
+61853	100579275	ZNF808			Ensembl:ENSNLEG00000006042	10		zinc finger protein 808	protein-coding				zinc finger protein 808	20201127	
+61853	100579318	ZNF317			Ensembl:ENSNLEG00000029885	10		zinc finger protein 317	protein-coding				zinc finger protein 317	20201127	
+61853	100579324	ZNF827				7b		zinc finger protein 827	protein-coding				zinc finger protein 827	20201127	
+61853	100579423	ZNF654				21		zinc finger protein 654	protein-coding				zinc finger protein 654|zinc finger protein Rlf	20201127	
+61853	100579552	ZNF541			Ensembl:ENSNLEG00000034044	17		zinc finger protein 541	protein-coding				zinc finger protein 541	20201127	
+61853	100579619	ZNF83				10		zinc finger protein 83	protein-coding				LOW QUALITY PROTEIN: zinc finger protein 83	20201127	
+61853	100579662	ZNF620			Ensembl:ENSNLEG00000005719	4		zinc finger protein 620	protein-coding				zinc finger protein 620	20201127	
+61853	100579663	LOC100579663		ZNF44	Ensembl:ENSNLEG00000036219	10		zinc finger protein 44	protein-coding				zinc finger protein 44	20201127	
+61853	100579789	ZNF274			Ensembl:ENSNLEG00000011103	10		zinc finger protein 274	protein-coding				neurotrophin receptor-interacting factor homolog	20201127	
+61853	100579806	LOC100579806		ZNF479		Un		zinc finger protein 479	protein-coding				zinc finger protein 479	20201127	
+61853	100579814	LOC100579814		ZNF676		3		zinc finger protein 676	protein-coding				zinc finger protein 676	20201128	
+61853	100579958	LOC100579958		ZNF701	Ensembl:ENSNLEG00000006043	10		zinc finger protein 701	protein-coding				zinc finger protein 701	20201127	
+61853	100580030	ZNF396			Ensembl:ENSNLEG00000006258	4		zinc finger protein 396	protein-coding				zinc finger protein 396	20201217	
+61853	100580114	ZNF266			Ensembl:ENSNLEG00000028253	10		zinc finger protein 266	protein-coding				zinc finger protein 266	20201217	
+61853	100580158	ZNF79			Ensembl:ENSNLEG00000017444	8		zinc finger protein 79	protein-coding				zinc finger protein 79	20201026	
+61853	100580215	ZNF519			Ensembl:ENSNLEG00000009267	4		zinc finger protein 519	protein-coding				zinc finger protein 519	20201127	
+61853	100580328	ZNF536			Ensembl:ENSNLEG00000007605	10		zinc finger protein 536	protein-coding				zinc finger protein 536	20201127	
+61853	100580466	LOC100580466		ZNF544	Ensembl:ENSNLEG00000028248	10		zinc finger protein 544	protein-coding				zinc finger protein 34|zinc finger protein 544|zinc finger protein 606|zinc finger protein 69 homolog	20201127	
+61853	100580486	LOC100580486		ZNF729		3		zinc finger protein 257	protein-coding				zinc finger protein 257|zinc finger protein 729	20201127	
+61853	100580591	ZNF276			Ensembl:ENSNLEG00000015731	2		zinc finger protein 276	protein-coding				zinc finger protein 276	20201128	
+61853	100580633	LOC100580633		ZNF611	Ensembl:ENSNLEG00000006047	10		zinc finger protein 611	protein-coding				zinc finger protein 611	20201217	
+61853	100580846	ZNF592			Ensembl:ENSNLEG00000011267	6		zinc finger protein 592	protein-coding				zinc finger protein 592	20201217	
+61853	100580991	LOC100580991		ZNF136	Ensembl:ENSNLEG00000033491	10		zinc finger protein 136	protein-coding				zinc finger protein 136	20201127	
+61853	100581112	ZNF132				10		zinc finger protein 132	protein-coding				zinc finger protein 132	20201127	
+61853	100581134	LOC100581134		ZNF430	Ensembl:ENSNLEG00000034805	3		zinc finger protein 430	protein-coding				LOW QUALITY PROTEIN: zinc finger protein 430	20201129	
+61853	100581140	ZNF576			Ensembl:ENSNLEG00000027737	17		zinc finger protein 576	protein-coding				zinc finger protein 576	20210123	
+61853	100581143	ZNF821			Ensembl:ENSNLEG00000029369	2		zinc finger protein 821	protein-coding				zinc finger protein 821	20210327	
+61853	100581167	ZNF695			Ensembl:ENSNLEG00000004244	5		zinc finger protein 695	protein-coding				zinc finger protein 695	20201026	
+61853	100581232	ZNF462			Ensembl:ENSNLEG00000017310	1a		zinc finger protein 462	protein-coding				zinc finger protein 462	20201127	
+61853	100581461	LOC100581461		ZNF43		3		zinc finger protein 43	protein-coding				zinc finger protein 43	20201217	
+61853	100581505	ZNF786			Ensembl:ENSNLEG00000003681	13		zinc finger protein 786	protein-coding				zinc finger protein 786	20201127	
+61853	100581533	ZNF621			Ensembl:ENSNLEG00000005721	4		zinc finger protein 621	protein-coding				zinc finger protein 621	20201026	
+61853	100581535	LOC100581535		ZNF177	Ensembl:ENSNLEG00000011974	10		zinc finger protein 177	protein-coding				zinc finger protein 177	20201127	
+61853	100581536	ZNF563			Ensembl:ENSNLEG00000035842	10		zinc finger protein 563	protein-coding				zinc finger protein 563	20201127	
+61853	100581559	ZNF608			Ensembl:ENSNLEG00000012117	2		zinc finger protein 608	protein-coding				zinc finger protein 608	20201127	
+61853	100581566	ZNF727			Ensembl:ENSNLEG00000007675	17		zinc finger protein 727	protein-coding				putative zinc finger protein 727	20201127	
+61853	100581681	ZNF512B				13		zinc finger protein 512B	protein-coding				zinc finger protein 512B	20201127	
+61853	100581686	ZNF346			Ensembl:ENSNLEG00000012612	Un		zinc finger protein 346	protein-coding				zinc finger protein 346	20201127	
+61853	100581726	LOC100581726		ZNF468	Ensembl:ENSNLEG00000027937	10		zinc finger protein 468	protein-coding				zinc finger protein 468|zinc finger protein 677	20201127	
+61853	100581851	ZNF311			Ensembl:ENSNLEG00000004619	22a		zinc finger protein 311	protein-coding				zinc finger protein 311	20201127	
+61853	100581870	ZNF788P				10		zinc finger family member 788, pseudogene	pseudo				putative KRAB domain-containing protein ZNF788	20201127	
+61853	100581965	ZNF804A				22a		zinc finger protein 804A	protein-coding				zinc finger protein 804A	20201127	
+61853	100581997	ZNF444				10		zinc finger protein 444	protein-coding				zinc finger protein 444	20201127	
+61853	100582025	ZNF891				10		zinc finger protein 891	protein-coding				zinc finger protein 891	20201128	
+61853	100582052	ZNF670			Ensembl:ENSNLEG00000004253	5		zinc finger protein 670	protein-coding				zinc finger protein 670	20201217	
+61853	100582059	LOC100582059		ZNF320		10		zinc finger protein 320	protein-coding				zinc finger protein 320	20201127	
+61853	100582062	ZNF425			Ensembl:ENSNLEG00000003692	13		zinc finger protein 425	protein-coding				zinc finger protein 425	20201127	
+61853	100582121	ZNF488				18		zinc finger protein 488	protein-coding				zinc finger protein 488	20201127	
+61853	100582182	ZNF436			Ensembl:ENSNLEG00000008477	24		zinc finger protein 436	protein-coding				zinc finger protein 436	20210306	
+61853	100582186	ZNF202				15		zinc finger protein 202	protein-coding				zinc finger protein 202	20201127	
+61853	100582207	ZNF625				10		zinc finger protein 625	protein-coding				zinc finger protein 625	20201127	
+61853	100582221	ZNF837				10		zinc finger protein 837	protein-coding				zinc finger protein 837	20201127	
+61853	100582283	ZNF512			Ensembl:ENSNLEG00000003871	19		zinc finger protein 512	protein-coding				zinc finger protein 512	20210327	
+61853	100582318	ZNF619				4		zinc finger protein 619	protein-coding				LOW QUALITY PROTEIN: zinc finger protein 619	20201127	
+61853	100582331	ZNF195			Ensembl:ENSNLEG00000010804	4		zinc finger protein 195	protein-coding				zinc finger protein 195	20201127	
+61853	100582382	ZNF669			Ensembl:ENSNLEG00000004254	5		zinc finger protein 669	protein-coding				zinc finger protein 669	20201127	
+61853	100582470	ZNF358				Un		zinc finger protein 358	protein-coding				zinc finger protein 358	20201127	
+61853	100582538	ZNF433				10		zinc finger protein 433	protein-coding				zinc finger protein 433	20201127	
+61853	100582552	ZNF365			Ensembl:ENSNLEG00000012085	18		zinc finger protein 365	protein-coding				protein ZNF365	20201127	
+61853	100582554	ZNF446			Ensembl:ENSNLEG00000011162	10		zinc finger protein 446	protein-coding				zinc finger protein 446	20201127	
+61853	100582612	ZNF133			Ensembl:ENSNLEG00000009749	13		zinc finger protein 133	protein-coding				zinc finger protein 133	20201026	
+61853	100582685	LOC100582685		ZNF708		3		zinc finger protein 708	protein-coding				LOW QUALITY PROTEIN: zinc finger protein 708	20201127	
+61853	100582726	LOC100582726		ZNF124	Ensembl:ENSNLEG00000030331	5		zinc finger protein 124	protein-coding				zinc finger protein 124	20201127	
+61853	100582735	ZNF160			Ensembl:ENSNLEG00000032951	10		zinc finger protein 160	protein-coding				zinc finger protein 160	20201127	
+61853	100582739	ZNF212			Ensembl:ENSNLEG00000035644	13		zinc finger protein 212	protein-coding				zinc finger protein 212	20201127	
+61853	100583370	LOC100583370		ZNF226	Ensembl:ENSNLEG00000001918	17		zinc finger protein 226	protein-coding				zinc finger protein 226	20201127	
+61853	100583856	LOC100583856		ZNF658		22a		zinc finger protein 658	protein-coding				LOW QUALITY PROTEIN: zinc finger protein 658	20201127	
+61853	100583910	LOC100583910		ZNF429	Ensembl:ENSNLEG00000000122	3		zinc finger protein 429	protein-coding				zinc finger protein 429	20201127	
+61853	100584033	LOC100584033		ZNF267		2		zinc finger protein 267	protein-coding				zinc finger protein 267	20201128	
+61853	100584110	LOC100584110		ZNF558	Ensembl:ENSNLEG00000036293	10		zinc finger protein 558	protein-coding				zinc finger protein 558	20201127	
+61853	100584208	LOC100584208		ZNF799	Ensembl:ENSNLEG00000034475	10		zinc finger protein 799	protein-coding				zinc finger protein 799	20201127	
+61853	100584655	LOC100584655		ZNF486	Ensembl:ENSNLEG00000031068	10		zinc finger protein 486	protein-coding				zinc finger protein 486	20201127	
+61853	100584911	LOC100584911		ZNF493		3		protein ZNF738	protein-coding				protein ZNF738|zinc finger protein 724|zinc finger protein 493	20201127	
+61853	100585205	LOC100585205		ZNF57	Ensembl:ENSNLEG00000035301	17		zinc finger protein 57	protein-coding				zinc finger protein 57	20201127	
+9606	100652813	LOC100652813				18	18p11.21	zinc finger protein 138 pseudogene	pseudo					20210611	
+9606	100873799	ZNF90P3			HGNC:HGNC:39882	7	7q11.21	zinc finger protein 90 pseudogene 3	pseudo	ZNF90P3	zinc finger protein 90 pseudogene 3	O		20210611	
+9606	105372481	ERVK3-1			HGNC:HGNC:30466|Ensembl:ENSG00000142396	19	19q13.43	endogenous retrovirus group K3 member 1	protein-coding	ERVK3-1	endogenous retrovirus group K3 member 1	O	endogenous retrovirus group K3 member 1|HERV-K(HML6-1)	20211001	
+9606	108903150	ZNF8-ERVK3-1			Ensembl:ENSG00000267216	19	19q13.43	ZNF8-ERVK3-1 readthrough	ncRNA					20210518	
