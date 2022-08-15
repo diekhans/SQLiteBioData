@@ -1,155 +1,95 @@
 #!/usr/bin/env python3
 
-import sys
 from os import path as osp
 import argparse
 from pycbio.sys import fileOps
-from pycbio.db import sqliteOps
 from pycbio.tsv import TsvReader
-
-sqllenReLib = "/cluster/home/markd/opt/current/x86_64/lib/sqlean-0.9.1/re.so"
+from multiprocessing import Pool
 
 def parseArgs():
-    desc = """generate test cases from a full refseqGeneDb
+    desc = """generate test cases from download files.
     """
     parser = argparse.ArgumentParser(description=desc)
-    parser.add_argument("refseqGeneDb",
-                        help="full database")
     parser.add_argument("refseqCasesTsv",
-                        help="contains either GeneID and/or accession columns")
+                        help="contains GeneID column is used, all others ignored")
+    parser.add_argument("indir",
+                        help="directory with downloaded RefSeq gene files")
     parser.add_argument("outdir",
                         help="directory for output")
     return parser.parse_args()
 
-createTmpTblSql = """
-CREATE TEMP TABLE testGeneIds (
-    GeneID INT
-);
-CREATE INDEX testGeneIds_GeneID ON testGeneIds (GeneID);
-"""
+geneIdFiles = (
+    "gene2accession",
+    "gene2ensembl",
+    "gene2go",
+    "gene2pubmed",
+    "gene2refseq",
+    "gene2vega",
+    "gene_group",
+    "gene_info",
+    "gene_neighbors",
+    "gene_orthologs",
+)
+# FIXME:  what is  "gene_orthologs_supplemental",
 
-loadGeneIdsSql = """
-INSERT INTO testGeneIds (GeneID) VALUES (?);
-"""
+geneHistoryFile = "gene_history"
 
-# This was used to generate original set of test case, however
-# they were move to a file to allow added specific ones.  This remains
-# here for documentation.
-getTaxonCaseSql = r"""
--- symbol without synonym match
-INSERT INTO testGeneIds
-   SELECT GeneID FROM gene_info WHERE (tax_id = :tax_id) AND
-       ((Symbol LIKE "znf%") AND
-        (Synonyms NOT REGEXP "(\||^)[zZ][nN][fF]")) LIMIT 50;
+protAccFile = "gene_refseq_uniprotkb_collab"
 
--- synonym without symbol match
-INSERT INTO testGeneIds
-   SELECT GeneID FROM gene_info WHERE (tax_id = :tax_id) AND
-       ((Symbol NOT LIKE "znf%") AND
-        (Synonyms REGEXP "(\||^)[zZ][nN][fF]")) LIMIT 25;
+def drop_version(accv):
+    return accv.split('.')[0]
 
--- some other stuff, don't get NEWENTRY stuff
-INSERT INTO testGeneIds
-   SELECT GeneID FROM gene_info WHERE (tax_id = :tax_id) AND
-       (Symbol != "NEWENTRY") AND
-       ((Symbol NOT LIKE "znf%")) AND
-        (Synonyms NOT REGEXP "(\||^)[zZ][nN][fF]") LIMIT 10;
-"""
+def int_or_none_in(v):
+    return None if v == '-' else int(v)
 
-getHomologSql = """
--- make sure we have all paralogs and orthologs in table
-INSERT INTO testGeneIds
-    SELECT Other_GeneId FROM gene_group WHERE GeneId IN (select GeneID FROM testGeneIds);
-INSERT INTO testGeneIds
-    SELECT GeneId FROM gene_group WHERE Other_GeneId IN (select GeneID FROM testGeneIds);
-"""
+def int_or_none_out(v):
+    return '-' if v is None else str(v)
 
+geneIdTypeMap = {
+    'GeneID': (int_or_none_in, int_or_none_out),
+    'Discontinued_GeneID': (int_or_none_in, int_or_none_out)
+}
 
 def loadRefseqCasesTsv(refseqCasesTsv):
-    # tuple per row
-    typeMap = {
-        'tax_id': int,
-        'GeneID': int
-    }
-    refseqCases = [r for r in TsvReader(refseqCasesTsv, typeMap=typeMap)]
-    if len(refseqCases) == 0:
+    """returns a set of geneids and process accessions"""
+    testGeneIds = set()
+    testProtAccs = set()
+    for row in TsvReader(refseqCasesTsv, typeMap=geneIdTypeMap):
+        testGeneIds.add(row.GeneID)
+        if row.protein_accession != "":
+            testProtAccs.add(drop_version(row.protein_accession))
+    if len(testGeneIds) == 0:
         raise Exception(f"no data found in '{refseqCasesTsv}'")
-    if ("GeneID" not in refseqCases[0]._columns_) and ("accession" not in refseqCases[0]._columns_):
-        raise Exception(f"TSV must have 'GeneId' or 'accession' columns, or both: '{refseqCasesTsv}'")
-    return refseqCases
+    return testGeneIds, testProtAccs
 
-def accDropVersion(acc):
-    return acc.split('.')[0]
+def filterRefSeqGeneFile(filterFunc, filterSet, indir, outdir, fname):
+    "load file based on selecting by gene ids"
+    reader = TsvReader(osp.join(indir, fname + ".gz"), typeMap=geneIdTypeMap)
+    with open(osp.join(outdir, fname), 'w') as outfh:
+        outfh.write('#' + '\t'.join(reader.columns) + '\n')
+        for row in reader:
+            if filterFunc(filterSet, row):
+                fileOps.prRow(outfh, row)
 
-def queryGeneId(cur, acc):
-    sql = "SELECT distinct GeneID FROM gene2refseq WHERE (RNA_nucleotide_accession = ?)"
-    cur.execute(sql, (accDropVersion(acc),))
-    # should only get one back, but consume cursor
-    geneId = None
-    for row in cur:
-        geneId = row[0]
-    if geneId is None:
-        print(f"Warning: '{acc}' not found in database", file=sys.stderr)
-    return geneId
+def _geneIdFilterFunc(testGeneIds, row):
+    return row.GeneID in testGeneIds
 
-def getGeneIdsForAccessions(cur, refseqCases):
-    geneIds = set()
-    for refseqCase in refseqCases:
-        geneId = queryGeneId(cur, refseqCase.accession)
-        if geneId is not None:
-            geneIds.add(geneId)
-    return geneIds
+def _geneIdHistoryFilterFunc(testGeneIds, row):
+    return (row.GeneID in testGeneIds) or (row.Discontinued_GeneID in testGeneIds)
 
-def getGeneIds(cur, refseqCases):
-    if "GeneID" in refseqCases[0]._columns_:
-        return frozenset([r.GeneID for r in refseqCases])
-    else:
-        return getGeneIdsForAccessions(cur, refseqCases)
+def _protAccFilterFunc(testProtAccs, row):
+    return drop_version(row.NCBI_protein_accession) in testProtAccs\
 
-def createGeneIdTable(cur, geneIds):
-    cur.execute(createTmpTblSql).fetchall()
-    # each entry must be a row
-    cur.executemany(loadGeneIdsSql, [(g,) for g in geneIds]).fetchall()
-    cur.execute(getHomologSql).fetchall()
-
-def writeTsvHeader(cur, table, fh):
-    "use this rather than cursor.description so can handle empty result"
-    cur.execute(f"PRAGMA table_info({table})")
-    cols = [r[1] for r in cur]
-    fh.write('#')
-    fileOps.prRow(fh, cols)
-
-def createGeneDataFile(cur, table, sql, fname):
-    with open(fname, 'w') as fh:
-        writeTsvHeader(cur, table, fh)
-        cur.execute(sql)
-        for row in cur:
-            fileOps.prRow(fh, row)
-
-def createGeneDataFiles(cur, outdir):
-    createGeneDataFile(cur, "gene2refseq",
-                       "SELECT * FROM gene2refseq WHERE GeneID in testGeneIds;",
-                       osp.join(outdir, "gene2refseq"))
-    createGeneDataFile(cur, "gene_info",
-                       "SELECT * FROM gene_info WHERE GeneID in testGeneIds;",
-                       osp.join(outdir, "gene_info"))
-    createGeneDataFile(cur, "gene_group",
-                       "SELECT * FROM gene_group WHERE (GeneID IN testGeneIds) or (Other_GeneId IN testGeneIds);",
-                       osp.join(outdir, "gene_group"))
-    createGeneDataFile(cur, "gene_orthologs",
-                       "SELECT * FROM gene_orthologs WHERE (GeneID IN testGeneIds) or (Other_GeneId IN testGeneIds);",
-                       osp.join(outdir, "gene_orthologs"))
+def processFiles(testGeneIds, testProtAccs, indir, outdir):
+    with Pool() as pool:
+        pool.starmap(filterRefSeqGeneFile,
+                     [(_geneIdFilterFunc, testGeneIds, indir, outdir, fname) for fname in geneIdFiles]
+                     + [(_geneIdHistoryFilterFunc, testGeneIds, indir, outdir, geneHistoryFile)]
+                     + [(_protAccFilterFunc, testProtAccs, indir, outdir, protAccFile)])
 
 def buildRefseqGeneTestData(opts):
-    refseqCases = loadRefseqCasesTsv(opts.refseqCasesTsv)
-    conn = sqliteOps.connect(opts.refseqGeneDb, rowFactory=None)
-    sqliteOps.loadExtension(conn, sqllenReLib)
-    cur = conn.cursor()
-
-    geneIds = getGeneIds(cur, refseqCases)
-    createGeneIdTable(cur, geneIds)
+    testGeneIds, testProtAccs = loadRefseqCasesTsv(opts.refseqCasesTsv)
     fileOps.ensureDir(opts.outdir)
-    createGeneDataFiles(cur, opts.outdir)
-    conn.close()
+    processFiles(testGeneIds, testProtAccs, opts.indir, opts.outdir)
 
 buildRefseqGeneTestData(parseArgs())

@@ -1,0 +1,1319 @@
+#tax_id	GeneID	GO_ID	Evidence	Qualifier	GO_term	PubMed	Category
+9606	1	GO:0003674	ND	enables	molecular_function	-	Function
+9606	1	GO:0005576	HDA	located_in	extracellular region	27068509	Component
+9606	1	GO:0005576	IDA	located_in	extracellular region	3458201	Component
+9606	1	GO:0005576	TAS	located_in	extracellular region	-	Component
+9606	1	GO:0005615	HDA	located_in	extracellular space	16502470	Component
+9606	1	GO:0008150	ND	involved_in	biological_process	-	Process
+9606	1	GO:0031093	TAS	located_in	platelet alpha granule lumen	-	Component
+9606	1	GO:0034774	TAS	located_in	secretory granule lumen	-	Component
+9606	1	GO:0062023	HDA	located_in	collagen-containing extracellular matrix	27559042	Component
+9606	1	GO:0070062	HDA	located_in	extracellular exosome	19056867|23533145	Component
+9606	1	GO:0072562	HDA	located_in	blood microparticle	22516433	Component
+9606	1	GO:1904813	TAS	located_in	ficolin-1-rich granule lumen	-	Component
+9606	2	GO:0001553	IEA	involved_in	luteinization	-	Process
+9606	2	GO:0001869	IDA	involved_in	negative regulation of complement activation, lectin pathway	12538697	Process
+9606	2	GO:0002020	IBA	enables	protease binding	21873635	Function
+9606	2	GO:0002020	IPI	enables	protease binding	18485748	Function
+9606	2	GO:0002438	IEA	involved_in	acute inflammatory response to antigenic stimulus	-	Process
+9606	2	GO:0004866	IBA	enables	endopeptidase inhibitor activity	21873635	Function
+9606	2	GO:0004867	IDA	enables	serine-type endopeptidase inhibitor activity	12538697	Function
+9606	2	GO:0005102	IMP	enables	signaling receptor binding	15226301	Function
+9606	2	GO:0005515	IPI	enables	protein binding	6698368|14687906|32814053	Function
+9606	2	GO:0005576	NAS	located_in	extracellular region	14718574	Component
+9606	2	GO:0005576	TAS	located_in	extracellular region	-	Component
+9606	2	GO:0005615	IBA	is_active_in	extracellular space	21873635	Component
+9606	2	GO:0006953	IEA	involved_in	acute-phase response	-	Process
+9606	2	GO:0007584	IEA	involved_in	response to nutrient	-	Process
+9606	2	GO:0010037	IEA	involved_in	response to carbon dioxide	-	Process
+9606	2	GO:0010951	IEA	involved_in	negative regulation of endopeptidase activity	-	Process
+9606	2	GO:0019838	IDA	enables	growth factor binding	9398211	Function
+9606	2	GO:0019899	IPI	enables	enzyme binding	11435418	Function
+9606	2	GO:0019959	IPI	enables	interleukin-8 binding	10880251	Function
+9606	2	GO:0019966	IDA	enables	interleukin-1 binding	9714181	Function
+9606	2	GO:0031093	TAS	located_in	platelet alpha granule lumen	-	Component
+9606	2	GO:0034695	IEA	involved_in	response to prostaglandin E	-	Process
+9606	2	GO:0042802	IEA	enables	identical protein binding	-	Function
+9606	2	GO:0043120	IDA	enables	tumor necrosis factor binding	9714181	Function
+9606	2	GO:0048306	IPI	enables	calcium-dependent protein binding	15226301	Function
+9606	2	GO:0048403	IEA	enables	brain-derived neurotrophic factor binding	-	Function
+9606	2	GO:0048406	IEA	enables	nerve growth factor binding	-	Function
+9606	2	GO:0048863	IEA	involved_in	stem cell differentiation	-	Process
+9606	2	GO:0051384	IEA	involved_in	response to glucocorticoid	-	Process
+9606	2	GO:0062023	HDA	colocalizes_with	collagen-containing extracellular matrix	28327460	Component
+9606	2	GO:0062023	HDA	located_in	collagen-containing extracellular matrix	25037231|28675934	Component
+9606	2	GO:0070062	HDA	located_in	extracellular exosome	20458337|21362503|23533145	Component
+9606	2	GO:0072562	HDA	located_in	blood microparticle	22516433	Component
+9606	2	GO:1990402	IEA	involved_in	embryonic liver development	-	Process
+9606	9	GO:0004060	IBA	enables	arylamine N-acetyltransferase activity	21873635	Function
+9606	9	GO:0004060	TAS	enables	arylamine N-acetyltransferase activity	-	Function
+9606	9	GO:0005829	TAS	located_in	cytosol	-	Component
+9606	9	GO:0006805	TAS	involved_in	xenobiotic metabolic process	-	Process
+9606	10	GO:0004060	IBA	enables	arylamine N-acetyltransferase activity	21873635	Function
+9606	10	GO:0004060	TAS	enables	arylamine N-acetyltransferase activity	-	Function
+9606	10	GO:0005515	IPI	enables	protein binding	25640309|32296183	Function
+9606	10	GO:0005829	TAS	located_in	cytosol	-	Component
+9606	10	GO:0006805	TAS	involved_in	xenobiotic metabolic process	-	Process
+9606	12	GO:0003677	TAS	enables	DNA binding	14668352	Function
+9606	12	GO:0004867	IBA	enables	serine-type endopeptidase inhibitor activity	21873635	Function
+9606	12	GO:0004867	TAS	enables	serine-type endopeptidase inhibitor activity	2404007	Function
+9606	12	GO:0005515	IPI	enables	protein binding	12709365|14668352|14687906|32814053	Function
+9606	12	GO:0005576	NAS	located_in	extracellular region	8647626|9880565|14718574	Component
+9606	12	GO:0005576	TAS	located_in	extracellular region	-	Component
+9606	12	GO:0005615	HDA	located_in	extracellular space	16502470	Component
+9606	12	GO:0005615	IBA	is_active_in	extracellular space	21873635	Component
+9606	12	GO:0005615	IDA	located_in	extracellular space	25645918	Component
+9606	12	GO:0005634	TAS	located_in	nucleus	14668352	Component
+9606	12	GO:0006953	IEA	involved_in	acute-phase response	-	Process
+9606	12	GO:0006954	NAS	involved_in	inflammatory response	12475184	Process
+9606	12	GO:0010951	IBA	involved_in	negative regulation of endopeptidase activity	21873635	Process
+9606	12	GO:0019216	NAS	involved_in	regulation of lipid metabolic process	11835318	Process
+9606	12	GO:0030277	NAS	involved_in	maintenance of gastrointestinal epithelium	8647626	Process
+9606	12	GO:0031093	TAS	located_in	platelet alpha granule lumen	-	Component
+9606	12	GO:0034774	TAS	located_in	secretory granule lumen	-	Component
+9606	12	GO:0035578	TAS	located_in	azurophil granule lumen	-	Component
+9606	12	GO:0062023	HDA	located_in	collagen-containing extracellular matrix	28344315|28675934	Component
+9606	12	GO:0070062	HDA	located_in	extracellular exosome	19056867|23533145	Component
+9606	12	GO:0072562	HDA	located_in	blood microparticle	22516433	Component
+9606	13	GO:0003824	TAS	enables	catalytic activity	8063807	Function
+9606	13	GO:0004806	IBA	enables	triglyceride lipase activity	21873635	Function
+9606	13	GO:0004806	ISS	enables	triglyceride lipase activity	-	Function
+9606	13	GO:0005515	IPI	enables	protein binding	32296183	Function
+9606	13	GO:0005789	IBA	is_active_in	endoplasmic reticulum membrane	21873635	Component
+9606	13	GO:0005789	IDA	located_in	endoplasmic reticulum membrane	10318829|15152005|19339378	Component
+9606	13	GO:0005789	TAS	located_in	endoplasmic reticulum membrane	-	Component
+9606	13	GO:0006629	IEA	involved_in	lipid metabolic process	-	Process
+9606	13	GO:0006805	TAS	involved_in	xenobiotic metabolic process	-	Process
+9606	13	GO:0010898	IBA	involved_in	positive regulation of triglyceride catabolic process	21873635	Process
+9606	13	GO:0010898	ISS	involved_in	positive regulation of triglyceride catabolic process	-	Process
+9606	13	GO:0016021	IEA	located_in	integral component of membrane	-	Component
+9606	13	GO:0016298	TAS	enables	lipase activity	11481320	Function
+9606	13	GO:0017171	IBA	enables	serine hydrolase activity	21873635	Function
+9606	13	GO:0017171	IDA	enables	serine hydrolase activity	17936933	Function
+9606	13	GO:0019213	IDA	enables	deacetylase activity	9665742	Function
+9606	13	GO:0019213	TAS	enables	deacetylase activity	-	Function
+9606	14	GO:0001525	NAS	involved_in	angiogenesis	10329261	Process
+9606	14	GO:0005515	IPI	enables	protein binding	28514442|32296183	Function
+9606	14	GO:0005829	IBA	is_active_in	cytosol	21873635	Component
+9606	14	GO:0005829	IDA	located_in	cytosol	-	Component
+9606	14	GO:0005829	TAS	located_in	cytosol	-	Component
+9606	14	GO:0005886	IEA	located_in	plasma membrane	-	Component
+9606	14	GO:0008201	IDA	enables	heparin binding	7743515	Function
+9606	14	GO:0009986	IDA	located_in	cell surface	10329261	Component
+9606	14	GO:0010595	ISS	involved_in	positive regulation of endothelial cell migration	-	Process
+9606	14	GO:0014909	IEP	involved_in	smooth muscle cell migration	18634987	Process
+9606	14	GO:0015630	IDA	located_in	microtubule cytoskeleton	-	Component
+9606	14	GO:0030154	IEA	involved_in	cell differentiation	-	Process
+9606	14	GO:0045171	IDA	located_in	intercellular bridge	-	Component
+9606	15	GO:0004059	IBA	enables	aralkylamine N-acetyltransferase activity	21873635	Function
+9606	15	GO:0004059	IDA	enables	aralkylamine N-acetyltransferase activity	11313340	Function
+9606	15	GO:0004059	TAS	enables	aralkylamine N-acetyltransferase activity	-	Function
+9606	15	GO:0004060	IEA	enables	arylamine N-acetyltransferase activity	-	Function
+9606	15	GO:0005515	IPI	enables	protein binding	25416956|25910212|32296183	Function
+9606	15	GO:0005737	IBA	is_active_in	cytoplasm	21873635	Component
+9606	15	GO:0005829	IDA	located_in	cytosol	-	Component
+9606	15	GO:0005829	TAS	located_in	cytosol	-	Component
+9606	15	GO:0006474	IDA	involved_in	N-terminal protein amino acid acetylation	11313340	Process
+9606	15	GO:0007623	IBA	involved_in	circadian rhythm	21873635	Process
+9606	15	GO:0007623	IMP	involved_in	circadian rhythm	12736803	Process
+9606	15	GO:0009416	IBA	involved_in	response to light stimulus	21873635	Process
+9606	15	GO:0009648	IEA	involved_in	photoperiodism	-	Process
+9606	15	GO:0010043	IEA	involved_in	response to zinc ion	-	Process
+9606	15	GO:0030187	IBA	involved_in	melatonin biosynthetic process	21873635	Process
+9606	15	GO:0030187	IDA	involved_in	melatonin biosynthetic process	11313340	Process
+9606	15	GO:0030187	IEA	involved_in	melatonin biosynthetic process	-	Process
+9606	15	GO:0032868	IEA	involved_in	response to insulin	-	Process
+9606	15	GO:0034097	IEA	involved_in	response to cytokine	-	Process
+9606	15	GO:0034695	IEA	involved_in	response to prostaglandin E	-	Process
+9606	15	GO:0046219	TAS	involved_in	indolalkylamine biosynthetic process	-	Process
+9606	15	GO:0046688	IEA	involved_in	response to copper ion	-	Process
+9606	15	GO:0048471	IDA	located_in	perinuclear region of cytoplasm	11313340	Component
+9606	15	GO:0051412	IEA	involved_in	response to corticosterone	-	Process
+9606	15	GO:0051592	IEA	involved_in	response to calcium ion	-	Process
+9606	15	GO:0071320	IDA	involved_in	cellular response to cAMP	11313340	Process
+9606	15	GO:0071889	IEA	enables	14-3-3 protein binding	-	Function
+9606	150	GO:0001819	IDA	involved_in	positive regulation of cytokine production	17655843	Process
+9606	150	GO:0002526	IEA	involved_in	acute inflammatory response	-	Process
+9606	150	GO:0004930	IBA	enables	G protein-coupled receptor activity	21873635	Function
+9606	150	GO:0004938	IBA	enables	alpha2-adrenergic receptor activity	21873635	Function
+9606	150	GO:0004938	IDA	enables	alpha2-adrenergic receptor activity	10948191	Function
+9606	150	GO:0004938	ISS	enables	alpha2-adrenergic receptor activity	1354394	Function
+9606	150	GO:0005515	IPI	enables	protein binding	16531006	Function
+9606	150	GO:0005737	IDA	located_in	cytoplasm	19477270	Component
+9606	150	GO:0005886	TAS	located_in	plasma membrane	-	Component
+9606	150	GO:0005887	IBA	is_active_in	integral component of plasma membrane	21873635	Component
+9606	150	GO:0005887	IDA	located_in	integral component of plasma membrane	2823383|10948191|10948198	Component
+9606	150	GO:0006260	IEA	involved_in	DNA replication	-	Process
+9606	150	GO:0007186	IDA	involved_in	G protein-coupled receptor signaling pathway	17215105|17655843	Process
+9606	150	GO:0007186	ISS	involved_in	G protein-coupled receptor signaling pathway	19965390	Process
+9606	150	GO:0007189	ISS	involved_in	adenylate cyclase-activating G protein-coupled receptor signaling pathway	12529373	Process
+9606	150	GO:0007193	ISS	involved_in	adenylate cyclase-inhibiting G protein-coupled receptor signaling pathway	1354394	Process
+9606	150	GO:0007265	TAS	involved_in	Ras protein signal transduction	8226727	Process
+9606	150	GO:0007266	TAS	involved_in	Rho protein signal transduction	9624180	Process
+9606	150	GO:0007565	IEA	involved_in	female pregnancy	-	Process
+9606	150	GO:0008284	TAS	involved_in	positive regulation of cell population proliferation	10896916	Process
+9606	150	GO:0010700	NAS	involved_in	negative regulation of norepinephrine secretion	16531006	Process
+9606	150	GO:0010700	TAS	involved_in	negative regulation of norepinephrine secretion	19477270	Process
+9606	150	GO:0016323	TAS	located_in	basolateral plasma membrane	17655843	Component
+9606	150	GO:0019229	IEA	involved_in	regulation of vasoconstriction	-	Process
+9606	150	GO:0019901	IPI	enables	protein kinase binding	15653687	Function
+9606	150	GO:0030036	TAS	involved_in	actin cytoskeleton organization	9624180	Process
+9606	150	GO:0030168	IEA	involved_in	platelet activation	-	Process
+9606	150	GO:0030335	IMP	involved_in	positive regulation of cell migration	17655843	Process
+9606	150	GO:0031692	ISS	enables	alpha-1B adrenergic receptor binding	-	Function
+9606	150	GO:0031696	IPI	enables	alpha-2C adrenergic receptor binding	16605244	Function
+9606	150	GO:0031996	IPI	enables	thioesterase binding	19477270	Function
+9606	150	GO:0032147	IDA	involved_in	activation of protein kinase activity	15653687	Process
+9606	150	GO:0032148	IDA	involved_in	activation of protein kinase B activity	17215105	Process
+9606	150	GO:0032795	IDA	enables	heterotrimeric G-protein binding	10948191	Function
+9606	150	GO:0032811	NAS	involved_in	negative regulation of epinephrine secretion	16531006	Process
+9606	150	GO:0032870	IGI	involved_in	cellular response to hormone stimulus	10948198	Process
+9606	150	GO:0035624	IDA	involved_in	receptor transactivation	17215105|17655843	Process
+9606	150	GO:0042311	IEA	involved_in	vasodilation	-	Process
+9606	150	GO:0042593	IMP	involved_in	glucose homeostasis	10952463	Process
+9606	150	GO:0042596	IEA	involved_in	fear response	-	Process
+9606	150	GO:0042803	IDA	enables	protein homodimerization activity	16605244	Function
+9606	150	GO:0043025	IEA	located_in	neuronal cell body	-	Component
+9606	150	GO:0043235	IDA	part_of	receptor complex	10948191	Component
+9606	150	GO:0043268	ISS	involved_in	positive regulation of potassium ion transport	1354394	Process
+9606	150	GO:0043406	IDA	involved_in	positive regulation of MAP kinase activity	19477270	Process
+9606	150	GO:0043410	IDA	involved_in	positive regulation of MAPK cascade	10948191	Process
+9606	150	GO:0043679	IEA	located_in	axon terminus	-	Component
+9606	150	GO:0045741	IDA	involved_in	positive regulation of epidermal growth factor-activated receptor activity	17655843	Process
+9606	150	GO:0045955	IC	involved_in	negative regulation of calcium ion-dependent exocytosis	10952463	Process
+9606	150	GO:0046676	IMP	involved_in	negative regulation of insulin secretion	10952463	Process
+9606	150	GO:0046982	IPI	enables	protein heterodimerization activity	16605244	Function
+9606	150	GO:0046982	ISS	enables	protein heterodimerization activity	-	Function
+9606	150	GO:0050892	TAS	involved_in	intestinal absorption	17655843	Process
+9606	150	GO:0050955	IEA	involved_in	thermoception	-	Process
+9606	150	GO:0050995	IGI	involved_in	negative regulation of lipid catabolic process	10948198	Process
+9606	150	GO:0051044	IDA	involved_in	positive regulation of membrane protein ectodomain proteolysis	17655843	Process
+9606	150	GO:0051379	IBA	enables	epinephrine binding	21873635	Function
+9606	150	GO:0051379	IDA	enables	epinephrine binding	2823383|10948191	Function
+9606	150	GO:0051380	IDA	enables	norepinephrine binding	2823383	Function
+9606	150	GO:0051926	ISS	involved_in	negative regulation of calcium ion transport	-	Process
+9606	150	GO:0061179	IMP	involved_in	negative regulation of insulin secretion involved in cellular response to glucose stimulus	19965390	Process
+9606	150	GO:0070473	IEA	involved_in	negative regulation of uterine smooth muscle contraction	-	Process
+9606	150	GO:0071875	IDA	involved_in	adrenergic receptor signaling pathway	10948191	Process
+9606	150	GO:0071880	IBA	involved_in	adenylate cyclase-activating adrenergic receptor signaling pathway	21873635	Process
+9606	150	GO:0071880	ISS	involved_in	adenylate cyclase-activating adrenergic receptor signaling pathway	-	Process
+9606	150	GO:0071881	IDA	involved_in	adenylate cyclase-inhibiting adrenergic receptor signaling pathway	10948191	Process
+9606	150	GO:0071882	IDA	involved_in	phospholipase C-activating adrenergic receptor signaling pathway	10948191	Process
+9606	150	GO:0090303	IMP	involved_in	positive regulation of wound healing	17655843	Process
+9606	150	GO:0098691	IEA	located_in	dopaminergic synapse	-	Component
+9606	150	GO:0098978	IEA	located_in	glutamatergic synapse	-	Component
+9606	150	GO:0098982	IEA	located_in	GABA-ergic synapse	-	Component
+9606	150	GO:0099059	IEA	located_in	integral component of presynaptic active zone membrane	-	Component
+9606	150	GO:0099061	IEA	located_in	integral component of postsynaptic density membrane	-	Component
+9606	150	GO:1901020	ISS	involved_in	negative regulation of calcium ion transmembrane transporter activity	1354394	Process
+9606	150	GO:2000300	IEA	involved_in	regulation of synaptic vesicle exocytosis	-	Process
+9606	463	GO:0000122	IDA	involved_in	negative regulation of transcription by RNA polymerase II	11314020	Process
+9606	463	GO:0000122	IGI	acts_upstream_of_or_within	negative regulation of transcription by RNA polymerase II	10318867	Process
+9606	463	GO:0000785	ISA	located_in	chromatin	-	Component
+9606	463	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	463	GO:0000978	IDA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	7507206	Function
+9606	463	GO:0000978	ISS	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	-	Function
+9606	463	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	463	GO:0000981	ISA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	-	Function
+9606	463	GO:0000981	TAS	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	1719379	Function
+9606	463	GO:0001227	EXP	enables	DNA-binding transcription repressor activity, RNA polymerase II-specific	11312261	Function
+9606	463	GO:0001227	IDA	enables	DNA-binding transcription repressor activity, RNA polymerase II-specific	11314020	Function
+9606	463	GO:0003700	NAS	enables	DNA-binding transcription factor activity	1719379	Function
+9606	463	GO:0005515	IPI	enables	protein binding	20599712|22452784	Function
+9606	463	GO:0005634	IBA	is_active_in	nucleus	21873635	Component
+9606	463	GO:0005634	IDA	located_in	nucleus	20599712|24651376	Component
+9606	463	GO:0005634	TAS	located_in	nucleus	1719379	Component
+9606	463	GO:0005654	IDA	located_in	nucleoplasm	-	Component
+9606	463	GO:0005654	TAS	located_in	nucleoplasm	-	Component
+9606	463	GO:0005667	IDA	part_of	transcription regulator complex	10318867	Component
+9606	463	GO:0005737	IDA	located_in	cytoplasm	20599712	Component
+9606	463	GO:0006355	TAS	involved_in	regulation of DNA-templated transcription	1719379	Process
+9606	463	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	463	GO:0007420	IBA	involved_in	brain development	21873635	Process
+9606	463	GO:0007517	IEA	involved_in	muscle organ development	-	Process
+9606	463	GO:0008270	IEA	enables	zinc ion binding	-	Function
+9606	463	GO:0016604	IDA	located_in	nuclear body	24651376	Component
+9606	463	GO:0019899	IPI	enables	enzyme binding	14715251	Function
+9606	463	GO:0032922	ISS	involved_in	circadian regulation of gene expression	-	Process
+9606	463	GO:0045664	IBA	involved_in	regulation of neuron differentiation	21873635	Process
+9606	463	GO:0045785	ISS	involved_in	positive regulation of cell adhesion	-	Process
+9606	463	GO:0045893	IDA	involved_in	positive regulation of DNA-templated transcription	20599712	Process
+9606	463	GO:0045944	ISS	involved_in	positive regulation of transcription by RNA polymerase II	-	Process
+9606	463	GO:0051726	IEA	involved_in	regulation of cell cycle	-	Process
+9606	463	GO:0071559	IDA	involved_in	response to transforming growth factor beta	20599712	Process
+9606	463	GO:1904059	ISS	involved_in	regulation of locomotor rhythm	-	Process
+9606	546	GO:0000212	IEA	involved_in	meiotic spindle organization	-	Process
+9606	546	GO:0000228	IEA	located_in	nuclear chromosome	-	Component
+9606	546	GO:0000779	IEA	located_in	condensed chromosome, centromeric region	-	Component
+9606	546	GO:0000781	ISS	colocalizes_with	chromosome, telomeric region	-	Component
+9606	546	GO:0000781	ISS	located_in	chromosome, telomeric region	-	Component
+9606	546	GO:0000792	TAS	located_in	heterochromatin	10570185	Component
+9606	546	GO:0003678	IEA	enables	DNA helicase activity	-	Function
+9606	546	GO:0003682	IDA	enables	chromatin binding	27029610	Function
+9606	546	GO:0005515	IPI	enables	protein binding	10699177|12953102|17296936|22102817|22391447|24651726|24981860|25417162|26373281|26496610|27029610	Function
+9606	546	GO:0005524	IEA	enables	ATP binding	-	Function
+9606	546	GO:0005634	IBA	is_active_in	nucleus	21873635	Component
+9606	546	GO:0005654	IDA	located_in	nucleoplasm	-	Component
+9606	546	GO:0005654	TAS	located_in	nucleoplasm	-	Component
+9606	546	GO:0005721	IBA	is_active_in	pericentric heterochromatin	21873635	Component
+9606	546	GO:0005721	ISS	located_in	pericentric heterochromatin	-	Component
+9606	546	GO:0006281	IEA	involved_in	DNA repair	-	Process
+9606	546	GO:0006306	TAS	involved_in	DNA methylation	10742099	Process
+9606	546	GO:0006334	IDA	involved_in	nucleosome assembly	20651253	Process
+9606	546	GO:0006338	IBA	involved_in	chromatin remodeling	21873635	Process
+9606	546	GO:0006338	IDA	involved_in	chromatin remodeling	20651253	Process
+9606	546	GO:0006355	TAS	involved_in	regulation of DNA-templated transcription	7697714	Process
+9606	546	GO:0006366	IEA	involved_in	transcription by RNA polymerase II	-	Process
+9606	546	GO:0007283	IEA	involved_in	spermatogenesis	-	Process
+9606	546	GO:0010571	ISS	involved_in	positive regulation of nuclear cell cycle DNA replication	-	Process
+9606	546	GO:0015616	IDA	enables	DNA translocase activity	12953102	Function
+9606	546	GO:0016604	IDA	located_in	nuclear body	-	Component
+9606	546	GO:0016605	ISS	located_in	PML body	-	Component
+9606	546	GO:0016887	IEA	enables	ATP hydrolysis activity	-	Function
+9606	546	GO:0030330	ISS	involved_in	DNA damage response, signal transduction by p53 class mediator	-	Process
+9606	546	GO:0030900	IEA	involved_in	forebrain development	-	Process
+9606	546	GO:0031297	IBA	involved_in	replication fork processing	21873635	Process
+9606	546	GO:0031297	ISS	involved_in	replication fork processing	-	Process
+9606	546	GO:0031490	IBA	enables	chromatin DNA binding	21873635	Function
+9606	546	GO:0032206	ISS	involved_in	positive regulation of telomere maintenance	-	Process
+9606	546	GO:0032508	IEA	involved_in	DNA duplex unwinding	-	Process
+9606	546	GO:0035064	IBA	enables	methylated histone binding	21873635	Function
+9606	546	GO:0035064	IDA	enables	methylated histone binding	21421568	Function
+9606	546	GO:0035128	IEA	involved_in	post-embryonic forelimb morphogenesis	-	Process
+9606	546	GO:0035264	IEA	involved_in	multicellular organism growth	-	Process
+9606	546	GO:0042393	IDA	enables	histone binding	20211137|22391447	Function
+9606	546	GO:0045944	IMP	involved_in	positive regulation of transcription by RNA polymerase II	22391447	Process
+9606	546	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	546	GO:0060009	IEA	involved_in	Sertoli cell development	-	Process
+9606	546	GO:0070087	IPI	enables	chromo shadow domain binding	15882967	Function
+9606	546	GO:0070192	IEA	involved_in	chromosome organization involved in meiotic cell cycle	-	Process
+9606	546	GO:0070198	ISS	involved_in	protein localization to chromosome, telomeric region	-	Process
+9606	546	GO:0072520	IEA	involved_in	seminiferous tubule development	-	Process
+9606	546	GO:0072711	ISS	involved_in	cellular response to hydroxyurea	-	Process
+9606	546	GO:0099115	IDA	located_in	chromosome, subtelomeric region	26055325	Component
+9606	546	GO:0140658	IEA	enables	ATP-dependent chromatin remodeler activity	-	Function
+9606	546	GO:1900112	IMP	involved_in	regulation of histone H3-K9 trimethylation	27029610	Process
+9606	546	GO:1901581	ISS	involved_in	negative regulation of telomeric RNA transcription from RNA pol II promoter	-	Process
+9606	546	GO:1901582	IBA	involved_in	positive regulation of telomeric RNA transcription from RNA pol II promoter	21873635	Process
+9606	546	GO:1901582	IMP	involved_in	positive regulation of telomeric RNA transcription from RNA pol II promoter	26055325	Process
+9606	546	GO:1904908	IMP	involved_in	negative regulation of maintenance of mitotic sister chromatid cohesion, telomeric	26373281	Process
+9606	604	GO:0000122	IBA	involved_in	negative regulation of transcription by RNA polymerase II	21873635	Process
+9606	604	GO:0000122	IDA	acts_upstream_of_or_within	negative regulation of transcription by RNA polymerase II	11929873	Process
+9606	604	GO:0000122	IDA	involved_in	negative regulation of transcription by RNA polymerase II	15577913|16704730	Process
+9606	604	GO:0000902	IEA	involved_in	cell morphogenesis	-	Process
+9606	604	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	604	GO:0001161	IEA	enables	intronic transcription regulatory region sequence-specific DNA binding	-	Function
+9606	604	GO:0001222	IPI	enables	transcription corepressor binding	10898795	Function
+9606	604	GO:0001227	IBA	enables	DNA-binding transcription repressor activity, RNA polymerase II-specific	21873635	Function
+9606	604	GO:0001227	IDA	enables	DNA-binding transcription repressor activity, RNA polymerase II-specific	16704730	Function
+9606	604	GO:0001817	IBA	involved_in	regulation of cytokine production	21873635	Process
+9606	604	GO:0001953	IEA	involved_in	negative regulation of cell-matrix adhesion	-	Process
+9606	604	GO:0002317	IEA	involved_in	plasma cell differentiation	-	Process
+9606	604	GO:0002467	IEA	involved_in	germinal center formation	-	Process
+9606	604	GO:0002634	NAS	involved_in	regulation of germinal center formation	7795255	Process
+9606	604	GO:0002682	IBA	involved_in	regulation of immune system process	21873635	Process
+9606	604	GO:0002903	NAS	involved_in	negative regulation of B cell apoptotic process	15577913	Process
+9606	604	GO:0003682	IDA	enables	chromatin binding	12097386	Function
+9606	604	GO:0003700	IMP	enables	DNA-binding transcription factor activity	15577913	Function
+9606	604	GO:0005515	IPI	enables	protein binding	12590135|16147992|16819511|21390126|22113614|25416956|27107012|32296183|32814053	Function
+9606	604	GO:0005634	IDA	located_in	nucleus	7795255|10898795|11929873	Component
+9606	604	GO:0005654	IBA	is_active_in	nucleoplasm	21873635	Component
+9606	604	GO:0005654	IDA	located_in	nucleoplasm	-	Component
+9606	604	GO:0005654	TAS	located_in	nucleoplasm	-	Component
+9606	604	GO:0005657	IDA	colocalizes_with	replication fork	10490843	Component
+9606	604	GO:0005730	IDA	located_in	nucleolus	-	Component
+9606	604	GO:0005794	IDA	located_in	Golgi apparatus	-	Component
+9606	604	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	604	GO:0006366	IEA	involved_in	transcription by RNA polymerase II	-	Process
+9606	604	GO:0006954	IEA	involved_in	inflammatory response	-	Process
+9606	604	GO:0006974	IDA	involved_in	cellular response to DNA damage stimulus	15577913	Process
+9606	604	GO:0007160	IEA	involved_in	cell-matrix adhesion	-	Process
+9606	604	GO:0007266	IEA	involved_in	Rho protein signal transduction	-	Process
+9606	604	GO:0007283	IEA	involved_in	spermatogenesis	-	Process
+9606	604	GO:0008104	IEA	involved_in	protein localization	-	Process
+9606	604	GO:0016575	IEA	involved_in	histone deacetylation	-	Process
+9606	604	GO:0021859	IEA	involved_in	pyramidal neuron differentiation	-	Process
+9606	604	GO:0030036	IEA	involved_in	actin cytoskeleton organization	-	Process
+9606	604	GO:0030308	IDA	involved_in	negative regulation of cell growth	10490843	Process
+9606	604	GO:0030890	IEA	involved_in	positive regulation of B cell proliferation	-	Process
+9606	604	GO:0031065	IEA	involved_in	positive regulation of histone deacetylation	-	Process
+9606	604	GO:0031490	IEA	enables	chromatin DNA binding	-	Function
+9606	604	GO:0032764	IEA	involved_in	negative regulation of mast cell cytokine production	-	Process
+9606	604	GO:0035024	IEA	involved_in	negative regulation of Rho protein signal transduction	-	Process
+9606	604	GO:0042092	IBA	involved_in	type 2 immune response	21873635	Process
+9606	604	GO:0042100	IEA	involved_in	B cell proliferation	-	Process
+9606	604	GO:0042127	IBA	involved_in	regulation of cell population proliferation	21873635	Process
+9606	604	GO:0042129	IEA	involved_in	regulation of T cell proliferation	-	Process
+9606	604	GO:0042382	IDA	located_in	paraspeckles	16704730	Component
+9606	604	GO:0042802	IPI	enables	identical protein binding	25416956|32296183	Function
+9606	604	GO:0043065	IDA	involved_in	positive regulation of apoptotic process	10490843	Process
+9606	604	GO:0043087	IEA	involved_in	regulation of GTPase activity	-	Process
+9606	604	GO:0043380	IEA	involved_in	regulation of memory T cell differentiation	-	Process
+9606	604	GO:0043565	IDA	enables	sequence-specific DNA binding	15577913	Function
+9606	604	GO:0045064	IEA	involved_in	T-helper 2 cell differentiation	-	Process
+9606	604	GO:0045591	IMP	involved_in	positive regulation of regulatory T cell differentiation	20935202|22387553	Process
+9606	604	GO:0045595	IBA	involved_in	regulation of cell differentiation	21873635	Process
+9606	604	GO:0045629	IEA	involved_in	negative regulation of T-helper 2 cell differentiation	-	Process
+9606	604	GO:0045666	IEA	involved_in	positive regulation of neuron differentiation	-	Process
+9606	604	GO:0045746	IEA	involved_in	negative regulation of Notch signaling pathway	-	Process
+9606	604	GO:0045892	IMP	involved_in	negative regulation of DNA-templated transcription	15577913	Process
+9606	604	GO:0045892	NAS	involved_in	negative regulation of DNA-templated transcription	9135990	Process
+9606	604	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	604	GO:0048289	IEA	involved_in	isotype switching to IgE isotypes	-	Process
+9606	604	GO:0048294	IEA	involved_in	negative regulation of isotype switching to IgE isotypes	-	Process
+9606	604	GO:0048821	IEA	involved_in	erythrocyte development	-	Process
+9606	604	GO:0050727	IBA	involved_in	regulation of inflammatory response	21873635	Process
+9606	604	GO:0050776	NAS	involved_in	regulation of immune response	16455075	Process
+9606	604	GO:0070664	IEA	involved_in	negative regulation of leukocyte proliferation	-	Process
+9606	604	GO:0140297	IPI	enables	DNA-binding transcription factor binding	16704730	Function
+9606	604	GO:1900099	IEA	involved_in	negative regulation of plasma cell differentiation	-	Process
+9606	604	GO:1903464	NAS	involved_in	negative regulation of mitotic cell cycle DNA replication	10490843	Process
+9606	604	GO:1990837	IDA	enables	sequence-specific double-stranded DNA binding	28473536	Function
+9606	604	GO:2000773	IEA	involved_in	negative regulation of cellular senescence	-	Process
+9606	1958	GO:0000122	IEA	involved_in	negative regulation of transcription by RNA polymerase II	-	Process
+9606	1958	GO:0000785	IDA	is_active_in	chromatin	19307576	Component
+9606	1958	GO:0000785	ISA	located_in	chromatin	-	Component
+9606	1958	GO:0000976	IDA	enables	transcription cis-regulatory region binding	18718911	Function
+9606	1958	GO:0000977	IDA	enables	RNA polymerase II transcription regulatory region sequence-specific DNA binding	14979875	Function
+9606	1958	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	1958	GO:0000978	IDA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	19307576|20018936	Function
+9606	1958	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	1958	GO:0000981	ISA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	-	Function
+9606	1958	GO:0001228	IDA	enables	DNA-binding transcription activator activity, RNA polymerase II-specific	19307576|20018936	Function
+9606	1958	GO:0001666	ISS	involved_in	response to hypoxia	-	Process
+9606	1958	GO:0002931	ISS	involved_in	response to ischemia	-	Process
+9606	1958	GO:0003677	IDA	enables	DNA binding	12560508	Function
+9606	1958	GO:0003700	IDA	enables	DNA-binding transcription factor activity	12560508	Function
+9606	1958	GO:0005515	IPI	enables	protein binding	19057511|21743491	Function
+9606	1958	GO:0005634	IDA	located_in	nucleus	19057511|20018936|20363028	Component
+9606	1958	GO:0005634	ISS	located_in	nucleus	-	Component
+9606	1958	GO:0005654	IDA	located_in	nucleoplasm	-	Component
+9606	1958	GO:0005654	TAS	located_in	nucleoplasm	-	Component
+9606	1958	GO:0005737	IDA	located_in	cytoplasm	19057511|20363028	Component
+9606	1958	GO:0005737	ISS	located_in	cytoplasm	-	Component
+9606	1958	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	1958	GO:0008270	IDA	enables	zinc ion binding	25258363	Function
+9606	1958	GO:0009749	IEA	involved_in	response to glucose	-	Process
+9606	1958	GO:0010385	IDA	enables	double-stranded methylated DNA binding	25258363	Function
+9606	1958	GO:0010628	IMP	involved_in	positive regulation of gene expression	24244514	Process
+9606	1958	GO:0030217	IEA	involved_in	T cell differentiation	-	Process
+9606	1958	GO:0030509	IEA	involved_in	BMP signaling pathway	-	Process
+9606	1958	GO:0032722	ISS	involved_in	positive regulation of chemokine production	-	Process
+9606	1958	GO:0032731	ISS	involved_in	positive regulation of interleukin-1 beta production	-	Process
+9606	1958	GO:0032868	IEA	involved_in	response to insulin	-	Process
+9606	1958	GO:0032922	ISS	involved_in	circadian regulation of gene expression	-	Process
+9606	1958	GO:0033233	IDA	involved_in	regulation of protein sumoylation	19057511	Process
+9606	1958	GO:0035035	IPI	enables	histone acetyltransferase binding	20018936	Function
+9606	1958	GO:0035914	IEA	involved_in	skeletal muscle cell differentiation	-	Process
+9606	1958	GO:0042981	IEA	involved_in	regulation of apoptotic process	-	Process
+9606	1958	GO:0043565	IDA	enables	sequence-specific DNA binding	1662794|25258363	Function
+9606	1958	GO:0044729	IDA	enables	hemi-methylated DNA-binding	25258363	Function
+9606	1958	GO:0044849	ISS	involved_in	estrous cycle	-	Process
+9606	1958	GO:0045475	ISS	involved_in	locomotor rhythm	-	Process
+9606	1958	GO:0045893	IDA	involved_in	positive regulation of DNA-templated transcription	12560508	Process
+9606	1958	GO:0045944	IDA	involved_in	positive regulation of transcription by RNA polymerase II	19057511|26089202	Process
+9606	1958	GO:0045944	IGI	involved_in	positive regulation of transcription by RNA polymerase II	14979875	Process
+9606	1958	GO:0045944	IMP	involved_in	positive regulation of transcription by RNA polymerase II	14979875|20018936	Process
+9606	1958	GO:0046886	ISS	involved_in	positive regulation of hormone biosynthetic process	-	Process
+9606	1958	GO:0060086	ISS	involved_in	circadian temperature homeostasis	-	Process
+9606	1958	GO:0061418	IEA	involved_in	regulation of transcription from RNA polymerase II promoter in response to hypoxia	-	Process
+9606	1958	GO:0070498	IMP	involved_in	interleukin-1-mediated signaling pathway	20018936	Process
+9606	1958	GO:0071480	IEA	involved_in	cellular response to gamma radiation	-	Process
+9606	1958	GO:0071504	ISS	involved_in	cellular response to heparin	-	Process
+9606	1958	GO:0071506	ISS	involved_in	cellular response to mycophenolic acid	-	Process
+9606	1958	GO:0072110	ISS	involved_in	glomerular mesangial cell proliferation	-	Process
+9606	1958	GO:0072303	ISS	involved_in	positive regulation of glomerular metanephric mesangial cell proliferation	-	Process
+9606	1958	GO:0090090	IEA	involved_in	negative regulation of canonical Wnt signaling pathway	-	Process
+9606	1958	GO:0098759	IDA	involved_in	cellular response to interleukin-8	20363028	Process
+9606	1958	GO:1901216	ISS	involved_in	positive regulation of neuron death	-	Process
+9606	1958	GO:1901875	IMP	involved_in	positive regulation of post-translational protein modification	20018936	Process
+9606	1958	GO:1902895	IDA	involved_in	positive regulation of miRNA transcription	19307576	Process
+9606	1958	GO:1902949	ISS	involved_in	positive regulation of tau-protein kinase activity	-	Process
+9606	1958	GO:1990837	IDA	enables	sequence-specific double-stranded DNA binding	28473536	Function
+9606	1958	GO:1990841	IDA	enables	promoter-specific chromatin binding	20363028	Function
+9606	1958	GO:2000182	ISS	involved_in	regulation of progesterone biosynthetic process	-	Process
+9606	2310	GO:0003700	IEA	enables	DNA-binding transcription factor activity	-	Function
+9606	2310	GO:0005829	IEA	located_in	cytosol	-	Component
+9606	2310	GO:0006355	IEA	involved_in	regulation of DNA-templated transcription	-	Process
+9606	2310	GO:0043565	IEA	enables	sequence-specific DNA binding	-	Function
+9606	2672	GO:0000083	TAS	involved_in	regulation of transcription involved in G1/S transition of mitotic cell cycle	8441411	Process
+9606	2672	GO:0000122	IDA	involved_in	negative regulation of transcription by RNA polymerase II	15947108|19506020	Process
+9606	2672	GO:0000976	IDA	enables	transcription cis-regulatory region binding	15947108	Function
+9606	2672	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	2672	GO:0001227	IDA	enables	DNA-binding transcription repressor activity, RNA polymerase II-specific	19506020	Function
+9606	2672	GO:0003700	IBA	enables	DNA-binding transcription factor activity	21873635	Function
+9606	2672	GO:0005515	IPI	enables	protein binding	11060035|12874834|16287849|17197705|17636019|17909014|18805794|19506020|20190815|20547752|21570500	Function
+9606	2672	GO:0005634	IDA	located_in	nucleus	12874834|20547752	Component
+9606	2672	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	2672	GO:0010956	IDA	involved_in	negative regulation of calcidiol 1-monooxygenase activity	15947108	Process
+9606	2672	GO:0010957	IC	involved_in	negative regulation of vitamin D biosynthetic process	15947108	Process
+9606	2672	GO:0010977	IDA	involved_in	negative regulation of neuron projection development	19026687	Process
+9606	2672	GO:0016032	TAS	involved_in	viral process	8441411	Process
+9606	2672	GO:0016363	IDA	located_in	nuclear matrix	12874834	Component
+9606	2672	GO:0016604	IDA	located_in	nuclear body	11060035	Component
+9606	2672	GO:0017053	IDA	part_of	transcription repressor complex	12874834|19506020	Component
+9606	2672	GO:0030097	IEA	involved_in	hemopoiesis	-	Process
+9606	2672	GO:0032088	ISS	involved_in	negative regulation of NF-kappaB transcription factor activity	-	Process
+9606	2672	GO:0034121	IDA	involved_in	regulation of toll-like receptor signaling pathway	20547752	Process
+9606	2672	GO:0045892	IDA	involved_in	negative regulation of DNA-templated transcription	12874834	Process
+9606	2672	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	2672	GO:0051569	IEA	involved_in	regulation of histone H3-K4 methylation	-	Process
+9606	2672	GO:0070105	IDA	involved_in	positive regulation of interleukin-6-mediated signaling pathway	11060035	Process
+9606	2672	GO:0071222	IEP	involved_in	cellular response to lipopolysaccharide	20547752	Process
+9606	2672	GO:1990837	IDA	enables	sequence-specific double-stranded DNA binding	28473536	Function
+9606	2738	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	2738	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	2738	GO:0003674	ND	enables	molecular_function	-	Function
+9606	2738	GO:0005515	IPI	enables	protein binding	32814053	Function
+9606	2738	GO:0005634	IEA	located_in	nucleus	-	Component
+9606	2738	GO:0006355	IBA	involved_in	regulation of DNA-templated transcription	21873635	Process
+9606	2738	GO:0006357	IEA	involved_in	regulation of transcription by RNA polymerase II	-	Process
+9606	2738	GO:0008150	ND	involved_in	biological_process	-	Process
+9606	2738	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	3090	GO:0000122	IDA	involved_in	negative regulation of transcription by RNA polymerase II	12052894|15231840	Process
+9606	3090	GO:0000122	ISS	involved_in	negative regulation of transcription by RNA polymerase II	-	Process
+9606	3090	GO:0000785	ISS	located_in	chromatin	-	Component
+9606	3090	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	3090	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	3090	GO:0001227	IDA	enables	DNA-binding transcription repressor activity, RNA polymerase II-specific	15231840	Function
+9606	3090	GO:0003700	IDA	enables	DNA-binding transcription factor activity	15231840	Function
+9606	3090	GO:0003700	TAS	enables	DNA-binding transcription factor activity	7585125	Function
+9606	3090	GO:0005515	IPI	enables	protein binding	12052894|16724116|16762039|19486893	Function
+9606	3090	GO:0005634	IBA	is_active_in	nucleus	21873635	Component
+9606	3090	GO:0005654	TAS	located_in	nucleoplasm	-	Component
+9606	3090	GO:0006355	TAS	involved_in	regulation of DNA-templated transcription	7585125	Process
+9606	3090	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	3090	GO:0008630	IDA	involved_in	intrinsic apoptotic signaling pathway in response to DNA damage	16269335	Process
+9606	3090	GO:0016055	IEA	involved_in	Wnt signaling pathway	-	Process
+9606	3090	GO:0030178	IDA	involved_in	negative regulation of Wnt signaling pathway	16724116	Process
+9606	3090	GO:0042826	IDA	enables	histone deacetylase binding	12052894	Function
+9606	3090	GO:0043517	ISS	involved_in	positive regulation of DNA damage response, signal transduction by p53 class mediator	-	Process
+9606	3090	GO:0043565	IDA	enables	sequence-specific DNA binding	15231840	Function
+9606	3090	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	3090	GO:1990837	IDA	enables	sequence-specific double-stranded DNA binding	28473536	Function
+9606	3096	GO:0000122	IDA	involved_in	negative regulation of transcription by RNA polymerase II	17008448	Process
+9606	3096	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	3096	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	3096	GO:0001227	IEA	enables	DNA-binding transcription repressor activity, RNA polymerase II-specific	-	Function
+9606	3096	GO:0005515	IPI	enables	protein binding	16713569|19732766|21078624|23414517	Function
+9606	3096	GO:0005634	IBA	is_active_in	nucleus	21873635	Component
+9606	3096	GO:0005634	IDA	located_in	nucleus	19732766	Component
+9606	3096	GO:0005654	IDA	located_in	nucleoplasm	-	Component
+9606	3096	GO:0005739	IDA	located_in	mitochondrion	-	Component
+9606	3096	GO:0005829	IDA	located_in	cytosol	-	Component
+9606	3096	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	3096	GO:0016604	IDA	located_in	nuclear body	-	Component
+9606	3096	GO:0030509	IDA	involved_in	BMP signaling pathway	17008448	Process
+9606	3096	GO:0045944	IDA	involved_in	positive regulation of transcription by RNA polymerase II	17008448	Process
+9606	3096	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	3096	GO:1990837	IDA	enables	sequence-specific double-stranded DNA binding	2106471	Function
+9606	3097	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	3097	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	3097	GO:0003677	TAS	enables	DNA binding	2022670|2247438	Function
+9606	3097	GO:0005634	IBA	is_active_in	nucleus	21873635	Component
+9606	3097	GO:0005654	IDA	located_in	nucleoplasm	-	Component
+9606	3097	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	3097	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	3104	GO:0000781	IDA	located_in	chromosome, telomeric region	28082411|28500257	Component
+9606	3104	GO:0000976	IDA	enables	transcription cis-regulatory region binding	28500257	Function
+9606	3104	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	3104	GO:0003691	IDA	enables	double-stranded telomeric DNA binding	28082411	Function
+9606	3104	GO:0003700	IBA	enables	DNA-binding transcription factor activity	21873635	Function
+9606	3104	GO:0005515	IPI	enables	protein binding	16189514|21516116|25416956|32296183|32814053	Function
+9606	3104	GO:0005634	IEA	located_in	nucleus	-	Component
+9606	3104	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	3104	GO:0010833	IMP	involved_in	telomere maintenance via telomere lengthening	28082411|28500257	Process
+9606	3104	GO:0042802	IPI	enables	identical protein binding	25416956|32296183	Function
+9606	3104	GO:0045893	IMP	involved_in	positive regulation of DNA-templated transcription	28500257	Process
+9606	3104	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	4150	GO:0000122	IDA	involved_in	negative regulation of transcription by RNA polymerase II	26089202	Process
+9606	4150	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	4150	GO:0000978	IDA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	1502157|25487955	Function
+9606	4150	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	4150	GO:0000981	IDA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	25487955	Function
+9606	4150	GO:0003700	IBA	enables	DNA-binding transcription factor activity	21873635	Function
+9606	4150	GO:0003723	HDA	enables	RNA binding	22658674|22681889	Function
+9606	4150	GO:0005515	IPI	enables	protein binding	11527412	Function
+9606	4150	GO:0005634	ISS	located_in	nucleus	-	Component
+9606	4150	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	4150	GO:0006367	IDA	involved_in	transcription initiation at RNA polymerase II promoter	1502157	Process
+9606	4150	GO:0006369	IDA	involved_in	termination of RNA polymerase II transcription	1502157	Process
+9606	4150	GO:0008284	IDA	involved_in	positive regulation of cell population proliferation	25487955	Process
+9606	4150	GO:0010628	IDA	involved_in	positive regulation of gene expression	25487955	Process
+9606	4150	GO:0014068	IDA	involved_in	positive regulation of phosphatidylinositol 3-kinase signaling	25487955	Process
+9606	4150	GO:0030335	IDA	involved_in	positive regulation of cell migration	25487955	Process
+9606	4150	GO:0045893	IDA	involved_in	positive regulation of DNA-templated transcription	25487955	Process
+9606	4150	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	4150	GO:0051897	IDA	involved_in	positive regulation of protein kinase B signaling	25487955	Process
+9606	4150	GO:2001234	IDA	involved_in	negative regulation of apoptotic signaling pathway	25487955	Process
+9606	4281	GO:0000226	TAS	involved_in	microtubule cytoskeleton organization	10077590	Process
+9606	4281	GO:0005515	IPI	enables	protein binding	19549727|21516116|25416956|25910212|26496610|31515488|32296183	Function
+9606	4281	GO:0005737	IBA	is_active_in	cytoplasm	21873635	Component
+9606	4281	GO:0005794	IDA	located_in	Golgi apparatus	-	Component
+9606	4281	GO:0005819	IEA	located_in	spindle	-	Component
+9606	4281	GO:0005829	IDA	located_in	cytosol	-	Component
+9606	4281	GO:0005829	TAS	located_in	cytosol	-	Component
+9606	4281	GO:0005874	IDA	located_in	microtubule	11806752	Component
+9606	4281	GO:0005875	TAS	part_of	microtubule associated complex	10077590	Component
+9606	4281	GO:0005881	IDA	colocalizes_with	cytoplasmic microtubule	18949047	Component
+9606	4281	GO:0007026	IEA	involved_in	negative regulation of microtubule depolymerization	-	Process
+9606	4281	GO:0007389	TAS	involved_in	pattern specification process	9354791	Process
+9606	4281	GO:0008017	IMP	enables	microtubule binding	11806752	Function
+9606	4281	GO:0008270	IEA	enables	zinc ion binding	-	Function
+9606	4281	GO:0016740	IEA	enables	transferase activity	-	Function
+9606	4281	GO:0019899	IPI	enables	enzyme binding	11806752	Function
+9606	4281	GO:0031625	IPI	enables	ubiquitin protein ligase binding	17438131	Function
+9606	4281	GO:0032874	IMP	involved_in	positive regulation of stress-activated MAPK cascade	17438131	Process
+9606	4281	GO:0034451	IDA	located_in	centriolar satellite	-	Component
+9606	4281	GO:0035372	IMP	involved_in	protein localization to microtubule	11806752	Process
+9606	4281	GO:0042802	IPI	enables	identical protein binding	22493164|22829933|25416956|32296183	Function
+9606	4281	GO:0042803	IDA	enables	protein homodimerization activity	11806752	Function
+9606	4281	GO:0051219	IPI	enables	phosphoprotein binding	11806752	Function
+9606	4281	GO:0070507	IBA	involved_in	regulation of microtubule cytoskeleton organization	21873635	Process
+9606	4694	GO:0005739	IDA	located_in	mitochondrion	16729965	Component
+9606	4694	GO:0005743	IDA	located_in	mitochondrial inner membrane	28844695	Component
+9606	4694	GO:0005743	TAS	located_in	mitochondrial inner membrane	-	Component
+9606	4694	GO:0005747	IBA	part_of	mitochondrial respiratory chain complex I	21873635	Component
+9606	4694	GO:0005747	IDA	part_of	mitochondrial respiratory chain complex I	12611891|17209039|27626371	Component
+9606	4694	GO:0005747	IPI	part_of	mitochondrial respiratory chain complex I	28844695	Component
+9606	4694	GO:0005747	NAS	part_of	mitochondrial respiratory chain complex I	9878551	Component
+9606	4694	GO:0006120	NAS	involved_in	mitochondrial electron transport, NADH to ubiquinone	9878551	Process
+9606	4694	GO:0008137	NAS	enables	NADH dehydrogenase (ubiquinone) activity	9878551	Function
+9606	4694	GO:0009060	IC	involved_in	aerobic respiration	30030361	Process
+9606	4694	GO:0031966	IDA	located_in	mitochondrial membrane	17209039	Component
+9606	4694	GO:0032981	IMP	involved_in	mitochondrial respiratory chain complex I assembly	27626371	Process
+9606	4694	GO:0042776	IC	involved_in	proton motive force-driven mitochondrial ATP synthesis	30030361	Process
+9606	5178	GO:0000122	IBA	involved_in	negative regulation of transcription by RNA polymerase II	21873635	Process
+9606	5178	GO:0000122	ISS	acts_upstream_of_or_within	negative regulation of transcription by RNA polymerase II	-	Process
+9606	5178	GO:0000977	IBA	enables	RNA polymerase II transcription regulatory region sequence-specific DNA binding	21873635	Function
+9606	5178	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	5178	GO:0001227	IBA	enables	DNA-binding transcription repressor activity, RNA polymerase II-specific	21873635	Function
+9606	5178	GO:0003674	ND	enables	molecular_function	-	Function
+9606	5178	GO:0005634	ISS	located_in	nucleus	-	Component
+9606	5178	GO:0005776	ISS	located_in	autophagosome	-	Component
+9606	5178	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	5178	GO:0006915	IEA	involved_in	apoptotic process	-	Process
+9606	5178	GO:0010468	ISS	acts_upstream_of_or_within	regulation of gene expression	-	Process
+9606	5178	GO:0045944	ISS	acts_upstream_of_or_within	positive regulation of transcription by RNA polymerase II	-	Process
+9606	5178	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	5324	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	5324	GO:0000978	IDA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	10646861	Function
+9606	5324	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	5324	GO:0001228	IDA	enables	DNA-binding transcription activator activity, RNA polymerase II-specific	10646861	Function
+9606	5324	GO:0003700	TAS	enables	DNA-binding transcription factor activity	9722527	Function
+9606	5324	GO:0005654	IDA	located_in	nucleoplasm	-	Component
+9606	5324	GO:0005813	IDA	located_in	centrosome	-	Component
+9606	5324	GO:0005829	IDA	located_in	cytosol	-	Component
+9606	5324	GO:0006351	IEA	involved_in	DNA-templated transcription	-	Process
+9606	5324	GO:0006355	IBA	involved_in	regulation of DNA-templated transcription	21873635	Process
+9606	5324	GO:0010628	IEA	involved_in	positive regulation of gene expression	-	Process
+9606	5324	GO:0010629	IEA	involved_in	negative regulation of gene expression	-	Process
+9606	5324	GO:0016607	IDA	located_in	nuclear speck	-	Component
+9606	5324	GO:0022612	IEA	involved_in	gland morphogenesis	-	Process
+9606	5324	GO:0035264	IEA	involved_in	multicellular organism growth	-	Process
+9606	5324	GO:0045944	IDA	involved_in	positive regulation of transcription by RNA polymerase II	10646861	Process
+9606	5324	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	5324	GO:0060252	IEA	involved_in	positive regulation of glial cell proliferation	-	Process
+9606	5324	GO:0060736	IEA	involved_in	prostate gland growth	-	Process
+9606	5326	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	5326	GO:0001228	IDA	enables	DNA-binding transcription activator activity, RNA polymerase II-specific	15361364	Function
+9606	5326	GO:0003700	TAS	enables	DNA-binding transcription factor activity	9722527	Function
+9606	5326	GO:0005515	IPI	enables	protein binding	32296183	Function
+9606	5326	GO:0005634	IBA	is_active_in	nucleus	21873635	Component
+9606	5326	GO:0006351	IEA	involved_in	DNA-templated transcription	-	Process
+9606	5326	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	5326	GO:0006629	IEA	involved_in	lipid metabolic process	-	Process
+9606	5326	GO:0009791	IEA	involved_in	post-embryonic development	-	Process
+9606	5326	GO:0034378	IEA	involved_in	chylomicron assembly	-	Process
+9606	5326	GO:0043565	IBA	enables	sequence-specific DNA binding	21873635	Function
+9606	5326	GO:0043565	IDA	enables	sequence-specific DNA binding	15361364	Function
+9606	5326	GO:0045944	IEA	involved_in	positive regulation of transcription by RNA polymerase II	-	Process
+9606	5326	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	5326	GO:2001244	IEA	involved_in	positive regulation of intrinsic apoptotic signaling pathway	-	Process
+9606	6018	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	6018	GO:0001228	ISS	enables	DNA-binding transcription activator activity, RNA polymerase II-specific	8545128	Function
+9606	6018	GO:0003677	IBA	enables	DNA binding	21873635	Function
+9606	6018	GO:0005515	IPI	enables	protein binding	10545207|24136289	Function
+9606	6018	GO:0005634	IBA	is_active_in	nucleus	21873635	Component
+9606	6018	GO:0005634	ISS	located_in	nucleus	8545128	Component
+9606	6018	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	6018	GO:0044030	IEA	involved_in	regulation of DNA methylation	-	Process
+9606	6018	GO:0045893	ISS	involved_in	positive regulation of DNA-templated transcription	8545128	Process
+9606	6018	GO:0045944	ISS	involved_in	positive regulation of transcription by RNA polymerase II	8545128	Process
+9606	6018	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	6018	GO:0097692	IEA	involved_in	histone H3-K4 monomethylation	-	Process
+9606	6297	GO:0000977	IDA	enables	RNA polymerase II transcription regulatory region sequence-specific DNA binding	21362508	Function
+9606	6297	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	6297	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	6297	GO:0001228	IDA	enables	DNA-binding transcription activator activity, RNA polymerase II-specific	21362508	Function
+9606	6297	GO:0001228	IMP	enables	DNA-binding transcription activator activity, RNA polymerase II-specific	21362508	Function
+9606	6297	GO:0001654	IDA	involved_in	eye development	24412933	Process
+9606	6297	GO:0005515	IPI	enables	protein binding	16189514|19131967|25416956	Function
+9606	6297	GO:0005634	IBA	is_active_in	nucleus	21873635	Component
+9606	6297	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	6297	GO:0045944	IMP	involved_in	positive regulation of transcription by RNA polymerase II	21362508	Process
+9606	6297	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	6299	GO:0000122	IDA	involved_in	negative regulation of transcription by RNA polymerase II	16443351	Process
+9606	6299	GO:0000792	IDA	located_in	heterochromatin	15158448	Component
+9606	6299	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	6299	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	6299	GO:0001227	IEA	enables	DNA-binding transcription repressor activity, RNA polymerase II-specific	-	Function
+9606	6299	GO:0001657	ISS	involved_in	ureteric bud development	-	Process
+9606	6299	GO:0001658	ISS	involved_in	branching involved in ureteric bud morphogenesis	-	Process
+9606	6299	GO:0001822	IMP	involved_in	kidney development	16971658	Process
+9606	6299	GO:0003281	ISS	involved_in	ventricular septum development	-	Process
+9606	6299	GO:0003337	IEP	involved_in	mesenchymal to epithelial transition involved in metanephros morphogenesis	11511981	Process
+9606	6299	GO:0005515	IPI	enables	protein binding	18297069|32296183	Function
+9606	6299	GO:0005634	IBA	is_active_in	nucleus	21873635	Component
+9606	6299	GO:0005634	IDA	located_in	nucleus	12065233|16443351	Component
+9606	6299	GO:0005654	TAS	located_in	nucleoplasm	-	Component
+9606	6299	GO:0005737	IDA	located_in	cytoplasm	12065233	Component
+9606	6299	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	6299	GO:0007507	IMP	involved_in	heart development	11484202	Process
+9606	6299	GO:0008013	IDA	enables	beta-catenin binding	15158448	Function
+9606	6299	GO:0008406	IEP	involved_in	gonad development	11511981	Process
+9606	6299	GO:0010369	IDA	located_in	chromocenter	16443351	Component
+9606	6299	GO:0021553	ISS	involved_in	olfactory nerve development	-	Process
+9606	6299	GO:0021889	ISS	involved_in	olfactory bulb interneuron differentiation	-	Process
+9606	6299	GO:0021983	IEP	involved_in	pituitary gland development	12065233	Process
+9606	6299	GO:0030177	IDA	involved_in	positive regulation of Wnt signaling pathway	15158448	Process
+9606	6299	GO:0030325	IEP	involved_in	adrenal gland development	12065233	Process
+9606	6299	GO:0031129	ISS	involved_in	inductive cell-cell signaling	-	Process
+9606	6299	GO:0042733	IMP	involved_in	embryonic digit morphogenesis	18280297	Process
+9606	6299	GO:0045892	IDA	involved_in	negative regulation of DNA-templated transcription	16443351	Process
+9606	6299	GO:0045893	IDA	involved_in	positive regulation of DNA-templated transcription	15158448	Process
+9606	6299	GO:0045944	IDA	involved_in	positive regulation of transcription by RNA polymerase II	15158448	Process
+9606	6299	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	6299	GO:0048566	IMP	involved_in	embryonic digestive tract development	18280297	Process
+9606	6299	GO:0060173	IMP	involved_in	limb development	18470945	Process
+9606	6299	GO:0061034	IMP	involved_in	olfactory bulb mitral cell layer development	18024993	Process
+9606	6299	GO:0072073	ISS	involved_in	kidney epithelium development	-	Process
+9606	6299	GO:0072092	ISS	involved_in	ureteric bud invasion	-	Process
+9606	6399	GO:0001501	IMP	involved_in	skeletal system development	10431248	Process
+9606	6399	GO:0005515	IPI	enables	protein binding	21525244|25416956|25918224	Function
+9606	6399	GO:0005634	IBA	is_active_in	nucleus	21873635	Component
+9606	6399	GO:0005634	IDA	located_in	nucleus	25918224	Component
+9606	6399	GO:0005654	IDA	located_in	nucleoplasm	-	Component
+9606	6399	GO:0005737	IBA	is_active_in	cytoplasm	21873635	Component
+9606	6399	GO:0005737	IC	located_in	cytoplasm	27066478	Component
+9606	6399	GO:0005783	IDA	located_in	endoplasmic reticulum	-	Component
+9606	6399	GO:0005793	IEA	located_in	endoplasmic reticulum-Golgi intermediate compartment	-	Component
+9606	6399	GO:0005829	TAS	located_in	cytosol	-	Component
+9606	6399	GO:0006888	IBA	involved_in	endoplasmic reticulum to Golgi vesicle-mediated transport	21873635	Process
+9606	6399	GO:0006888	IC	involved_in	endoplasmic reticulum to Golgi vesicle-mediated transport	27066478	Process
+9606	6399	GO:0006888	NAS	involved_in	endoplasmic reticulum to Golgi vesicle-mediated transport	10431248|11805826	Process
+9606	6399	GO:0006901	IC	involved_in	vesicle coating	27066478	Process
+9606	6399	GO:0030008	IBA	part_of	TRAPP complex	21873635	Component
+9606	6399	GO:0030008	IDA	part_of	TRAPP complex	21525244	Component
+9606	6399	GO:0043231	IDA	located_in	intracellular membrane-bounded organelle	-	Component
+9606	6399	GO:0044325	IPI	enables	transmembrane transporter binding	12681486	Function
+9606	6399	GO:0048208	IC	involved_in	COPII vesicle coating	27066478	Process
+9606	6399	GO:0048471	IDA	located_in	perinuclear region of cytoplasm	12681486	Component
+9606	6399	GO:0099022	IC	involved_in	vesicle tethering	27066478	Process
+9606	6399	GO:1990071	IC	part_of	TRAPPII protein complex	27066478	Component
+9606	6399	GO:1990072	IC	part_of	TRAPPIII protein complex	27066478	Component
+9606	6940	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	6940	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	6940	GO:0005634	HDA	located_in	nucleus	21630459	Component
+9606	6940	GO:0005634	IBA	is_active_in	nucleus	21873635	Component
+9606	6940	GO:0005634	IDA	located_in	nucleus	23665872	Component
+9606	6940	GO:0005654	IDA	located_in	nucleoplasm	-	Component
+9606	6940	GO:0005730	IDA	located_in	nucleolus	-	Component
+9606	6940	GO:0005829	IDA	located_in	cytosol	-	Component
+9606	6940	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	6940	GO:0007605	TAS	involved_in	sensory perception of sound	9919311	Process
+9606	6940	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7536	GO:0000245	NAS	involved_in	spliceosomal complex assembly	8752089	Process
+9606	7536	GO:0000389	TAS	involved_in	mRNA 3'-splice site recognition	15647371	Process
+9606	7536	GO:0000398	IC	involved_in	mRNA splicing, via spliceosome	9731529|17024186	Process
+9606	7536	GO:0003714	TAS	enables	transcription corepressor activity	9660765	Function
+9606	7536	GO:0003723	HDA	enables	RNA binding	22658674|22681889	Function
+9606	7536	GO:0003723	TAS	enables	RNA binding	8752089	Function
+9606	7536	GO:0003729	IBA	enables	mRNA binding	21873635	Function
+9606	7536	GO:0005515	IPI	enables	protein binding	10449420|12718882|16189514|17332742|17589525|22365833|23273425|25416956|26420826|31515488	Function
+9606	7536	GO:0005634	IBA	is_active_in	nucleus	21873635	Component
+9606	7536	GO:0005634	IC	located_in	nucleus	17024186	Component
+9606	7536	GO:0005634	NAS	located_in	nucleus	7912130	Component
+9606	7536	GO:0005654	IDA	located_in	nucleoplasm	-	Component
+9606	7536	GO:0005654	TAS	located_in	nucleoplasm	-	Component
+9606	7536	GO:0005681	IDA	part_of	spliceosomal complex	9731529	Component
+9606	7536	GO:0005681	IPI	part_of	spliceosomal complex	23273425	Component
+9606	7536	GO:0005840	NAS	located_in	ribosome	8752089	Component
+9606	7536	GO:0008270	IEA	enables	zinc ion binding	-	Function
+9606	7536	GO:0016604	IEA	located_in	nuclear body	-	Component
+9606	7536	GO:0030238	IEA	involved_in	male sex determination	-	Process
+9606	7536	GO:0030575	IEA	involved_in	nuclear body organization	-	Process
+9606	7536	GO:0033327	IEA	involved_in	Leydig cell differentiation	-	Process
+9606	7536	GO:0042802	IPI	enables	identical protein binding	22365833|26420826	Function
+9606	7536	GO:0045131	IEA	enables	pre-mRNA branch point binding	-	Function
+9606	7536	GO:0045892	IEA	involved_in	negative regulation of DNA-templated transcription	-	Process
+9606	7536	GO:0048024	IBA	involved_in	regulation of mRNA splicing, via spliceosome	21873635	Process
+9606	7536	GO:0048662	IEA	involved_in	negative regulation of smooth muscle cell proliferation	-	Process
+9606	7536	GO:0050810	IEA	involved_in	regulation of steroid biosynthetic process	-	Process
+9606	7536	GO:0089701	IPI	part_of	U2AF complex	23273425	Component
+9606	7539	GO:0000122	IBA	involved_in	negative regulation of transcription by RNA polymerase II	21873635	Process
+9606	7539	GO:0000977	IBA	enables	RNA polymerase II transcription regulatory region sequence-specific DNA binding	21873635	Function
+9606	7539	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7539	GO:0001227	IBA	enables	DNA-binding transcription repressor activity, RNA polymerase II-specific	21873635	Function
+9606	7539	GO:0003700	NAS	enables	DNA-binding transcription factor activity	9585434	Function
+9606	7539	GO:0005634	IEA	located_in	nucleus	-	Component
+9606	7539	GO:0006355	NAS	involved_in	regulation of DNA-templated transcription	9585434	Process
+9606	7539	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7539	GO:0008270	NAS	enables	zinc ion binding	9585434	Function
+9606	7541	GO:0000122	IEA	involved_in	negative regulation of transcription by RNA polymerase II	-	Process
+9606	7541	GO:0000976	IDA	enables	transcription cis-regulatory region binding	17714511	Function
+9606	7541	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	7541	GO:0001227	IBA	enables	DNA-binding transcription repressor activity, RNA polymerase II-specific	21873635	Function
+9606	7541	GO:0001822	IEA	involved_in	kidney development	-	Process
+9606	7541	GO:0003170	IEA	involved_in	heart valve development	-	Process
+9606	7541	GO:0003279	IEA	involved_in	cardiac septum development	-	Process
+9606	7541	GO:0003700	IDA	enables	DNA-binding transcription factor activity	17714511	Function
+9606	7541	GO:0005515	IPI	enables	protein binding	15629158|25416956|29892012|31515488|32296183|32814053	Function
+9606	7541	GO:0005634	IDA	located_in	nucleus	15629158|17714511	Component
+9606	7541	GO:0005654	IBA	is_active_in	nucleoplasm	21873635	Component
+9606	7541	GO:0005654	IDA	located_in	nucleoplasm	-	Component
+9606	7541	GO:0005730	IDA	located_in	nucleolus	-	Component
+9606	7541	GO:0005829	IDA	located_in	cytosol	-	Component
+9606	7541	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7541	GO:0016235	IDA	located_in	aggresome	-	Component
+9606	7541	GO:0043565	IDA	enables	sequence-specific DNA binding	17714511	Function
+9606	7541	GO:0045892	IBA	involved_in	negative regulation of DNA-templated transcription	21873635	Process
+9606	7541	GO:0045892	IMP	involved_in	negative regulation of DNA-templated transcription	17714511	Process
+9606	7541	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7541	GO:0060976	IEA	involved_in	coronary vasculature development	-	Process
+9606	7541	GO:1990837	IDA	enables	sequence-specific double-stranded DNA binding	28473536	Function
+9606	7551	GO:0000122	IBA	involved_in	negative regulation of transcription by RNA polymerase II	21873635	Process
+9606	7551	GO:0000977	IBA	enables	RNA polymerase II transcription regulatory region sequence-specific DNA binding	21873635	Function
+9606	7551	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7551	GO:0001227	IBA	enables	DNA-binding transcription repressor activity, RNA polymerase II-specific	21873635	Function
+9606	7551	GO:0003677	NAS	enables	DNA binding	2288909	Function
+9606	7551	GO:0005515	IPI	enables	protein binding	18255255|25416956|32296183	Function
+9606	7551	GO:0005634	IEA	located_in	nucleus	-	Component
+9606	7551	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7551	GO:0008270	NAS	enables	zinc ion binding	2288909	Function
+9606	7551	GO:0030154	IEA	involved_in	cell differentiation	-	Process
+9606	7551	GO:0042802	IPI	enables	identical protein binding	18255255	Function
+9606	7551	GO:0045321	NAS	involved_in	leukocyte activation	2288909	Process
+9606	7553	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	7553	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7553	GO:0003677	TAS	enables	DNA binding	2106481	Function
+9606	7553	GO:0005634	IBA	is_active_in	nucleus	21873635	Component
+9606	7553	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7553	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7554	GO:0000122	IBA	involved_in	negative regulation of transcription by RNA polymerase II	21873635	Process
+9606	7554	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	7554	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7554	GO:0003677	NAS	enables	DNA binding	2106481	Function
+9606	7554	GO:0005515	IPI	enables	protein binding	32296183	Function
+9606	7554	GO:0005634	IBA	is_active_in	nucleus	21873635	Component
+9606	7554	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7554	GO:0008270	NAS	enables	zinc ion binding	2106481	Function
+9606	7554	GO:0030509	IEA	involved_in	BMP signaling pathway	-	Process
+9606	7556	GO:0000122	IBA	involved_in	negative regulation of transcription by RNA polymerase II	21873635	Process
+9606	7556	GO:0000977	IBA	enables	RNA polymerase II transcription regulatory region sequence-specific DNA binding	21873635	Function
+9606	7556	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7556	GO:0001227	IBA	enables	DNA-binding transcription repressor activity, RNA polymerase II-specific	21873635	Function
+9606	7556	GO:0005515	IPI	enables	protein binding	17512541|23665872|32296183	Function
+9606	7556	GO:0005634	IDA	located_in	nucleus	23665872	Component
+9606	7556	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7556	GO:0032991	IDA	part_of	protein-containing complex	17512541	Component
+9606	7556	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7561	GO:0000977	IBA	enables	RNA polymerase II transcription regulatory region sequence-specific DNA binding	21873635	Function
+9606	7561	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7561	GO:0005634	IBA	is_active_in	nucleus	21873635	Component
+9606	7561	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7561	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7564	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	7564	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7564	GO:0005515	IPI	enables	protein binding	21874239|25416956|32296183	Function
+9606	7564	GO:0005634	IBA	is_active_in	nucleus	21873635	Component
+9606	7564	GO:0005634	IDA	located_in	nucleus	16628192	Component
+9606	7564	GO:0005654	IDA	located_in	nucleoplasm	-	Component
+9606	7564	GO:0005730	IDA	located_in	nucleolus	-	Component
+9606	7564	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7564	GO:0007049	IEA	involved_in	cell cycle	-	Process
+9606	7564	GO:0008284	IDA	involved_in	positive regulation of cell population proliferation	21874239	Process
+9606	7564	GO:0033674	IDA	involved_in	positive regulation of kinase activity	21874239	Process
+9606	7564	GO:0043066	IDA	involved_in	negative regulation of apoptotic process	21874239	Process
+9606	7564	GO:0045648	IMP	involved_in	positive regulation of erythrocyte differentiation	16628192	Process
+9606	7564	GO:0045654	IMP	involved_in	positive regulation of megakaryocyte differentiation	16628192	Process
+9606	7564	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7564	GO:0051301	IEA	involved_in	cell division	-	Process
+9606	7564	GO:0051781	IEA	involved_in	positive regulation of cell division	-	Process
+9606	7564	GO:0072707	IDA	involved_in	cellular response to sodium dodecyl sulfate	21874239	Process
+9606	7564	GO:1901989	IDA	involved_in	positive regulation of cell cycle phase transition	21874239	Process
+9606	7565	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	7565	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7565	GO:0005515	IPI	enables	protein binding	32296183	Function
+9606	7565	GO:0005634	IBA	is_active_in	nucleus	21873635	Component
+9606	7565	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7565	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7567	GO:0000122	IBA	involved_in	negative regulation of transcription by RNA polymerase II	21873635	Process
+9606	7567	GO:0000977	IBA	enables	RNA polymerase II transcription regulatory region sequence-specific DNA binding	21873635	Function
+9606	7567	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7567	GO:0001227	IBA	enables	DNA-binding transcription repressor activity, RNA polymerase II-specific	21873635	Function
+9606	7567	GO:0005515	IPI	enables	protein binding	32296183|32814053	Function
+9606	7567	GO:0005634	IEA	located_in	nucleus	-	Component
+9606	7567	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7567	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7568	GO:0000122	IBA	involved_in	negative regulation of transcription by RNA polymerase II	21873635	Process
+9606	7568	GO:0000977	IBA	enables	RNA polymerase II transcription regulatory region sequence-specific DNA binding	21873635	Function
+9606	7568	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7568	GO:0001227	IBA	enables	DNA-binding transcription repressor activity, RNA polymerase II-specific	21873635	Function
+9606	7568	GO:0005515	IPI	enables	protein binding	25416956|32296183|32814053	Function
+9606	7568	GO:0005634	IEA	located_in	nucleus	-	Component
+9606	7568	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7568	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7571	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	7571	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7571	GO:0005515	IPI	enables	protein binding	32296183|32814053	Function
+9606	7571	GO:0005634	IBA	is_active_in	nucleus	21873635	Component
+9606	7571	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7571	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7571	GO:1990837	IDA	enables	sequence-specific double-stranded DNA binding	28473536	Function
+9606	7574	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	7574	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7574	GO:0005515	IPI	enables	protein binding	25416956|31515488	Function
+9606	7574	GO:0005634	IBA	is_active_in	nucleus	21873635	Component
+9606	7574	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7574	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7576	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	7576	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7576	GO:0005634	IBA	is_active_in	nucleus	21873635	Component
+9606	7576	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7576	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7584	GO:0000977	IBA	enables	RNA polymerase II transcription regulatory region sequence-specific DNA binding	21873635	Function
+9606	7584	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7584	GO:0003677	TAS	enables	DNA binding	2108922	Function
+9606	7584	GO:0003700	IDA	enables	DNA-binding transcription factor activity	1572646	Function
+9606	7584	GO:0005515	IPI	enables	protein binding	32296183	Function
+9606	7584	GO:0005634	IDA	located_in	nucleus	20186958	Component
+9606	7584	GO:0006355	TAS	involved_in	regulation of DNA-templated transcription	2108922	Process
+9606	7584	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7584	GO:0007283	ISS	involved_in	spermatogenesis	20186958	Process
+9606	7584	GO:0043565	IDA	enables	sequence-specific DNA binding	8477855	Function
+9606	7584	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7584	GO:0048471	IDA	located_in	perinuclear region of cytoplasm	20186958	Component
+9606	7584	GO:0071300	ISS	involved_in	cellular response to retinoic acid	20186958	Process
+9606	7592	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	7592	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7592	GO:0005515	IPI	enables	protein binding	25416956	Function
+9606	7592	GO:0005634	IBA	is_active_in	nucleus	21873635	Component
+9606	7592	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7592	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7620	GO:0000122	IBA	involved_in	negative regulation of transcription by RNA polymerase II	21873635	Process
+9606	7620	GO:0000977	IBA	enables	RNA polymerase II transcription regulatory region sequence-specific DNA binding	21873635	Function
+9606	7620	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7620	GO:0001227	IBA	enables	DNA-binding transcription repressor activity, RNA polymerase II-specific	21873635	Function
+9606	7620	GO:0005515	IPI	enables	protein binding	25416956	Function
+9606	7620	GO:0005634	IEA	located_in	nucleus	-	Component
+9606	7620	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7620	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7621	GO:0000977	IBA	enables	RNA polymerase II transcription regulatory region sequence-specific DNA binding	21873635	Function
+9606	7621	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7621	GO:0005515	IPI	enables	protein binding	27353377	Function
+9606	7621	GO:0005737	IDA	located_in	cytoplasm	27353377	Component
+9606	7621	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7621	GO:0043076	IDA	located_in	megasporocyte nucleus	27353377	Component
+9606	7621	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7627	GO:0000122	IBA	involved_in	negative regulation of transcription by RNA polymerase II	21873635	Process
+9606	7627	GO:0000977	IBA	enables	RNA polymerase II transcription regulatory region sequence-specific DNA binding	21873635	Function
+9606	7627	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7627	GO:0001227	IBA	enables	DNA-binding transcription repressor activity, RNA polymerase II-specific	21873635	Function
+9606	7627	GO:0005515	IPI	enables	protein binding	32296183	Function
+9606	7627	GO:0005634	IEA	located_in	nucleus	-	Component
+9606	7627	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7627	GO:0008150	ND	involved_in	biological_process	-	Process
+9606	7627	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7627	GO:1990837	IDA	enables	sequence-specific double-stranded DNA binding	28473536	Function
+9606	7633	GO:0000122	IBA	involved_in	negative regulation of transcription by RNA polymerase II	21873635	Process
+9606	7633	GO:0000977	IBA	enables	RNA polymerase II transcription regulatory region sequence-specific DNA binding	21873635	Function
+9606	7633	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7633	GO:0001227	IBA	enables	DNA-binding transcription repressor activity, RNA polymerase II-specific	21873635	Function
+9606	7633	GO:0003674	ND	enables	molecular_function	-	Function
+9606	7633	GO:0005515	IPI	enables	protein binding	25416956|32296183	Function
+9606	7633	GO:0005634	IEA	located_in	nucleus	-	Component
+9606	7633	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7633	GO:0008150	ND	involved_in	biological_process	-	Process
+9606	7633	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7634	GO:0000977	IBA	enables	RNA polymerase II transcription regulatory region sequence-specific DNA binding	21873635	Function
+9606	7634	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7634	GO:0005515	IPI	enables	protein binding	32296183	Function
+9606	7634	GO:0005634	IEA	located_in	nucleus	-	Component
+9606	7634	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7634	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7637	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	7637	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7637	GO:0003677	NAS	enables	DNA binding	2505992	Function
+9606	7637	GO:0005515	IPI	enables	protein binding	32296183	Function
+9606	7637	GO:0005634	IBA	is_active_in	nucleus	21873635	Component
+9606	7637	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7637	GO:0008270	NAS	enables	zinc ion binding	2505992	Function
+9606	7638	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	7638	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7638	GO:0005515	IPI	enables	protein binding	32296183	Function
+9606	7638	GO:0005634	IEA	located_in	nucleus	-	Component
+9606	7638	GO:0006355	IBA	involved_in	regulation of DNA-templated transcription	21873635	Process
+9606	7638	GO:0006357	IEA	involved_in	regulation of transcription by RNA polymerase II	-	Process
+9606	7638	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7639	GO:0000122	IEA	involved_in	negative regulation of transcription by RNA polymerase II	-	Process
+9606	7639	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	7639	GO:0000978	IDA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	9839802	Function
+9606	7639	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7639	GO:0001227	IDA	enables	DNA-binding transcription repressor activity, RNA polymerase II-specific	9839802	Function
+9606	7639	GO:0005634	IDA	located_in	nucleus	9839802	Component
+9606	7639	GO:0005654	IDA	located_in	nucleoplasm	-	Component
+9606	7639	GO:0006355	IBA	involved_in	regulation of DNA-templated transcription	21873635	Process
+9606	7639	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7643	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	7643	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7643	GO:0003700	NAS	enables	DNA-binding transcription factor activity	2023909	Function
+9606	7643	GO:0005634	IEA	located_in	nucleus	-	Component
+9606	7643	GO:0006355	IBA	involved_in	regulation of DNA-templated transcription	21873635	Process
+9606	7643	GO:0006357	IEA	involved_in	regulation of transcription by RNA polymerase II	-	Process
+9606	7643	GO:0008270	NAS	enables	zinc ion binding	2023909	Function
+9606	7644	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	7644	GO:0001228	IBA	enables	DNA-binding transcription activator activity, RNA polymerase II-specific	21873635	Function
+9606	7644	GO:0003700	IDA	enables	DNA-binding transcription factor activity	25274305	Function
+9606	7644	GO:0003700	NAS	enables	DNA-binding transcription factor activity	2023909	Function
+9606	7644	GO:0005634	IBA	is_active_in	nucleus	21873635	Component
+9606	7644	GO:0005634	IDA	located_in	nucleus	23665872	Component
+9606	7644	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7644	GO:0008270	NAS	enables	zinc ion binding	8467795	Function
+9606	7644	GO:0045892	IDA	involved_in	negative regulation of DNA-templated transcription	25274305	Process
+9606	7644	GO:0045944	IEA	involved_in	positive regulation of transcription by RNA polymerase II	-	Process
+9606	7644	GO:0070895	IDA	involved_in	negative regulation of transposon integration	25274305	Process
+9606	7652	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	7652	GO:0001228	IBA	enables	DNA-binding transcription activator activity, RNA polymerase II-specific	21873635	Function
+9606	7652	GO:0005634	IBA	is_active_in	nucleus	21873635	Component
+9606	7652	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7652	GO:0045944	IEA	involved_in	positive regulation of transcription by RNA polymerase II	-	Process
+9606	7652	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7673	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	7673	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7673	GO:0005634	IBA	is_active_in	nucleus	21873635	Component
+9606	7673	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7673	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7678	GO:0000122	IBA	involved_in	negative regulation of transcription by RNA polymerase II	21873635	Process
+9606	7678	GO:0000977	IBA	enables	RNA polymerase II transcription regulatory region sequence-specific DNA binding	21873635	Function
+9606	7678	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7678	GO:0001227	IBA	enables	DNA-binding transcription repressor activity, RNA polymerase II-specific	21873635	Function
+9606	7678	GO:0003677	TAS	enables	DNA binding	7916577	Function
+9606	7678	GO:0005515	IPI	enables	protein binding	25416956|32296183|32814053	Function
+9606	7678	GO:0005634	IEA	located_in	nucleus	-	Component
+9606	7678	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7678	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7690	GO:0000122	IEA	involved_in	negative regulation of transcription by RNA polymerase II	-	Process
+9606	7690	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	7690	GO:0001227	IBA	enables	DNA-binding transcription repressor activity, RNA polymerase II-specific	21873635	Function
+9606	7690	GO:0001228	IEA	enables	DNA-binding transcription activator activity, RNA polymerase II-specific	-	Function
+9606	7690	GO:0005654	IBA	is_active_in	nucleoplasm	21873635	Component
+9606	7690	GO:0005654	IDA	located_in	nucleoplasm	-	Component
+9606	7690	GO:0005654	TAS	located_in	nucleoplasm	-	Component
+9606	7690	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7690	GO:0045111	IDA	located_in	intermediate filament cytoskeleton	-	Component
+9606	7690	GO:0045944	IEA	involved_in	positive regulation of transcription by RNA polymerase II	-	Process
+9606	7690	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7691	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	7691	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7691	GO:0005634	IBA	is_active_in	nucleus	21873635	Component
+9606	7691	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7691	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7693	GO:0000122	IEA	involved_in	negative regulation of transcription by RNA polymerase II	-	Process
+9606	7693	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	7693	GO:0001227	IBA	enables	DNA-binding transcription repressor activity, RNA polymerase II-specific	21873635	Function
+9606	7693	GO:0005515	IPI	enables	protein binding	32296183	Function
+9606	7693	GO:0005654	IBA	is_active_in	nucleoplasm	21873635	Component
+9606	7693	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7693	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7695	GO:0000122	IDA	involved_in	negative regulation of transcription by RNA polymerase II	7649249	Process
+9606	7695	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	7695	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7695	GO:0005515	IPI	enables	protein binding	16189514|19060904|21516116|25416956|31515488|32296183	Function
+9606	7695	GO:0005634	IBA	is_active_in	nucleus	21873635	Component
+9606	7695	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7695	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7697	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	7697	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7697	GO:0005515	IPI	enables	protein binding	32296183|32814053	Function
+9606	7697	GO:0005634	IEA	located_in	nucleus	-	Component
+9606	7697	GO:0006355	IBA	involved_in	regulation of DNA-templated transcription	21873635	Process
+9606	7697	GO:0006357	IEA	involved_in	regulation of transcription by RNA polymerase II	-	Process
+9606	7697	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7699	GO:0000122	IDA	involved_in	negative regulation of transcription by RNA polymerase II	7649249|11470777	Process
+9606	7699	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	7699	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7699	GO:0001227	IDA	enables	DNA-binding transcription repressor activity, RNA polymerase II-specific	11470777	Function
+9606	7699	GO:0005515	IPI	enables	protein binding	32296183	Function
+9606	7699	GO:0005634	IBA	is_active_in	nucleus	21873635	Component
+9606	7699	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7699	GO:0043565	IDA	enables	sequence-specific DNA binding	28473536	Function
+9606	7699	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7699	GO:1990837	IDA	enables	sequence-specific double-stranded DNA binding	28473536	Function
+9606	7700	GO:0000122	IDA	involved_in	negative regulation of transcription by RNA polymerase II	7649249	Process
+9606	7700	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	7700	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7700	GO:0005634	IEA	located_in	nucleus	-	Component
+9606	7700	GO:0006355	IBA	involved_in	regulation of DNA-templated transcription	21873635	Process
+9606	7700	GO:0006366	TAS	involved_in	transcription by RNA polymerase II	8268908	Process
+9606	7700	GO:0009653	TAS	involved_in	anatomical structure morphogenesis	8268908	Process
+9606	7700	GO:0035108	IMP	involved_in	limb morphogenesis	23160277	Process
+9606	7700	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7701	GO:0000977	IBA	enables	RNA polymerase II transcription regulatory region sequence-specific DNA binding	21873635	Function
+9606	7701	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7701	GO:0003674	ND	enables	molecular_function	-	Function
+9606	7701	GO:0005575	ND	is_active_in	cellular_component	-	Component
+9606	7701	GO:0005634	IBA	is_active_in	nucleus	21873635	Component
+9606	7701	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7701	GO:0008150	ND	involved_in	biological_process	-	Process
+9606	7701	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7702	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	7702	GO:0000978	IDA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	10893243	Function
+9606	7702	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7702	GO:0001228	IDA	enables	DNA-binding transcription activator activity, RNA polymerase II-specific	10893243	Function
+9606	7702	GO:0003682	IEA	enables	chromatin binding	-	Function
+9606	7702	GO:0005515	IPI	enables	protein binding	17938208|32296183	Function
+9606	7702	GO:0005654	TAS	located_in	nucleoplasm	-	Component
+9606	7702	GO:0006355	IBA	involved_in	regulation of DNA-templated transcription	21873635	Process
+9606	7702	GO:0006357	TAS	involved_in	regulation of transcription by RNA polymerase II	9566884	Process
+9606	7702	GO:0006359	TAS	involved_in	regulation of transcription by RNA polymerase III	9566884	Process
+9606	7702	GO:0045944	EXP	involved_in	positive regulation of transcription by RNA polymerase II	9009278	Process
+9606	7702	GO:0045944	IDA	involved_in	positive regulation of transcription by RNA polymerase II	10893243	Process
+9606	7702	GO:0045945	TAS	involved_in	positive regulation of transcription by RNA polymerase III	9009278	Process
+9606	7702	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7702	GO:0048661	IEA	involved_in	positive regulation of smooth muscle cell proliferation	-	Process
+9606	7702	GO:1905382	EXP	involved_in	positive regulation of snRNA transcription by RNA polymerase II	9009278	Process
+9606	7705	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	7705	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7705	GO:0003677	TAS	enables	DNA binding	8665923	Function
+9606	7705	GO:0005515	IPI	enables	protein binding	32296183	Function
+9606	7705	GO:0005634	IBA	is_active_in	nucleus	21873635	Component
+9606	7705	GO:0005730	IDA	located_in	nucleolus	-	Component
+9606	7705	GO:0005829	IDA	located_in	cytosol	-	Component
+9606	7705	GO:0006355	TAS	involved_in	regulation of DNA-templated transcription	8107129	Process
+9606	7705	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7705	GO:0008201	TAS	enables	heparin binding	8665923	Function
+9606	7705	GO:0008270	TAS	enables	zinc ion binding	8665923	Function
+9606	7707	GO:0000122	EXP	involved_in	negative regulation of transcription by RNA polymerase II	9685330	Process
+9606	7707	GO:0000122	IDA	involved_in	negative regulation of transcription by RNA polymerase II	12771217	Process
+9606	7707	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	7707	GO:0000978	IDA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	12771217	Function
+9606	7707	GO:0001227	IDA	enables	DNA-binding transcription repressor activity, RNA polymerase II-specific	12771217	Function
+9606	7707	GO:0003700	IBA	enables	DNA-binding transcription factor activity	21873635	Function
+9606	7707	GO:0005515	IPI	enables	protein binding	12771217|25416956	Function
+9606	7707	GO:0005654	IDA	located_in	nucleoplasm	-	Component
+9606	7707	GO:0005794	IDA	located_in	Golgi apparatus	-	Component
+9606	7707	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7707	GO:0006968	TAS	involved_in	cellular defense response	8355710	Process
+9606	7707	GO:0007276	IEA	involved_in	gamete generation	-	Process
+9606	7707	GO:0010629	IDA	involved_in	negative regulation of gene expression	12771217	Process
+9606	7707	GO:0021762	HEP	involved_in	substantia nigra development	22926577	Process
+9606	7707	GO:0043565	IDA	enables	sequence-specific DNA binding	12771217	Function
+9606	7707	GO:0045892	IDA	involved_in	negative regulation of DNA-templated transcription	12771217	Process
+9606	7707	GO:0045944	IEA	involved_in	positive regulation of transcription by RNA polymerase II	-	Process
+9606	7707	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7707	GO:0065003	IEA	involved_in	protein-containing complex assembly	-	Process
+9606	7710	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	7710	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7710	GO:0005634	IBA	is_active_in	nucleus	21873635	Component
+9606	7710	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7710	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7711	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	7711	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7711	GO:0005515	IPI	enables	protein binding	32296183	Function
+9606	7711	GO:0005634	IBA	is_active_in	nucleus	21873635	Component
+9606	7711	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7711	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7712	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	7712	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7712	GO:0005634	IBA	is_active_in	nucleus	21873635	Component
+9606	7712	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7712	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7718	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	7718	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7718	GO:0005515	IPI	enables	protein binding	16189514|25910212|31515488|32296183|32814053	Function
+9606	7718	GO:0005634	IEA	located_in	nucleus	-	Component
+9606	7718	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7718	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7727	GO:0000122	IDA	involved_in	negative regulation of transcription by RNA polymerase II	7673192	Process
+9606	7727	GO:0000785	ISA	located_in	chromatin	-	Component
+9606	7727	GO:0000976	IDA	enables	transcription cis-regulatory region binding	7673192	Function
+9606	7727	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	7727	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7727	GO:0000981	ISA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	-	Function
+9606	7727	GO:0001650	IDA	located_in	fibrillar center	-	Component
+9606	7727	GO:0003700	IDA	enables	DNA-binding transcription factor activity	7673192	Function
+9606	7727	GO:0005634	NAS	located_in	nucleus	7673192	Component
+9606	7727	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7727	GO:0016604	IDA	located_in	nuclear body	-	Component
+9606	7727	GO:0042803	IPI	enables	protein homodimerization activity	15629724	Function
+9606	7727	GO:0043565	IDA	enables	sequence-specific DNA binding	28473536	Function
+9606	7727	GO:0045892	IDA	involved_in	negative regulation of DNA-templated transcription	7673192	Process
+9606	7727	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7727	GO:1990837	IDA	enables	sequence-specific double-stranded DNA binding	28473536	Function
+9606	7728	GO:0000122	IDA	involved_in	negative regulation of transcription by RNA polymerase II	17170456	Process
+9606	7728	GO:0000977	IDA	enables	RNA polymerase II transcription regulatory region sequence-specific DNA binding	17170456	Function
+9606	7728	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	7728	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7728	GO:0001227	IDA	enables	DNA-binding transcription repressor activity, RNA polymerase II-specific	17170456	Function
+9606	7728	GO:0001228	IDA	enables	DNA-binding transcription activator activity, RNA polymerase II-specific	17170456	Function
+9606	7728	GO:0003700	TAS	enables	DNA-binding transcription factor activity	8838321	Function
+9606	7728	GO:0005515	IPI	enables	protein binding	25416956|32296183	Function
+9606	7728	GO:0005634	IBA	is_active_in	nucleus	21873635	Component
+9606	7728	GO:0005730	IDA	located_in	nucleolus	-	Component
+9606	7728	GO:0005829	IDA	located_in	cytosol	-	Component
+9606	7728	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7728	GO:0045944	IDA	involved_in	positive regulation of transcription by RNA polymerase II	17170456	Process
+9606	7728	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7728	GO:0051607	IEA	involved_in	defense response to virus	-	Process
+9606	7730	GO:0000122	IBA	involved_in	negative regulation of transcription by RNA polymerase II	21873635	Process
+9606	7730	GO:0000977	IBA	enables	RNA polymerase II transcription regulatory region sequence-specific DNA binding	21873635	Function
+9606	7730	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7730	GO:0001227	IBA	enables	DNA-binding transcription repressor activity, RNA polymerase II-specific	21873635	Function
+9606	7730	GO:0005515	IPI	enables	protein binding	25416956	Function
+9606	7730	GO:0005634	IEA	located_in	nucleus	-	Component
+9606	7730	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7730	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7730	GO:0072562	HDA	located_in	blood microparticle	22516433	Component
+9606	7730	GO:1990837	IDA	enables	sequence-specific double-stranded DNA binding	28473536	Function
+9606	7733	GO:0000122	IBA	involved_in	negative regulation of transcription by RNA polymerase II	21873635	Process
+9606	7733	GO:0000977	IBA	enables	RNA polymerase II transcription regulatory region sequence-specific DNA binding	21873635	Function
+9606	7733	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7733	GO:0001227	IBA	enables	DNA-binding transcription repressor activity, RNA polymerase II-specific	21873635	Function
+9606	7733	GO:0005515	IPI	enables	protein binding	25416956|31413325	Function
+9606	7733	GO:0005634	IEA	located_in	nucleus	-	Component
+9606	7733	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7733	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7738	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	7738	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7738	GO:0005634	IBA	is_active_in	nucleus	21873635	Component
+9606	7738	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7738	GO:0008270	NAS	enables	zinc ion binding	9073517	Function
+9606	7739	GO:0005515	IPI	enables	protein binding	32296183	Function
+9606	7739	GO:0005737	IEA	located_in	cytoplasm	-	Component
+9606	7739	GO:0005925	IEA	located_in	focal adhesion	-	Component
+9606	7739	GO:0008270	TAS	enables	zinc ion binding	9268636	Function
+9606	7739	GO:0015629	IEA	located_in	actin cytoskeleton	-	Component
+9606	7739	GO:0051015	IEA	enables	actin filament binding	-	Function
+9606	7743	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	7743	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	7743	GO:0005634	IBA	is_active_in	nucleus	21873635	Component
+9606	7743	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	7743	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	7752	GO:0003674	ND	enables	molecular_function	-	Function
+9606	7752	GO:0005515	IPI	enables	protein binding	32296183	Function
+9606	7752	GO:0005634	IEA	located_in	nucleus	-	Component
+9606	7752	GO:0008150	ND	involved_in	biological_process	-	Process
+9606	7752	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	10795	GO:0000122	IDA	involved_in	negative regulation of transcription by RNA polymerase II	12822888	Process
+9606	10795	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	10795	GO:0001228	IBA	enables	DNA-binding transcription activator activity, RNA polymerase II-specific	21873635	Function
+9606	10795	GO:0003677	NAS	enables	DNA binding	11311945	Function
+9606	10795	GO:0003700	NAS	enables	DNA-binding transcription factor activity	11311945	Function
+9606	10795	GO:0005634	IBA	is_active_in	nucleus	21873635	Component
+9606	10795	GO:0005634	IDA	located_in	nucleus	12822888	Component
+9606	10795	GO:0005634	NAS	located_in	nucleus	11311945	Component
+9606	10795	GO:0005737	IDA	located_in	cytoplasm	15547661	Component
+9606	10795	GO:0005829	IDA	located_in	cytosol	-	Component
+9606	10795	GO:0006355	NAS	involved_in	regulation of DNA-templated transcription	11311945	Process
+9606	10795	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	10795	GO:0007346	IMP	involved_in	regulation of mitotic cell cycle	23946776	Process
+9606	10795	GO:0008284	IMP	involved_in	positive regulation of cell population proliferation	23091055	Process
+9606	10795	GO:0008285	IMP	involved_in	negative regulation of cell population proliferation	22235304|23946776	Process
+9606	10795	GO:0030154	IEA	involved_in	cell differentiation	-	Process
+9606	10795	GO:0030335	IMP	involved_in	positive regulation of cell migration	23946776	Process
+9606	10795	GO:0043065	IMP	involved_in	positive regulation of apoptotic process	22235304	Process
+9606	10795	GO:0043066	IMP	involved_in	negative regulation of apoptotic process	23091055	Process
+9606	10795	GO:0045597	IMP	involved_in	positive regulation of cell differentiation	22235304	Process
+9606	10795	GO:0045944	IMP	involved_in	positive regulation of transcription by RNA polymerase II	23091055	Process
+9606	10795	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	10795	GO:0051726	IMP	involved_in	regulation of cell cycle	23091055	Process
+9606	79903	GO:0000139	IBA	is_active_in	Golgi membrane	21873635	Component
+9606	79903	GO:0000139	IDA	located_in	Golgi membrane	21981917|25732826	Component
+9606	79903	GO:0004402	IBA	enables	histone acetyltransferase activity	21873635	Function
+9606	79903	GO:0004596	IBA	enables	peptide alpha-N-acetyltransferase activity	21873635	Function
+9606	79903	GO:0004596	IDA	enables	peptide alpha-N-acetyltransferase activity	21750686|21981917|25732826|27320834|27550639	Function
+9606	79903	GO:0005515	IPI	enables	protein binding	32296183|32814053	Function
+9606	79903	GO:0006334	IDA	involved_in	nucleosome assembly	21981917	Process
+9606	79903	GO:0006474	IDA	involved_in	N-terminal protein amino acid acetylation	25732826|27320834|27550639	Process
+9606	79903	GO:0007059	ISS	involved_in	chromosome segregation	-	Process
+9606	79903	GO:0008283	IMP	involved_in	cell population proliferation	21981917	Process
+9606	79903	GO:0010485	IDA	enables	H4 histone acetyltransferase activity	21981917	Function
+9606	79903	GO:0017196	IBA	involved_in	N-terminal peptidyl-methionine acetylation	21873635	Process
+9606	79903	GO:0017196	IDA	involved_in	N-terminal peptidyl-methionine acetylation	21750686	Process
+9606	79903	GO:0042803	IDA	enables	protein homodimerization activity	27320834	Function
+9606	79903	GO:0043966	IBA	involved_in	histone H3 acetylation	21873635	Process
+9606	79903	GO:0043967	IBA	involved_in	histone H4 acetylation	21873635	Process
+9606	79903	GO:0043967	IDA	involved_in	histone H4 acetylation	21981917	Process
+9606	79943	GO:0000977	IBA	enables	RNA polymerase II transcription regulatory region sequence-specific DNA binding	21873635	Function
+9606	79943	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	79943	GO:0005515	IPI	enables	protein binding	32296183|32814053	Function
+9606	79943	GO:0005634	IBA	is_active_in	nucleus	21873635	Component
+9606	79943	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	79943	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	79986	GO:0003677	IEA	enables	DNA binding	-	Function
+9606	79986	GO:0005515	IPI	enables	protein binding	25416956	Function
+9606	79986	GO:0005634	IEA	located_in	nucleus	-	Component
+9606	79986	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	84527	GO:0000122	IBA	involved_in	negative regulation of transcription by RNA polymerase II	21873635	Process
+9606	84527	GO:0000977	IBA	enables	RNA polymerase II transcription regulatory region sequence-specific DNA binding	21873635	Function
+9606	84527	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	84527	GO:0001227	IBA	enables	DNA-binding transcription repressor activity, RNA polymerase II-specific	21873635	Function
+9606	84527	GO:0005515	IPI	enables	protein binding	16189514|25416956|29892012|32296183	Function
+9606	84527	GO:0005634	IEA	located_in	nucleus	-	Component
+9606	84527	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	84527	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	84561	GO:0005515	IPI	enables	protein binding	32296183	Function
+9606	84561	GO:0006884	IBA	involved_in	cell volume homeostasis	21873635	Process
+9606	84561	GO:0015379	IBA	enables	potassium:chloride symporter activity	21873635	Function
+9606	84561	GO:0016021	IEA	located_in	integral component of membrane	-	Component
+9606	84561	GO:0055064	IBA	involved_in	chloride ion homeostasis	21873635	Process
+9606	84561	GO:0055075	IBA	involved_in	potassium ion homeostasis	21873635	Process
+9606	84561	GO:1902476	IBA	involved_in	chloride transmembrane transport	21873635	Process
+9606	84561	GO:1990573	IBA	involved_in	potassium ion import across plasma membrane	21873635	Process
+9606	90589	GO:0000977	IBA	enables	RNA polymerase II transcription regulatory region sequence-specific DNA binding	21873635	Function
+9606	90589	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	90589	GO:0005515	IPI	enables	protein binding	25416956	Function
+9606	90589	GO:0005634	IBA	is_active_in	nucleus	21873635	Component
+9606	90589	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	90589	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	162968	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	162968	GO:0003700	IBA	enables	DNA-binding transcription factor activity	21873635	Function
+9606	162968	GO:0005515	IPI	enables	protein binding	32296183|32814053	Function
+9606	162968	GO:0005634	IEA	located_in	nucleus	-	Component
+9606	162968	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	162968	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	167359	GO:0000287	IDA	enables	magnesium ion binding	15733851	Function
+9606	167359	GO:0004674	IBA	enables	protein serine/threonine kinase activity	21873635	Function
+9606	167359	GO:0004674	IDA	enables	protein serine/threonine kinase activity	15733851	Function
+9606	167359	GO:0005524	IDA	enables	ATP binding	15733851	Function
+9606	167359	GO:0006468	IBA	involved_in	protein phosphorylation	21873635	Process
+9606	167359	GO:0006468	IDA	involved_in	protein phosphorylation	15733851	Process
+9606	167359	GO:0035556	IBA	involved_in	intracellular signal transduction	21873635	Process
+9606	167359	GO:0042149	IBA	involved_in	cellular response to glucose starvation	21873635	Process
+9606	167359	GO:0106310	IEA	enables	protein serine kinase activity	-	Function
+9606	286128	GO:0000977	IBA	enables	RNA polymerase II transcription regulatory region sequence-specific DNA binding	21873635	Function
+9606	286128	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	286128	GO:0005515	IPI	enables	protein binding	32296183	Function
+9606	286128	GO:0005634	IEA	located_in	nucleus	-	Component
+9606	286128	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	286128	GO:0007283	IEA	involved_in	spermatogenesis	-	Process
+9606	286128	GO:0030154	IEA	involved_in	cell differentiation	-	Process
+9606	286128	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	286128	GO:1990837	IDA	enables	sequence-specific double-stranded DNA binding	28473536	Function
+9606	642280	GO:0000978	IBA	enables	RNA polymerase II cis-regulatory region sequence-specific DNA binding	21873635	Function
+9606	642280	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	642280	GO:0005634	IEA	located_in	nucleus	-	Component
+9606	642280	GO:0006355	IBA	involved_in	regulation of DNA-templated transcription	21873635	Process
+9606	642280	GO:0006357	IEA	involved_in	regulation of transcription by RNA polymerase II	-	Process
+9606	642280	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	100529215	GO:0000122	IBA	involved_in	negative regulation of transcription by RNA polymerase II	21873635	Process
+9606	100529215	GO:0000977	IBA	enables	RNA polymerase II transcription regulatory region sequence-specific DNA binding	21873635	Function
+9606	100529215	GO:0000981	IBA	enables	DNA-binding transcription factor activity, RNA polymerase II-specific	21873635	Function
+9606	100529215	GO:0001227	IBA	enables	DNA-binding transcription repressor activity, RNA polymerase II-specific	21873635	Function
+9606	100529215	GO:0005515	IPI	enables	protein binding	25416956	Function
+9606	100529215	GO:0005634	IEA	located_in	nucleus	-	Component
+9606	100529215	GO:0006357	IBA	involved_in	regulation of transcription by RNA polymerase II	21873635	Process
+9606	100529215	GO:0046872	IEA	enables	metal ion binding	-	Function
+9606	100529215	GO:0072562	HDA	located_in	blood microparticle	22516433	Component
+9606	100529215	GO:1990837	IDA	enables	sequence-specific double-stranded DNA binding	28473536	Function

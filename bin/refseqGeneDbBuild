@@ -12,8 +12,18 @@ verbose = False
 def parseArgs():
     desc = """create a sqlite data from a subset of the RefseqGene files.
 
-    requires: gene2refseq.gz gene_info.gz gene_group.gz gene_orthologs.gz
-    from https://ftp.ncbi.nih.gov/gene/DATA/
+    Requires RefSeq gene database download from https://ftp.ncbi.nih.gov/gene/DATA/
+    The current files are imported:
+
+       gene2refseq.gz
+       gene_info.gz
+       gene_group.gz
+       gene_orthologs.gz
+
+    To download the entire gene database:
+       wget -np -nv -nd -r -l 0 -A 'gene*.gz' --unlink -e robots=off https://ftp.ncbi.nih.gov/gene/DATA/
+
+    The size as of 2022-07 is 11G.  These do not need to be uncompressed to load.
 
     All column names are user from NCBI files, with '.' being replaced by '_'.
     A column RNA_nucleotide_accession is added to gene2refseq with the accession
@@ -37,20 +47,21 @@ def getDataFile(datadir, basename):
     else:
         raise FileNotFoundError(fpath + " or " + fpathCmp)
 
-def rowReaderSetNull(rdr, nonNullCols):
-    for row in rdr:
+def TsvRowReader(tsvReader, nonNullCols):
+    for row in tsvReader:
         cols = []
-        for colName in rdr.columns:
+        for colName in tsvReader.columns:
             val = row[colName]
             if (colName not in nonNullCols) and (val in ('-', 'NA')):
                 val = None
             cols.append(val)
         yield cols
 
-def tsvLoadToTable(cur, table, tsvFile, *, nonNullCols=frozenset(), extraCols=None, extraColsFunc=None):
+def tsvLoadToTable(cur, tsvReader, table, tsvFile, *, nonNullCols=frozenset(), extraCols=None, extraColsFunc=None):
     """nonnNllcols indicate which  do not have NULL substitution performed."""
     assert (extraCols is None) == (extraColsFunc is None)
     cnt = 0
+
     def insert(insertSql, rows):
         cur.execute("BEGIN TRANSACTION")
         cur.executemany(insertSql, rows)
@@ -60,10 +71,9 @@ def tsvLoadToTable(cur, table, tsvFile, *, nonNullCols=frozenset(), extraCols=No
         if verbose:
             print(f"{datetime.now().isoformat()}: {table} inserted {cnt} rows", file=sys.stderr)
 
-    rdr = TsvReader(tsvFile)
-
     # replace accession.version with accession_version
-    dbColNames = [c.replace('.', '_') for c in rdr.columns]
+    dbColNames = [c.replace('.', '_') for c in tsvReader.columns]
+
     if extraCols is not None:
         dbColNames += list(extraCols)
     # insert in same order:
@@ -72,7 +82,7 @@ def tsvLoadToTable(cur, table, tsvFile, *, nonNullCols=frozenset(), extraCols=No
                                                                                valbinds=",".join(len(dbColNames) * '?'))
     batchSize = 50000
     rows = []
-    for row in rowReaderSetNull(rdr, nonNullCols):
+    for row in TsvRowReader(tsvReader, nonNullCols):
         if extraColsFunc is not None:
             extraColsFunc(row)
         rows.append(row)
@@ -83,6 +93,77 @@ def tsvLoadToTable(cur, table, tsvFile, *, nonNullCols=frozenset(), extraCols=No
     if len(rows) > 0:
         insert(insertSql, rows)
 
+def checkExpectColumns(tsvFile, columns, expectedCols):
+    "validate this code matches file"
+    if frozenset(columns) != frozenset(expectedCols):
+        raise Exception(f"refseq TSV file '{tsvFile}' columns don't match what is expected in this code, please update the code")
+
+def buildTable(conn, refseqGeneDownloadDir, table, expectedCols, createSql, indexSql,
+               *, nonNullCols=frozenset(), extraCols=None, extraColsFunc=None):
+    tsvFile = getDataFile(refseqGeneDownloadDir, table)
+    tsvReader = TsvReader(tsvFile)
+    cur = conn.cursor()
+    cur.execute(createSql)
+    tsvLoadToTable(cur, tsvReader, table, tsvFile, nonNullCols=nonNullCols, extraCols=extraCols, extraColsFunc=extraColsFunc)
+    cur.execute(indexSql)
+    cur.close()
+
+
+###
+# gene_info
+###
+geneInfoExpectedCols = (
+    "tax_id", "GeneID", "Symbol", "LocusTag", "Synonyms", "dbXrefs",
+    "chromosome", "map_location", "description", "type_of_gene",
+    "Symbol_from_nomenclature_authority",
+    "Full_name_from_nomenclature_authority", "Nomenclature_status",
+    "Other_designations", "Modification_date", "Feature_type")
+
+geneInfoCreateSql = """
+DROP TABLE IF EXISTS gene_info;
+CREATE TABLE gene_info (
+  "tax_id" INT NOT NULL,
+  "GeneID" INT NOT NULL,
+  "Symbol" TEXT,
+  "LocusTag" TEXT,
+  "Synonyms" TEXT,
+  "dbXrefs" TEXT,
+  "chromosome" TEXT,
+  "map_location" TEXT,
+  "description" TEXT,
+  "type_of_gene" TEXT NOT NULL,
+  "Symbol_from_nomenclature_authority" TEXT,
+  "Full_name_from_nomenclature_authority" TEXT,
+  "Nomenclature_status" TEXT,
+  "Other_designations" TEXT,
+  "Modification_date" TEXT NOT NULL,
+  "Feature_type" TEXT
+);
+"""
+
+geneInfoIndexSql = """
+CREATE INDEX gene_info_tax_id ON gene_info (tax_id);
+CREATE INDEX gene_info_GeneId ON gene_info (GeneId);
+CREATE INDEX gene_info_Symbol ON gene_info (Symbol);
+CREATE INDEX gene_info_type_of_gene ON gene_info (type_of_gene);
+"""
+
+geneInfoNonNullCols = frozenset(("tax_id", "GeneID", "type_of_gene", "Modification_date"))
+
+def loadGeneInfo(conn, refseqGeneDownloadDir):
+    buildTable(conn, refseqGeneDownloadDir, "gene_info", geneInfoExpectedCols, geneInfoCreateSql,
+               geneInfoIndexSql, nonNullCols=geneInfoNonNullCols)
+
+###
+# gene2refseq
+###
+gene2refseqExpectedCols = (
+    "tax_id", "GeneID", "status", "RNA_nucleotide_accession_version",
+    "RNA_nucleotide_gi", "protein_accession_version", "protein_gi",
+    "genomic_nucleotide_accession_version", "genomic_nucleotide_gi",
+    "start_position_on_the_genomic_accession",
+    "end_position_on_the_genomic_accession", "orientation", "assembly",
+    "mature_peptide_accession_version", "mature_peptide_gi", "Symbol")
 gene2refseqCreateSql = """
 DROP TABLE IF EXISTS gene2refseq;
 CREATE TABLE gene2refseq (
@@ -121,52 +202,16 @@ def loadGene2refseq(conn, refseqGeneDownloadDir):
     def _addAddCol(row):
         acc = row[3].split('.')[0] if row[3] is not None else None
         row.append(acc)
-    cur = conn.cursor()
-    cur.execute(gene2refseqCreateSql)
-    tsvLoadToTable(cur, "gene2refseq", getDataFile(refseqGeneDownloadDir, "gene2refseq"), nonNullCols=gene2refseqNonNullCols,
-                   extraCols=["RNA_nucleotide_accession"], extraColsFunc=_addAddCol)
-    cur.execute(gene2refseqIndexSql)
-    cur.close()
+    buildTable(conn, refseqGeneDownloadDir, "gene2refseq",
+               gene2refseqExpectedCols, gene2refseqCreateSql,
+               gene2refseqIndexSql, nonNullCols=gene2refseqNonNullCols,
+               extraCols=["RNA_nucleotide_accession"], extraColsFunc=_addAddCol)
 
-geneInfoCreateSql = """
-DROP TABLE IF EXISTS gene_info;
-CREATE TABLE gene_info (
-  "tax_id" INT NOT NULL,
-  "GeneID" INT NOT NULL,
-  "Symbol" TEXT,
-  "LocusTag" TEXT,
-  "Synonyms" TEXT,
-  "dbXrefs" TEXT,
-  "chromosome" TEXT,
-  "map_location" TEXT,
-  "description" TEXT,
-  "type_of_gene" TEXT NOT NULL,
-  "Symbol_from_nomenclature_authority" TEXT,
-  "Full_name_from_nomenclature_authority" TEXT,
-  "Nomenclature_status" TEXT,
-  "Other_designations" TEXT,
-  "Modification_date" TEXT NOT NULL,
-  "Feature_type" TEXT
-);
-"""
-
-geneInfoIndexSql = """
-CREATE INDEX gene_info_tax_id ON gene_info (tax_id);
-CREATE INDEX gene_info_GeneId ON gene_info (GeneId);
-CREATE INDEX gene_info_Symbol ON gene_info (Symbol);
-CREATE INDEX gene_info_type_of_gene ON gene_info (type_of_gene);
-"""
-
-geneInfoNonNullCols = frozenset(("tax_id", "GeneID", "type_of_gene", "Modification_date"))
-
-def loadGeneInfo(conn, refseqGeneDownloadDir):
-    cur = conn.cursor()
-    cur.execute(geneInfoCreateSql)
-    tsvLoadToTable(cur, "gene_info", getDataFile(refseqGeneDownloadDir, "gene_info"))
-    cur.execute(geneInfoIndexSql)
-    cur.close()
-
-
+###
+# gene_group and gene_orthologs
+###
+geneAssocExpectedCols = (
+    "tax_id", "GeneID", "relationship", "Other_tax_id", "Other_GeneID")
 geneAssocCreateSql = """
 DROP TABLE IF EXISTS {table};
 CREATE TABLE {table} (
@@ -184,21 +229,20 @@ CREATE INDEX {table}_GeneId ON {table} (GeneId);
 CREATE INDEX {table}_Other_tax_id ON {table} (Other_tax_id);
 CREATE INDEX {table}_Other_GeneId ON {table} (Other_GeneId);
 """
+geneAssocNonNullCols = geneAssocExpectedCols
 
-def loadGeneAssoc(conn, refseqGeneDownloadDir, table):
-    cur = conn.cursor()
-    cur.execute(geneAssocCreateSql.format(table=table))
-    tsvLoadToTable(cur, table, getDataFile(refseqGeneDownloadDir, table))
-    cur.execute(geneAssocIndexSql.format(table=table))
-    cur.close()
+def loadGeneAssocTypeTable(conn, refseqGeneDownloadDir, table):
+    buildTable(conn, refseqGeneDownloadDir, table, geneAssocExpectedCols,
+               geneAssocCreateSql.format(table=table), geneAssocIndexSql.format(table=table),
+               nonNullCols=geneAssocNonNullCols)
 
 def buildRefseqGeneDb(refseqGeneDownloadDir, refseqGeneDb):
     conn = sqliteOps.connect(refseqGeneDb, create=True)
     sqliteOps.setFastLoadPragmas(conn)
     loadGene2refseq(conn, refseqGeneDownloadDir)
     loadGeneInfo(conn, refseqGeneDownloadDir)
-    loadGeneAssoc(conn, refseqGeneDownloadDir, "gene_group")
-    loadGeneAssoc(conn, refseqGeneDownloadDir, "gene_orthologs")
+    loadGeneAssocTypeTable(conn, refseqGeneDownloadDir, "gene_group")
+    loadGeneAssocTypeTable(conn, refseqGeneDownloadDir, "gene_orthologs")
     conn.close()
 
 def main(opts):

@@ -1,11 +1,11 @@
 * building test cases
 
-bin/buildRefseqGeneTestData is used to build test cases from a full refseqGeneDb.db
+bin/buildRefseqGeneTestData is used to build test cases
 
 the file input/refseqCases.tsv has ids to extract.
 
-bin/buildRefseqGeneTestData ../builds/2021-10/data/refseqGene//refseqGene.db input/refseqCases.tsv tmp
+./bin/buildRefseqGeneTestData input/refseqCases.tsv tmp/ncbi-gene/ tmp/out/
 
-# manually check files then
+# manually insect files then
 mv tmp/* input/refseqGene/
 
