@@ -36,6 +36,10 @@ def parseArgs():
                         help="create this database")
     return parser.parse_args()
 
+def baseAccOrNone(accv):
+    "drop version if not None"
+    return accv.split('.')[0] if accv is not None else None
+
 def getDataFile(datadir, basename):
     "compressed or uncompressed path"
     fpath = osp.join(datadir, basename)
@@ -94,14 +98,17 @@ def tsvLoadToTable(cur, tsvReader, table, tsvFile, *, nonNullCols=frozenset(), e
         insert(insertSql, rows)
 
 def checkExpectColumns(tsvFile, columns, expectedCols):
-    "validate this code matches file"
-    if frozenset(columns) != frozenset(expectedCols):
-        raise Exception(f"refseq TSV file '{tsvFile}' columns don't match what is expected in this code, please update the code")
+    "validate this code matches header, including order "
+    columns = tuple(columns)
+    if columns != expectedCols:
+        raise Exception(f"refseq TSV file '{tsvFile}' columns don't match what is expected in this code, please update the code:\n"
+                        f"got: {columns}\nexpect: {expectedCols}")
 
 def buildTable(conn, refseqGeneDownloadDir, table, expectedCols, createSql, indexSql,
                *, nonNullCols=frozenset(), extraCols=None, extraColsFunc=None):
     tsvFile = getDataFile(refseqGeneDownloadDir, table)
     tsvReader = TsvReader(tsvFile)
+    checkExpectColumns(tsvFile, tsvReader.columns, expectedCols)
     cur = conn.cursor()
     cur.execute(createSql)
     tsvLoadToTable(cur, tsvReader, table, tsvFile, nonNullCols=nonNullCols, extraCols=extraCols, extraColsFunc=extraColsFunc)
@@ -158,12 +165,21 @@ def loadGeneInfo(conn, refseqGeneDownloadDir):
 # gene2refseq
 ###
 gene2refseqExpectedCols = (
-    "tax_id", "GeneID", "status", "RNA_nucleotide_accession_version",
-    "RNA_nucleotide_gi", "protein_accession_version", "protein_gi",
-    "genomic_nucleotide_accession_version", "genomic_nucleotide_gi",
+    "tax_id", "GeneID", "status", "RNA_nucleotide_accession.version",
+    "RNA_nucleotide_gi", "protein_accession.version", "protein_gi",
+    "genomic_nucleotide_accession.version", "genomic_nucleotide_gi",
     "start_position_on_the_genomic_accession",
     "end_position_on_the_genomic_accession", "orientation", "assembly",
-    "mature_peptide_accession_version", "mature_peptide_gi", "Symbol")
+    "mature_peptide_accession.version", "mature_peptide_gi", "Symbol")
+
+# these are added
+gene2refseqDerivedCols = (
+    "RNA_nucleotide_accession",
+    "protein_accession",
+    "genomic_nucleotide_accession",
+    "mature_peptide_accession",
+)
+
 gene2refseqCreateSql = """
 DROP TABLE IF EXISTS gene2refseq;
 CREATE TABLE gene2refseq (
@@ -183,7 +199,11 @@ CREATE TABLE gene2refseq (
   "mature_peptide_accession_version" TEXT,
   "mature_peptide_gi" TEXT,
   "Symbol" TEXT NOT NULL,
-  "RNA_nucleotide_accession" TEXT
+  -- Derived columns
+  "RNA_nucleotide_accession" TEXT,
+  "protein_accession" TEXT,
+  "genomic_nucleotide_accession" TEXT,
+  "mature_peptide_accession" TEXT
 );
 """
 
@@ -191,21 +211,30 @@ gene2refseqIndexSql = """
 CREATE INDEX gene2refseq_tax_id ON gene2refseq (tax_id);
 CREATE INDEX gene2refseq_GeneId ON gene2refseq (GeneId);
 CREATE INDEX gene2refseq_RNA_nucleotide_accession_version ON gene2refseq (RNA_nucleotide_accession_version);
+CREATE INDEX gene2refseq_protein_accession_version ON gene2refseq (protein_accession_version);
+CREATE INDEX gene2refseq_genomic_nucleotide_accession_version ON gene2refseq (genomic_nucleotide_accession_version);
+CREATE INDEX gene2refseq_mature_peptide_accession_version ON gene2refseq (mature_peptide_accession_version);
 CREATE INDEX gene2refseq_Symbol ON gene2refseq (Symbol);
 CREATE INDEX gene2refseq_RNA_nucleotide_accession ON gene2refseq (RNA_nucleotide_accession);
+CREATE INDEX gene2refseq_protein_accession ON gene2refseq (protein_accession);
+CREATE INDEX gene2refseq_genomic_nucleotide_accession ON gene2refseq (genomic_nucleotide_accession);
+CREATE INDEX gene2refseq_mature_peptide_accession ON gene2refseq (mature_peptide_accession);
 """
 
 # orientation is '?' if unknown, '-' is strand, not NULL
 gene2refseqNonNullCols = frozenset(("tax_id", "GeneID", "Symbol", "orientation"))
 
 def loadGene2refseq(conn, refseqGeneDownloadDir):
-    def _addAddCol(row):
-        acc = row[3].split('.')[0] if row[3] is not None else None
-        row.append(acc)
+    def _addDerived(row):
+        row.extend([baseAccOrNone(row[3]),    # RNA_nucleotide_accession.version
+                    baseAccOrNone(row[5]),    # protein_accession.version
+                    baseAccOrNone(row[7]),    # genomic_nucleotide_accession.version
+                    baseAccOrNone(row[13])])  # mature_peptide_accession.version
+
     buildTable(conn, refseqGeneDownloadDir, "gene2refseq",
                gene2refseqExpectedCols, gene2refseqCreateSql,
                gene2refseqIndexSql, nonNullCols=gene2refseqNonNullCols,
-               extraCols=["RNA_nucleotide_accession"], extraColsFunc=_addAddCol)
+               extraCols=gene2refseqDerivedCols, extraColsFunc=_addDerived)
 
 ###
 # gene_group and gene_orthologs
