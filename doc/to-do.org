@@ -8,3 +8,7 @@ doesn't support sqlite need: https://pypi.org/project/dbml-sqlite/
 https://github.com/holistics/dbml
 
 https://pypi.org/project/pydbml/
+* use of names vs column indexes
+row = rec.toRow()  # FIXME this could should really use names everywhere
+
+

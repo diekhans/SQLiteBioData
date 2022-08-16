@@ -2,8 +2,9 @@
 
 import sys
 from os import path as osp
+import time
 import argparse
-from datetime import datetime
+from functools import partial
 from pycbio.tsv import TsvReader
 from pycbio.db import sqliteOps
 
@@ -37,11 +38,16 @@ def parseArgs():
     without the version.
     """
     parser = argparse.ArgumentParser(description=desc)
+    parser.add_argument("--verbose", action="store_true",
+                        help="print info about each table load")
     parser.add_argument("refseqGeneDownloadDir",
                         help="directory with downloaded files")
     parser.add_argument("refseqGeneDb",
                         help="create this database")
-    return parser.parse_args()
+    opts = parser.parse_args()
+    global verbose
+    verbose = opts.verbose
+    return opts
 
 def baseAccOrNone(accv):
     "drop version if not None"
@@ -58,67 +64,80 @@ def getDataFile(datadir, basename):
     else:
         raise FileNotFoundError(fpath + " or " + fpathCmp)
 
-def TsvRowReader(tsvReader, nonNullCols):
-    for row in tsvReader:
-        cols = []
-        for colName in tsvReader.columns:
-            val = row[colName]
-            if (colName not in nonNullCols) and (val in ('-', 'NA')):
-                val = None
-            cols.append(val)
-        yield cols
+def tsvToSqlColumnNames(tsvCols):
+    "replace accession.version with accession_version in various column names"
+    return [c.replace('.', '_') for c in tsvCols]
 
-def tsvLoadToTable(cur, tsvReader, table, tsvFile, *, nonNullCols=frozenset(), extraCols=None, extraColsFunc=None):
-    """nonnNllcols indicate which  do not have NULL substitution performed."""
-    assert (extraCols is None) == (extraColsFunc is None)
-    cnt = 0
+def fixRowNulls(tsvReader, row, nonNullTsvCols):
+    "update columns to None, if they are are '-' or 'NA' and not listed in nonNullTsvCols"
+    for idx, colName in enumerate(tsvReader.columns):
+        if (colName not in nonNullTsvCols) and (row[idx] in ('-', 'NA')):
+            row[idx] = None
 
-    def insert(insertSql, rows):
+class BatchInserter:
+    "insert rows in batches"
+    BATCH_SIZE = 1000000
+
+    def __init__(self, table, dbColNames):
+        self.table = table
+        self.insertSql = "INSERT INTO {table} ({colnames}) VALUES ({valbinds});".format(table=table,
+                                                                                        colnames=",".join(dbColNames),
+                                                                                        valbinds=",".join(len(dbColNames) * '?'))
+        self.rows = []
+        self.cnt = 0
+        self.startTime = time.time()
+
+    def _insert(self, cur):
         cur.execute("BEGIN TRANSACTION")
-        cur.executemany(insertSql, rows)
+        cur.executemany(self.insertSql, self.rows)
         cur.execute("COMMIT TRANSACTION")
-        nonlocal cnt
-        cnt += len(rows)
+        self.rows = []
+
+    def add(self, cur, row):
+        self.rows.append(row)
+        self.cnt += 1
+        if len(self.rows) >= self.BATCH_SIZE:
+            self._insert(cur)
+
+    def finish(self, cur):
+        if len(self.rows) > 0:
+            self._insert(cur)
         if verbose:
-            print(f"{datetime.now().isoformat()}: {table} inserted {cnt} rows", file=sys.stderr)
+            elapsedTime = time.time() - self.startTime
+            print(f"{self.table} inserted {self.cnt} rows in {elapsedTime} seconds", file=sys.stderr)
 
-    # replace accession.version with accession_version
-    dbColNames = [c.replace('.', '_') for c in tsvReader.columns]
 
-    if extraCols is not None:
-        dbColNames += list(extraCols)
-    # insert in same order:
-    insertSql = "INSERT INTO {table} ({colnames}) VALUES ({valbinds});".format(table=table,
-                                                                               colnames=",".join(dbColNames),
-                                                                               valbinds=",".join(len(dbColNames) * '?'))
-    batchSize = 50000
-    rows = []
-    for row in TsvRowReader(tsvReader, nonNullCols):
-        if extraColsFunc is not None:
-            extraColsFunc(row)
-        rows.append(row)
-        if len(rows) >= batchSize:
-            insert(insertSql, rows)
-            rows = []
+def tsvLoadToTable(cur, tsvReader, table, dbColNames, *, nonNullTsvCols=frozenset(),
+                   rowEditFunc=None):
+    """The nonNullcols arguments indicate which do not have NULL substitution performed.
+    The  rowEditFunc is called on each row,
+    to add extraColumns values or do other edits.
+    """
 
-    if len(rows) > 0:
-        insert(insertSql, rows)
+    batchInserter = BatchInserter(table, dbColNames)
+    for rec in tsvReader:
+        row = rec.getRow()  # FIXME this could should really use names everywhere
+        fixRowNulls(tsvReader, row, nonNullTsvCols)
+        if rowEditFunc is not None:
+            rowEditFunc(row)
+        batchInserter.add(cur, row)
+    batchInserter.finish(cur)
 
-def checkExpectColumns(tsvFile, columns, expectedCols):
+def checkExpectColumns(tsvFile, columns, expectedTsvCols):
     "validate this code matches header, including order."
     columns = tuple(columns)
-    if columns != expectedCols:
+    if columns != expectedTsvCols:
         raise Exception(f"refseq TSV file '{tsvFile}' columns don't match what is expected in this code, please update the code:\n"
-                        f"got: {columns}\nexpect: {expectedCols}")
+                        f"got: {columns}\nexpect: {expectedTsvCols}")
 
-def buildTable(conn, refseqGeneDownloadDir, table, expectedCols, createSql, indexSql,
-               *, nonNullCols=frozenset(), extraCols=None, extraColsFunc=None):
+def buildTable(conn, refseqGeneDownloadDir, expectedTsvCols, table, createSql, indexSql,
+               dbColNames, *, nonNullTsvCols=frozenset(), rowEditFunc=None):
     tsvFile = getDataFile(refseqGeneDownloadDir, table)
     tsvReader = TsvReader(tsvFile)
-    checkExpectColumns(tsvFile, tsvReader.columns, expectedCols)
+    checkExpectColumns(tsvFile, tsvReader.columns, expectedTsvCols)
     cur = conn.cursor()
     cur.execute(createSql)
-    tsvLoadToTable(cur, tsvReader, table, tsvFile, nonNullCols=nonNullCols, extraCols=extraCols, extraColsFunc=extraColsFunc)
+    tsvLoadToTable(cur, tsvReader, table, dbColNames, nonNullTsvCols=nonNullTsvCols, rowEditFunc=rowEditFunc)
     cur.execute(indexSql)
     cur.close()
 
@@ -126,7 +145,7 @@ def buildTable(conn, refseqGeneDownloadDir, table, expectedCols, createSql, inde
 ###
 # gene_info
 ###
-geneInfoExpectedCols = (
+geneInfoExpectedTsvCols = (
     "tax_id", "GeneID", "Symbol", "LocusTag", "Synonyms", "dbXrefs",
     "chromosome", "map_location", "description", "type_of_gene",
     "Symbol_from_nomenclature_authority",
@@ -155,6 +174,7 @@ CREATE TABLE gene_info (
     Feature_type TEXT
 );
 """
+# note: can't define GeneID as PRIMARY KEY or it becomes the rowid
 
 geneInfoIndexSql = """
 CREATE INDEX gene_info_tax_id ON gene_info (tax_id);
@@ -166,13 +186,14 @@ CREATE INDEX gene_info_type_of_gene ON gene_info (type_of_gene);
 geneInfoNonNullCols = frozenset(("tax_id", "GeneID", "type_of_gene", "Modification_date"))
 
 def loadGeneInfo(conn, refseqGeneDownloadDir):
-    buildTable(conn, refseqGeneDownloadDir, "gene_info", geneInfoExpectedCols, geneInfoCreateSql,
-               geneInfoIndexSql, nonNullCols=geneInfoNonNullCols)
+    dbColNames = tsvToSqlColumnNames(geneInfoExpectedTsvCols)
+    buildTable(conn, refseqGeneDownloadDir, geneInfoExpectedTsvCols, "gene_info", geneInfoCreateSql,
+               geneInfoIndexSql, dbColNames, nonNullTsvCols=geneInfoNonNullCols)
 
 ###
 # gene2refseq
 ###
-gene2refseqExpectedCols = (
+gene2refseqExpectedTsvCols = (
     "tax_id", "GeneID", "status", "RNA_nucleotide_accession.version",
     "RNA_nucleotide_gi", "protein_accession.version", "protein_gi",
     "genomic_nucleotide_accession.version", "genomic_nucleotide_gi",
@@ -241,15 +262,16 @@ def loadGene2refseq(conn, refseqGeneDownloadDir):
                     baseAccOrNone(row[7]),    # genomic_nucleotide_accession.version
                     baseAccOrNone(row[13])])  # mature_peptide_accession.version
 
-    buildTable(conn, refseqGeneDownloadDir, "gene2refseq",
-               gene2refseqExpectedCols, gene2refseqCreateSql,
-               gene2refseqIndexSql, nonNullCols=gene2refseqNonNullCols,
-               extraCols=gene2refseqDerivedCols, extraColsFunc=_addDerived)
+    dbColNames = tsvToSqlColumnNames(gene2refseqExpectedTsvCols) + list(gene2refseqDerivedCols)
+    buildTable(conn, refseqGeneDownloadDir, gene2refseqExpectedTsvCols,
+               "gene2refseq", gene2refseqCreateSql, gene2refseqIndexSql,
+               dbColNames, nonNullTsvCols=gene2refseqNonNullCols,
+               rowEditFunc=_addDerived)
 
 ###
 # gene_group and gene_orthologs
 ###
-geneAssocExpectedCols = (
+geneAssocExpectedTsvCols = (
     "tax_id", "GeneID", "relationship", "Other_tax_id", "Other_GeneID"
 )
 geneAssocCreateSql = """
@@ -271,17 +293,18 @@ CREATE INDEX {table}_GeneId ON {table} (GeneId);
 CREATE INDEX {table}_Other_tax_id ON {table} (Other_tax_id);
 CREATE INDEX {table}_Other_GeneId ON {table} (Other_GeneId);
 """
-geneAssocNonNullCols = geneAssocExpectedCols
+geneAssocNonNullCols = geneAssocExpectedTsvCols
 
 def loadGeneAssocTypeTable(conn, refseqGeneDownloadDir, table):
-    buildTable(conn, refseqGeneDownloadDir, table, geneAssocExpectedCols,
+    dbColNames = tsvToSqlColumnNames(geneAssocExpectedTsvCols)
+    buildTable(conn, refseqGeneDownloadDir, geneAssocExpectedTsvCols, table,
                geneAssocCreateSql.format(table=table), geneAssocIndexSql.format(table=table),
-               nonNullCols=geneAssocNonNullCols)
+               dbColNames, nonNullTsvCols=geneAssocNonNullCols)
 
 ###
 # gene2go
 ###
-gene2goExpectedCols = (
+gene2goExpectedTsvCols = (
     "tax_id", "GeneID", "GO_ID", "Evidence", "Qualifier", "GO_term", "PubMed", "Category"
 )
 
@@ -294,9 +317,10 @@ CREATE TABLE gene2go (
     Evidence TEXT NOT NULL,
     Qualifier TEXT NOT NULL,
     GO_term TEXT NOT NULL,
-    PubMed TEXT,
+    PubMed_refs_id INT,
     Category TEXT NOT NULL,
     FOREIGN KEY(GeneID) REFERENCES gene_info(GeneID)
+    FOREIGN KEY(PubMed_refs_id) REFERENCES pubmed_ref (id)
 );
 """
 gene2goIndexSql = """
@@ -306,10 +330,55 @@ CREATE INDEX gene2go_GO_ID ON gene2go (GO_ID);
 CREATE INDEX gene2go_GO_term ON gene2go (GO_term);
 """
 
+pubmed_refCreateSql = """
+DROP TABLE IF EXISTS pubmed_ref;
+CREATE TABLE pubmed_ref (
+    id INT NOT NULL,
+    PubMed INT NOT NULL
+);
+"""
+
+pubmed_refIndexSql = """
+CREATE INDEX pubmed_ref_id ON pubmed_ref (id);
+CREATE INDEX pubmed_ref_PubMed ON pubmed_ref (PubMed);
+"""
+def _addPubmedRefs(pubmed_refs, pubmeds):
+    pubmed_refs.append(pubmeds.split('|'))
+    return len(pubmed_refs)  # 1-based id
+
+def _editGene2goPubMed(pubmed_refs, row):
+    "update PubMed column"
+    pubmeds = row[6]
+    if (pubmeds is None) or (pubmeds == ""):
+        pubmeds_ref_id = None
+    else:
+        pubmeds_ref_id = _addPubmedRefs(pubmed_refs, pubmeds)
+    row[6] = pubmeds_ref_id
+
+def loadPubMedRef(conn, pubmed_refs):
+    "load one to many pubmed_ref table"
+    table = "pubmed_ref"
+    cur = conn.cursor()
+    cur.execute(pubmed_refCreateSql)
+    batchInserter = BatchInserter(table, ("id", "PubMed"))
+    for idx, pubmeds in enumerate(pubmed_refs):
+        for pubmed in pubmeds:
+            batchInserter.add(cur, (idx + 1, pubmed))
+    batchInserter.finish(cur)
+    cur.execute(pubmed_refIndexSql)
+    cur.close()
+
 def loadGene2go(conn, refseqGeneDownloadDir):
-    buildTable(conn, refseqGeneDownloadDir, "gene2go",
-               gene2goExpectedCols, gene2goCreateSql,
-               gene2goIndexSql)
+    # replace PubMed with PubMed_ref
+    dbColNames = tsvToSqlColumnNames(gene2goExpectedTsvCols)
+    dbColNames[dbColNames.index("PubMed")] = "PubMed_refs_id"
+
+    # collects one_to_many pubmeds to add to pubmed_ref; id is index +1
+    pubmed_refs = []
+    buildTable(conn, refseqGeneDownloadDir, gene2goExpectedTsvCols, "gene2go", gene2goCreateSql,
+               gene2goIndexSql, dbColNames, rowEditFunc=partial(_editGene2goPubMed, pubmed_refs))
+
+    loadPubMedRef(conn, pubmed_refs)
 
 ##
 # main
