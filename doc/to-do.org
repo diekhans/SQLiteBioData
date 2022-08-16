@@ -1,2 +1,10 @@
-* what is the gene_orthologs_supplemental.gz that gets downloaded?
+* Schema documentation generation
+** https://github.com/mgramin/awesome-db-tools#documentations
+** https://pypi.org/project/sphinx-sql/
 
+** dbml:
+doesn't support sqlite need: https://pypi.org/project/dbml-sqlite/
+
+https://github.com/holistics/dbml
+
+https://pypi.org/project/pydbml/

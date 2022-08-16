@@ -21,10 +21,12 @@ testRefGeneDbBuild: mkdirs
 	$(call sqliteDmp,$@,gene_group,GeneID)
 	$(call sqliteDmp,$@,gene_info,GeneID)
 	$(call sqliteDmp,$@,gene_orthologs,GeneID)
+	$(call sqliteDmp,$@,gene2go,GeneID)
 	$(call sqliteDmpDiff,$@,gene2refseq)
 	$(call sqliteDmpDiff,$@,gene_group)
 	$(call sqliteDmpDiff,$@,gene_info)
 	$(call sqliteDmpDiff,$@,gene_orthologs)
+	$(call sqliteDmpDiff,$@,gene2go)
 
 ####
 mkdirs:

@@ -7,6 +7,12 @@ from datetime import datetime
 from pycbio.tsv import TsvReader
 from pycbio.db import sqliteOps
 
+##
+# Design notes
+#   - SQL is embedded here rather than in separate files to make it easy
+#     to only build a subset of tables.
+##
+
 verbose = False
 
 def parseArgs():
@@ -19,6 +25,7 @@ def parseArgs():
        gene_info.gz
        gene_group.gz
        gene_orthologs.gz
+       gene2go.gz
 
     To download the entire gene database:
        wget -np -nv -nd -r -l 0 -A 'gene*.gz' --unlink -e robots=off https://ftp.ncbi.nih.gov/gene/DATA/
@@ -98,7 +105,7 @@ def tsvLoadToTable(cur, tsvReader, table, tsvFile, *, nonNullCols=frozenset(), e
         insert(insertSql, rows)
 
 def checkExpectColumns(tsvFile, columns, expectedCols):
-    "validate this code matches header, including order "
+    "validate this code matches header, including order."
     columns = tuple(columns)
     if columns != expectedCols:
         raise Exception(f"refseq TSV file '{tsvFile}' columns don't match what is expected in this code, please update the code:\n"
@@ -124,33 +131,34 @@ geneInfoExpectedCols = (
     "chromosome", "map_location", "description", "type_of_gene",
     "Symbol_from_nomenclature_authority",
     "Full_name_from_nomenclature_authority", "Nomenclature_status",
-    "Other_designations", "Modification_date", "Feature_type")
+    "Other_designations", "Modification_date", "Feature_type"
+)
 
 geneInfoCreateSql = """
 DROP TABLE IF EXISTS gene_info;
 CREATE TABLE gene_info (
-  "tax_id" INT NOT NULL,
-  "GeneID" INT NOT NULL,
-  "Symbol" TEXT,
-  "LocusTag" TEXT,
-  "Synonyms" TEXT,
-  "dbXrefs" TEXT,
-  "chromosome" TEXT,
-  "map_location" TEXT,
-  "description" TEXT,
-  "type_of_gene" TEXT NOT NULL,
-  "Symbol_from_nomenclature_authority" TEXT,
-  "Full_name_from_nomenclature_authority" TEXT,
-  "Nomenclature_status" TEXT,
-  "Other_designations" TEXT,
-  "Modification_date" TEXT NOT NULL,
-  "Feature_type" TEXT
+    tax_id INT NOT NULL,
+    GeneID INT NOT NULL,
+    Symbol TEXT,
+    LocusTag TEXT,
+    Synonyms TEXT,
+    dbXrefs TEXT,
+    chromosome TEXT,
+    map_location TEXT,
+    description TEXT,
+    type_of_gene TEXT NOT NULL,
+    Symbol_from_nomenclature_authority TEXT,
+    Full_name_from_nomenclature_authority TEXT,
+    Nomenclature_status TEXT,
+    Other_designations TEXT,
+    Modification_date TEXT NOT NULL,
+    Feature_type TEXT
 );
 """
 
 geneInfoIndexSql = """
 CREATE INDEX gene_info_tax_id ON gene_info (tax_id);
-CREATE INDEX gene_info_GeneId ON gene_info (GeneId);
+CREATE UNIQUE INDEX gene_info_GeneId ON gene_info (GeneId);
 CREATE INDEX gene_info_Symbol ON gene_info (Symbol);
 CREATE INDEX gene_info_type_of_gene ON gene_info (type_of_gene);
 """
@@ -170,9 +178,10 @@ gene2refseqExpectedCols = (
     "genomic_nucleotide_accession.version", "genomic_nucleotide_gi",
     "start_position_on_the_genomic_accession",
     "end_position_on_the_genomic_accession", "orientation", "assembly",
-    "mature_peptide_accession.version", "mature_peptide_gi", "Symbol")
+    "mature_peptide_accession.version", "mature_peptide_gi", "Symbol"
+)
 
-# these are added
+# these are derived by dropping version from accessions
 gene2refseqDerivedCols = (
     "RNA_nucleotide_accession",
     "protein_accession",
@@ -183,27 +192,28 @@ gene2refseqDerivedCols = (
 gene2refseqCreateSql = """
 DROP TABLE IF EXISTS gene2refseq;
 CREATE TABLE gene2refseq (
-  "tax_id" INT NOT NULL,
-  "GeneID" INT NOT NULL,
-  "status" TEXT,
-  "RNA_nucleotide_accession_version" TEXT,
-  "RNA_nucleotide_gi" TEXT,
-  "protein_accession_version" TEXT,
-  "protein_gi" TEXT,
-  "genomic_nucleotide_accession_version" TEXT,
-  "genomic_nucleotide_gi" TEXT,
-  "start_position_on_the_genomic_accession" TEXT,
-  "end_position_on_the_genomic_accession" TEXT,
-  "orientation" TEXT,
-  "assembly" TEXT,
-  "mature_peptide_accession_version" TEXT,
-  "mature_peptide_gi" TEXT,
-  "Symbol" TEXT NOT NULL,
-  -- Derived columns
-  "RNA_nucleotide_accession" TEXT,
-  "protein_accession" TEXT,
-  "genomic_nucleotide_accession" TEXT,
-  "mature_peptide_accession" TEXT
+    tax_id INT NOT NULL,
+    GeneID INT NOT NULL,
+    status TEXT,
+    RNA_nucleotide_accession_version TEXT,
+    RNA_nucleotide_gi TEXT,
+    protein_accession_version TEXT,
+    protein_gi TEXT,
+    genomic_nucleotide_accession_version TEXT,
+    genomic_nucleotide_gi TEXT,
+    start_position_on_the_genomic_accession TEXT,
+    end_position_on_the_genomic_accession TEXT,
+    orientation TEXT,
+    assembly TEXT,
+    mature_peptide_accession_version TEXT,
+    mature_peptide_gi TEXT,
+    Symbol TEXT NOT NULL,
+    -- Derived columns
+    RNA_nucleotide_accession TEXT,
+    protein_accession TEXT,
+    genomic_nucleotide_accession TEXT,
+    mature_peptide_accession TEXT,
+    FOREIGN KEY(GeneID) REFERENCES gene_info(GeneID)
 );
 """
 
@@ -240,15 +250,18 @@ def loadGene2refseq(conn, refseqGeneDownloadDir):
 # gene_group and gene_orthologs
 ###
 geneAssocExpectedCols = (
-    "tax_id", "GeneID", "relationship", "Other_tax_id", "Other_GeneID")
+    "tax_id", "GeneID", "relationship", "Other_tax_id", "Other_GeneID"
+)
 geneAssocCreateSql = """
 DROP TABLE IF EXISTS {table};
 CREATE TABLE {table} (
-  "tax_id" INT NOT NULL,
-  "GeneID" INT NOT NULL,
-  "relationship" TEXT NOT NULL,
-  "Other_tax_id" INT NOT NULL,
-  "Other_GeneID" INT NOT NULL
+    tax_id INT NOT NULL,
+    GeneID INT NOT NULL,
+    relationship TEXT NOT NULL,
+    Other_tax_id INT NOT NULL,
+    Other_GeneID INT NOT NULL,
+    FOREIGN KEY(GeneID) REFERENCES gene_info(GeneID),
+    FOREIGN KEY(Other_GeneID) REFERENCES gene_info(GeneID)
 );
 """
 
@@ -265,6 +278,42 @@ def loadGeneAssocTypeTable(conn, refseqGeneDownloadDir, table):
                geneAssocCreateSql.format(table=table), geneAssocIndexSql.format(table=table),
                nonNullCols=geneAssocNonNullCols)
 
+###
+# gene2go
+###
+gene2goExpectedCols = (
+    "tax_id", "GeneID", "GO_ID", "Evidence", "Qualifier", "GO_term", "PubMed", "Category"
+)
+
+gene2goCreateSql = """
+DROP TABLE IF EXISTS gene2go;
+CREATE TABLE gene2go (
+    tax_id INT NOT NULL,
+    GeneID INT NOT NULL,
+    GO_ID TEXT NOT NULL,
+    Evidence TEXT NOT NULL,
+    Qualifier TEXT NOT NULL,
+    GO_term TEXT NOT NULL,
+    PubMed TEXT,
+    Category TEXT NOT NULL,
+    FOREIGN KEY(GeneID) REFERENCES gene_info(GeneID)
+);
+"""
+gene2goIndexSql = """
+CREATE INDEX gene2go_tax_id ON gene2go (tax_id);
+CREATE INDEX gene2go_GeneId ON gene2go (GeneId);
+CREATE INDEX gene2go_GO_ID ON gene2go (GO_ID);
+CREATE INDEX gene2go_GO_term ON gene2go (GO_term);
+"""
+
+def loadGene2go(conn, refseqGeneDownloadDir):
+    buildTable(conn, refseqGeneDownloadDir, "gene2go",
+               gene2goExpectedCols, gene2goCreateSql,
+               gene2goIndexSql)
+
+##
+# main
+##
 def buildRefseqGeneDb(refseqGeneDownloadDir, refseqGeneDb):
     conn = sqliteOps.connect(refseqGeneDb, create=True)
     sqliteOps.setFastLoadPragmas(conn)
@@ -272,8 +321,10 @@ def buildRefseqGeneDb(refseqGeneDownloadDir, refseqGeneDb):
     loadGeneInfo(conn, refseqGeneDownloadDir)
     loadGeneAssocTypeTable(conn, refseqGeneDownloadDir, "gene_group")
     loadGeneAssocTypeTable(conn, refseqGeneDownloadDir, "gene_orthologs")
+    loadGene2go(conn, refseqGeneDownloadDir)
     conn.close()
 
 def main(opts):
     buildRefseqGeneDb(opts.refseqGeneDownloadDir, opts.refseqGeneDb)
+
 main(parseArgs())
