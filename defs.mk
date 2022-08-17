@@ -24,4 +24,4 @@ diff = diff -u
 tmpExt = $(shell hostname).$(shell echo $$PPID).tmp
 tmpExtGz = ${tmpExt}.gz
 
-refseqGeneDbBuild = ${binDir}/refseqGeneDbBuild
+ncbiGeneDbBuild = ${binDir}/ncbiGeneDbBuild

@@ -1,12 +1,12 @@
 ROOT = ..
 include ${ROOT}/defs.mk
 
-refseqGeneDb = output/refseqGene.db
+ncbiGeneDb = output/ncbiGene.db
 
-test: refGeneDbTests
+test: ncbiGeneDbTests
 
 ####
-refGeneDbTests: testRefGeneDbBuild testRefGeneTwoTables
+ncbiGeneDbTests: testNcbiGeneDbBuild testNcbiGeneTwoTables
 	@echo "NOTE: use full-test to test build with the full gene database"
 
 sqlite = sqlite3 -batch -separator $$'\t' -header
@@ -16,9 +16,9 @@ sqliteDmp = ${sqlite} output/$(1).db  'SELECT * FROM $(2) ORDER BY $(3)' > outpu
 comma = ,
 sqliteDmpDiff = diff -u expected/$(1)/$(2).tsv output/$(1)/$(2).tsv
 
-testRefGeneDbBuild: mkdirs
+testNcbiGeneDbBuild: mkdirs
 	rm -f output/$@.db
-	${refseqGeneDbBuild} input/refseqGene output/$@.db
+	${ncbiGeneDbBuild} input/ncbiGene output/$@.db
 	mkdir -p output/$@
 	$(call sqliteDmp,$@,gene_info,GeneID)
 	$(call sqliteDmp,$@,gene2refseq,GeneID${comma}RNA_nucleotide_accession_version)
@@ -35,9 +35,9 @@ testRefGeneDbBuild: mkdirs
 	$(call sqliteDmpDiff,$@,pubmed_ref)
 	$(call sqliteDmpDiff,$@,gene2ensembl)
 
-testRefGeneTwoTables: mkdirs
+testNcbiGeneTwoTables: mkdirs
 	rm -f output/$@.db
-	${refseqGeneDbBuild} --table=gene_info --table=gene2refseq input/refseqGene output/$@.db
+	${ncbiGeneDbBuild} --table=gene_info --table=gene2refseq input/ncbiGene output/$@.db
 	mkdir -p output/$@
 	${sqlite} output/$@.db 'SELECT name FROM sqlite_master where type="table" ORDER BY name' > output/$@.tables
 	diff expected/$@.tables output/$@.tables
@@ -49,10 +49,10 @@ testRefGeneTwoTables: mkdirs
 # need a FS with a lot of space
 full_dir = /hive/users/markd/NCBI-SqlLite/full
 full_download_dir = ${full_dir}/download
-full_refseqGene_db = ${full_dir}/refseqGene.db
+full_ncbiGene_db = ${full_dir}/ncbiGene.db
 full-test: ${full_download_dir}/done
-	rm -f ${full_refseqGene_db}
-	time -p ${refseqGeneDbBuild} --verbose ${full_download_dir} ${full_refseqGene_db}
+	rm -f ${full_ncbiGene_db}
+	time -p ${ncbiGeneDbBuild} --verbose ${full_download_dir} ${full_ncbiGene_db}
 
 ${full_download_dir}/done:
 	@mkdir -p $(dir $@)

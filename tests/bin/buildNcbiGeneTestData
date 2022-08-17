@@ -10,10 +10,10 @@ def parseArgs():
     desc = """generate test cases from download files.
     """
     parser = argparse.ArgumentParser(description=desc)
-    parser.add_argument("refseqCasesTsv",
+    parser.add_argument("ncbiCasesTsv",
                         help="contains GeneID column is used, all others ignored")
     parser.add_argument("indir",
-                        help="directory with downloaded RefSeq gene files")
+                        help="directory with downloaded Ncbi gene files")
     parser.add_argument("outdir",
                         help="directory for output")
     return parser.parse_args()
@@ -23,7 +23,7 @@ geneIdFiles = (
     "gene2ensembl",
     "gene2go",
     "gene2pubmed",
-    "gene2refseq",
+    "gene2ncbi",
     "gene2vega",
     "gene_group",
     "gene_info",
@@ -34,7 +34,7 @@ geneIdFiles = (
 
 geneHistoryFile = "gene_history"
 
-protAccFile = "gene_refseq_uniprotkb_collab"
+protAccFile = "gene_ncbi_uniprotkb_collab"
 
 def drop_version(accv):
     return accv.split('.')[0]
@@ -50,19 +50,19 @@ geneIdTypeMap = {
     'Discontinued_GeneID': (int_or_none_in, int_or_none_out)
 }
 
-def loadRefseqCasesTsv(refseqCasesTsv):
+def loadNcbiCasesTsv(ncbiCasesTsv):
     """returns a set of geneids and process accessions"""
     testGeneIds = set()
     testProtAccs = set()
-    for row in TsvReader(refseqCasesTsv, typeMap=geneIdTypeMap):
+    for row in TsvReader(ncbiCasesTsv, typeMap=geneIdTypeMap):
         testGeneIds.add(row.GeneID)
         if row.protein_accession != "":
             testProtAccs.add(drop_version(row.protein_accession))
     if len(testGeneIds) == 0:
-        raise Exception(f"no data found in '{refseqCasesTsv}'")
+        raise Exception(f"no data found in '{ncbiCasesTsv}'")
     return testGeneIds, testProtAccs
 
-def filterRefSeqGeneFile(filterFunc, filterSet, indir, outdir, fname):
+def filterNcbiGeneFile(filterFunc, filterSet, indir, outdir, fname):
     "load file based on selecting by gene ids"
     reader = TsvReader(osp.join(indir, fname + ".gz"), typeMap=geneIdTypeMap)
     with open(osp.join(outdir, fname), 'w') as outfh:
@@ -82,14 +82,14 @@ def _protAccFilterFunc(testProtAccs, row):
 
 def processFiles(testGeneIds, testProtAccs, indir, outdir):
     with Pool() as pool:
-        pool.starmap(filterRefSeqGeneFile,
+        pool.starmap(filterNcbiGeneFile,
                      [(_geneIdFilterFunc, testGeneIds, indir, outdir, fname) for fname in geneIdFiles]
                      + [(_geneIdHistoryFilterFunc, testGeneIds, indir, outdir, geneHistoryFile)]
                      + [(_protAccFilterFunc, testProtAccs, indir, outdir, protAccFile)])
 
-def buildRefseqGeneTestData(opts):
-    testGeneIds, testProtAccs = loadRefseqCasesTsv(opts.refseqCasesTsv)
+def buildNcbiGeneTestData(opts):
+    testGeneIds, testProtAccs = loadNcbiCasesTsv(opts.ncbiCasesTsv)
     fileOps.ensureDir(opts.outdir)
     processFiles(testGeneIds, testProtAccs, opts.indir, opts.outdir)
 
-buildRefseqGeneTestData(parseArgs())
+buildNcbiGeneTestData(parseArgs())

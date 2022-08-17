@@ -19,7 +19,7 @@ row = rec.toRow()  # FIXME this could should really use names everywhere
 | table                        | status |
 |------------------------------+--------|
 | gene2accession               |        |
-| gene2ensembl                 |        |
+| gene2ensembl                 | done   |
 | gene2go                      | done   |
 | gene2pubmed                  |        |
 | gene2refseq                  | done   |

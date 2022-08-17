@@ -28,9 +28,9 @@ ALL_TABLES = (Tables.gene_info, Tables.gene2refseq, Tables.gene_group,
 
 
 def parseArgs():
-    desc = """create a sqlite data from a subset of the RefseqGene files.
+    desc = """create a sqlite data from NCBI genes download files.
 
-    Requires RefSeq gene database download from https://ftp.ncbi.nih.gov/gene/DATA/
+    Requires NCBI gene database download from https://ftp.ncbi.nih.gov/gene/DATA/
     The current files are imported:
 
        gene2refseq.gz
@@ -54,9 +54,9 @@ def parseArgs():
                         help="print info about each table load")
     parser.add_argument("--table", "-t", dest="tables", action="append", choices=ALL_TABLES,
                         help="only load these tables, maybe repeated")
-    parser.add_argument("refseqGeneDownloadDir",
+    parser.add_argument("ncbiGeneDownloadDir",
                         help="directory with downloaded files")
-    parser.add_argument("refseqGeneDb",
+    parser.add_argument("ncbiGeneDb",
                         help="create this database")
     opts = parser.parse_args()
     global verbose
@@ -146,9 +146,9 @@ def checkExpectColumns(tsvFile, columns, expectedTsvCols):
         raise Exception(f"refseq TSV file '{tsvFile}' columns don't match what is expected in this code, please update the code:\n"
                         f"got: {columns}\nexpect: {expectedTsvCols}")
 
-def buildTable(conn, refseqGeneDownloadDir, expectedTsvCols, table, createSql, indexSql,
+def buildTable(conn, ncbiGeneDownloadDir, expectedTsvCols, table, createSql, indexSql,
                dbColNames, *, nonNullTsvCols=frozenset(), rowEditFunc=None):
-    tsvFile = getDataFile(refseqGeneDownloadDir, table)
+    tsvFile = getDataFile(ncbiGeneDownloadDir, table)
     tsvReader = TsvReader(tsvFile)
     checkExpectColumns(tsvFile, tsvReader.columns, expectedTsvCols)
     cur = conn.cursor()
@@ -201,9 +201,9 @@ CREATE INDEX gene_info_type_of_gene ON gene_info (type_of_gene);
 
 geneInfoNonNullCols = frozenset(("tax_id", "GeneID", "type_of_gene", "Modification_date"))
 
-def loadGeneInfo(conn, refseqGeneDownloadDir):
+def loadGeneInfo(conn, ncbiGeneDownloadDir):
     dbColNames = tsvToSqlColumnNames(geneInfoExpectedTsvCols)
-    buildTable(conn, refseqGeneDownloadDir, geneInfoExpectedTsvCols, "gene_info", geneInfoCreateSql,
+    buildTable(conn, ncbiGeneDownloadDir, geneInfoExpectedTsvCols, "gene_info", geneInfoCreateSql,
                geneInfoIndexSql, dbColNames, nonNullTsvCols=geneInfoNonNullCols)
 
 ################################################################
@@ -271,7 +271,7 @@ CREATE INDEX gene2refseq_mature_peptide_accession ON gene2refseq (mature_peptide
 # orientation is '?' if unknown, '-' is strand, not NULL
 gene2refseqNonNullCols = frozenset(("tax_id", "GeneID", "Symbol", "orientation"))
 
-def loadGene2refseq(conn, refseqGeneDownloadDir):
+def loadGene2refseq(conn, ncbiGeneDownloadDir):
     def _addDerived(row):
         row.extend([baseAccOrNone(row[3]),    # RNA_nucleotide_accession.version
                     baseAccOrNone(row[5]),    # protein_accession.version
@@ -279,7 +279,7 @@ def loadGene2refseq(conn, refseqGeneDownloadDir):
                     baseAccOrNone(row[13])])  # mature_peptide_accession.version
 
     dbColNames = tsvToSqlColumnNames(gene2refseqExpectedTsvCols) + list(gene2refseqDerivedCols)
-    buildTable(conn, refseqGeneDownloadDir, gene2refseqExpectedTsvCols,
+    buildTable(conn, ncbiGeneDownloadDir, gene2refseqExpectedTsvCols,
                "gene2refseq", gene2refseqCreateSql, gene2refseqIndexSql,
                dbColNames, nonNullTsvCols=gene2refseqNonNullCols,
                rowEditFunc=_addDerived)
@@ -312,9 +312,9 @@ CREATE INDEX {table}_Other_GeneId ON {table} (Other_GeneId);
 """
 geneAssocNonNullCols = geneAssocExpectedTsvCols
 
-def loadGeneAssocTypeTable(conn, refseqGeneDownloadDir, table):
+def loadGeneAssocTypeTable(conn, ncbiGeneDownloadDir, table):
     dbColNames = tsvToSqlColumnNames(geneAssocExpectedTsvCols)
-    buildTable(conn, refseqGeneDownloadDir, geneAssocExpectedTsvCols, table,
+    buildTable(conn, ncbiGeneDownloadDir, geneAssocExpectedTsvCols, table,
                geneAssocCreateSql.format(table=table), geneAssocIndexSql.format(table=table),
                dbColNames, nonNullTsvCols=geneAssocNonNullCols)
 
@@ -385,14 +385,14 @@ def loadPubMedRef(conn, pubmed_refs):
     cur.execute(pubmed_refIndexSql)
     cur.close()
 
-def loadGene2go(conn, refseqGeneDownloadDir):
+def loadGene2go(conn, ncbiGeneDownloadDir):
     # replace PubMed with PubMed_ref
     dbColNames = tsvToSqlColumnNames(gene2goExpectedTsvCols)
     dbColNames[dbColNames.index("PubMed")] = "PubMed_refs_id"
 
     # collects one_to_many pubmeds to add to pubmed_ref; id is index +1
     pubmed_refs = []
-    buildTable(conn, refseqGeneDownloadDir, gene2goExpectedTsvCols, "gene2go", gene2goCreateSql,
+    buildTable(conn, ncbiGeneDownloadDir, gene2goExpectedTsvCols, "gene2go", gene2goCreateSql,
                gene2goIndexSql, dbColNames, rowEditFunc=partial(_editGene2goPubMed, pubmed_refs))
 
     loadPubMedRef(conn, pubmed_refs)
@@ -439,7 +439,7 @@ CREATE INDEX gene2ensembl_RNA_nucleotide_accession_version ON gene2ensembl (RNA_
 CREATE INDEX gene2ensembl_protein_accession_version ON gene2ensembl (protein_accession_version);
 """
 
-def loadGene2ensembl(conn, refseqGeneDownloadDir):
+def loadGene2ensembl(conn, ncbiGeneDownloadDir):
     def _addDerived(row):
         row.extend([baseAccOrNone(row[2]),    # Ensembl_gene_identifier
                     baseAccOrNone(row[3]),    # RNA_nucleotide_accession.version
@@ -448,31 +448,31 @@ def loadGene2ensembl(conn, refseqGeneDownloadDir):
                     baseAccOrNone(row[6])])   # Ensembl_protein_identifier
 
     dbColNames = tsvToSqlColumnNames(gene2ensemblExpectedTsvCols) + list(gene2ensemblDerivedCols)
-    buildTable(conn, refseqGeneDownloadDir, gene2ensemblExpectedTsvCols,
+    buildTable(conn, ncbiGeneDownloadDir, gene2ensemblExpectedTsvCols,
                "gene2ensembl", gene2ensemblCreateSql, gene2ensemblIndexSql,
                dbColNames, rowEditFunc=_addDerived)
 
 ###
 # main
 ###
-def buildRefseqGeneDb(refseqGeneDownloadDir, refseqGeneDb, tables):
-    conn = sqliteOps.connect(refseqGeneDb, create=True)
+def ncbiGeneDbBuild(ncbiGeneDownloadDir, ncbiGeneDb, tables):
+    conn = sqliteOps.connect(ncbiGeneDb, create=True)
     sqliteOps.setFastLoadPragmas(conn)
     if Tables.gene_info in tables:
-        loadGeneInfo(conn, refseqGeneDownloadDir)
+        loadGeneInfo(conn, ncbiGeneDownloadDir)
     if Tables.gene2refseq in tables:
-        loadGene2refseq(conn, refseqGeneDownloadDir)
+        loadGene2refseq(conn, ncbiGeneDownloadDir)
     if Tables.gene_group in tables:
-        loadGeneAssocTypeTable(conn, refseqGeneDownloadDir, "gene_group")
+        loadGeneAssocTypeTable(conn, ncbiGeneDownloadDir, "gene_group")
     if Tables.gene_orthologs in tables:
-        loadGeneAssocTypeTable(conn, refseqGeneDownloadDir, "gene_orthologs")
+        loadGeneAssocTypeTable(conn, ncbiGeneDownloadDir, "gene_orthologs")
     if Tables.gene2go in tables:
-        loadGene2go(conn, refseqGeneDownloadDir)
+        loadGene2go(conn, ncbiGeneDownloadDir)
     if Tables.gene2ensembl in tables:
-        loadGene2ensembl(conn, refseqGeneDownloadDir)
+        loadGene2ensembl(conn, ncbiGeneDownloadDir)
     conn.close()
 
 def main(opts):
-    buildRefseqGeneDb(opts.refseqGeneDownloadDir, opts.refseqGeneDb, opts.tables)
+    ncbiGeneDbBuild(opts.ncbiGeneDownloadDir, opts.ncbiGeneDb, opts.tables)
 
 main(parseArgs())

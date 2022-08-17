@@ -1,11 +1,11 @@
 * building test cases
 
-bin/buildRefseqGeneTestData is used to build test cases
+bin/buildNcbiGeneTestData is used to build test cases
 
 the file input/refseqCases.tsv has ids to extract.
 
-./bin/buildRefseqGeneTestData input/refseqCases.tsv tmp/ncbi-gene/ tmp/out/
+./bin/buildNcbiGeneTestData input/ncbiGeneCases.tsv tmp/ncbi-gene/ tmp/out/
 
 # manually insect files then
-mv tmp/* input/refseqGene/
+mv tmp/* input/ncbiGene/
 
