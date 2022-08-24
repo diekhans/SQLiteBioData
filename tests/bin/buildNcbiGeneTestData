@@ -19,6 +19,8 @@ def parseArgs():
     return parser.parse_args()
 
 geneIdFiles = (
+    "gene_info",
+    "gene2refseq",
     "gene2accession",
     "gene2ensembl",
     "gene2go",
@@ -26,14 +28,11 @@ geneIdFiles = (
     "gene2ncbi",
     "gene2vega",
     "gene_group",
-    "gene_info",
     "gene_neighbors",
     "gene_orthologs",
 )
-# FIXME:  what is  "gene_orthologs_supplemental",
 
 geneHistoryFile = "gene_history"
-
 protAccFile = "gene_ncbi_uniprotkb_collab"
 
 def drop_version(accv):

@@ -121,7 +121,7 @@ class BatchInserter:
             self._insert(cur)
         if verbose:
             elapsedTime = time.time() - self.startTime
-            print(f"{self.table} inserted {self.cnt} rows in {elapsedTime:.2} seconds", file=sys.stderr, flush=True)
+            print(f"{self.table} inserted {self.cnt} rows in {elapsedTime:.2f} seconds", file=sys.stderr, flush=True)
 
 
 def tsvLoadToTable(cur, tsvReader, table, dbColNames, *, nonNullTsvCols=frozenset(),
