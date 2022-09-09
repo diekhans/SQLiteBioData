@@ -261,6 +261,7 @@ CREATE INDEX gene2refseq_RNA_nucleotide_accession_version ON gene2refseq (RNA_nu
 CREATE INDEX gene2refseq_protein_accession_version ON gene2refseq (protein_accession_version);
 CREATE INDEX gene2refseq_genomic_nucleotide_accession_version ON gene2refseq (genomic_nucleotide_accession_version);
 CREATE INDEX gene2refseq_mature_peptide_accession_version ON gene2refseq (mature_peptide_accession_version);
+CREATE INDEX gene2refseq_assembly ON gene2refseq (assembly);
 CREATE INDEX gene2refseq_Symbol ON gene2refseq (Symbol);
 CREATE INDEX gene2refseq_RNA_nucleotide_accession ON gene2refseq (RNA_nucleotide_accession);
 CREATE INDEX gene2refseq_protein_accession ON gene2refseq (protein_accession);

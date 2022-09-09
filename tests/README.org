@@ -2,7 +2,7 @@
 
 bin/buildNcbiGeneTestData is used to build test cases
 
-the file input/refseqCases.tsv has ids to extract.
+the file input/ncbiGeneCases.tsv has ids to extract.
 
 cd tmp/ncbi-gene
 wget -np -nv -nd -r -l 0 -A 'gene*.gz' --unlink -e robots=off https://ftp.ncbi.nih.gov/gene/DATA/
