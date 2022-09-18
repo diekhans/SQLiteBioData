@@ -1,3 +1,18 @@
+* don't want to do just NCBI, so change name of repo
+SQLiteBioMeta
+SQLiteBioData
+SQLiteBioDBs
+SQLiteGemomicsMeta
+
+* add
+** NCBI taxon
+** HGNC
+** VGNC https://vertebrate.genenames.org/
+
+* load tables in parallel.
+* move SQL to separate files and generate schema as markdown
+
+* Add full-text index on description
 * Schema documentation generation
 ** https://github.com/mgramin/awesome-db-tools#documentations
 ** https://pypi.org/project/sphinx-sql/
