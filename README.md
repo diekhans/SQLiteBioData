@@ -16,6 +16,6 @@ choose only the relevant datasets. The resulting SQLite3 database is designed
 to be accessed read-only from any language with SQLite3 support. No additional
 software is required.
 
-The databases currently supported are
+The databases currently supported are:
 
 * NCBI Gene (partial)

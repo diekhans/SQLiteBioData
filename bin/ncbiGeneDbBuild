@@ -13,12 +13,6 @@ sys.path.insert(0, osp.normpath(osp.join(osp.dirname(__file__), "../lib")))
 from sqlitebiodata.ncbigenesql import (geneInfoCreateSql, geneInfoIndexSql, gene2refseqCreateSql, gene2refseqIndexSql,
                                        geneAssocCreateSql, geneAssocIndexSql)
 
-##
-# Design notes
-#   - SQL is embedded here rather than in separate files to make it easy
-#     to only build a subset of tables.
-##
-
 verbose = False
 
 class Tables:

@@ -1,9 +1,3 @@
-* don't want to do just NCBI, so change name of repo
-SQLiteBioMeta
-SQLiteBioData
-SQLiteBioDBs
-SQLiteGemomicsMeta
-
 * add
 ** NCBI taxon
 ** HGNC
