@@ -4,6 +4,24 @@
 ** VGNC https://vertebrate.genenames.org/
 
 * load tables in parallel.
+** https://www.sqlite.org/cgi/src/doc/begin-concurrent/doc/begin_concurrent.md
+*** Two transactions that write to different sets of tables never conflict, and that
+
+*** Two transactions that write to the same tables or indexes only conflict if the values of the keys (either primary keys or indexed rows) are fairly close together. For example, given a large table with the schema:
+
+         CREATE TABLE t1(a INTEGER PRIMARY KEY, b BLOB);
+
+    writing two rows with adjacent values for "a" probably will cause a conflict (as the two keys are stored on the same page), but writing two rows with vastly different values for "a" will not (as the keys will likly be stored on different pages).
+
+* suggest load speedup
+PRAGMA cache_size = 400000;
+PRAGMA synchronous = OFF;
+PRAGMA journal_mode = OFF;
+PRAGMA locking_mode = EXCLUSIVE;
+PRAGMA count_changes = OFF;
+PRAGMA temp_store = MEMORY;
+PRAGMA auto_vacuum = NONE;
+
 * move SQL to separate files and generate schema as markdown
 
 * Add full-text index on description
