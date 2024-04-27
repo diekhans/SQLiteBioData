@@ -18,4 +18,5 @@ software is required.
 
 The databases currently supported are:
 
-* NCBI Gene (partial)
+* NCBI Gene (partial support)
+  wget -np -nv -nd -r -l 0 -A 'gene*.gz' --unlink -e robots=off https://ftp.ncbi.nih.gov/gene/DATA/
