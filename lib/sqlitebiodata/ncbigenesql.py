@@ -103,4 +103,5 @@ CREATE INDEX {table}_tax_id ON {table} (tax_id);
 CREATE INDEX {table}_GeneId ON {table} (GeneId);
 CREATE INDEX {table}_Other_tax_id ON {table} (Other_tax_id);
 CREATE INDEX {table}_Other_GeneId ON {table} (Other_GeneId);
+CREATE INDEX {table}_relationship ON {table} (relationship);
 """

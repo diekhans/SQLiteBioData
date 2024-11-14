@@ -42,7 +42,7 @@ def parseArgs():
     To download the entire gene database:
        wget -np -nv -nd -r -l 0 -A 'gene*.gz' --unlink -e robots=off https://ftp.ncbi.nih.gov/gene/DATA/
 
-    The size as of 2022-07 is 11G.  These do not need to be uncompressed to load.
+    The size as of 2024-10 is 21G.  These do not need to be uncompressed to load.
 
     All column names are user from NCBI files, with '.' being replaced by '_'.
     A column RNA_nucleotide_accession is added to gene2refseq with the accession

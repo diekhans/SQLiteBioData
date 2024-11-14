@@ -39,7 +39,7 @@ testNcbiGeneTwoTables: mkdirs
 	rm -f output/$@.db
 	${ncbiGeneDbBuild} --table=gene_info --table=gene2refseq input/ncbiGene output/$@.db
 	mkdir -p output/$@
-	${sqlite} output/$@.db 'SELECT name FROM sqlite_master where type="table" ORDER BY name' > output/$@.tables
+	${sqlite} output/$@.db "SELECT name FROM sqlite_master where type='table' ORDER BY name" > output/$@.tables
 	diff expected/$@.tables output/$@.tables
 	$(call sqliteDmp,$@,gene_info,GeneID)
 	$(call sqliteDmp,$@,gene2refseq,GeneID${comma}RNA_nucleotide_accession_version)
